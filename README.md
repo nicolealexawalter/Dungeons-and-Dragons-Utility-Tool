@@ -1,6 +1,8 @@
 <html>
 <body>
-<h1>Hello World</h1>
-<p>test test test</p>
+<h1>XP Budget Calculator</h1>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Calculate</button>
 </body>
 </html>
