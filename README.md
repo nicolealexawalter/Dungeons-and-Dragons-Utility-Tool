@@ -15,7 +15,7 @@
   </select>
 </form>
 <button onclick="calculateXP()">Calculate</button>
-<p id="xpbudget"></p>
+<p style="display:inline-block" id="xpbudget"></p>
 <script>
 function calculateXP() {
   var level = document.getElementById("level").value;
