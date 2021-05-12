@@ -1,6 +1,9 @@
 <html>
 <body>
+<header>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <h1>XP Budget Calculator</h1>
+</header>
 <form>
   <label for="numchar">Number Characters:</label>
   <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
@@ -310,5 +313,8 @@ function calculateXP() {
   document.getElementById("xpbudget").innerHTML = xp + " XP";
 }
 </script>
+<header>
+<h1>Creature Searcher</h1>
+</header>
 </body>
 </html>
