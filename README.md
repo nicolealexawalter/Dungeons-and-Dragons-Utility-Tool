@@ -1,7 +1,9 @@
 <html>
+<head>
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+</head>
 <body>
 <header>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <h1>XP Budget Calculator</h1>
 </header>
 <form>
