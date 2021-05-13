@@ -1,0 +1,181 @@
+Spider of Leng|Large|Aberration|chaotic evil|2,900|Tome of Beasts p.365
+Ychen Bannog|Gargantuan|Beast|unaligned|7,200|Tome of Beasts p.413
+Triceratops|Huge|Beast|unaligned|1,800|Monster Manual p.80
+Swarm of Ravens|Medium|Beast (Swarm)|unaligned|50|Monster Manual p.339
+Swarm of Insects|Medium|Beast (Swarm)|unaligned|100|Monster Manual p.338
+Spider|Tiny|Beast|unaligned|10|Monster Manual p.337
+Scorpion|Tiny|Beast|unaligned|10|Monster Manual p.337
+Rat|Tiny|Beast|unaligned|10|Monster Manual p.335
+Quetzalcoatlus|Huge|Beast|unaligned|450|Volo's Guide to Monsters p.140
+Pteranodon|Medium|Beast|unaligned|50|Monster Manual p.80
+Lizard|Tiny|Beast|unaligned|10|Monster Manual p.332
+Hawk|Tiny|Beast|unaligned|10|Monster Manual p.330
+Giant Wolf Spider|Medium|Beast|unaligned|50|Monster Manual p.330
+Giant Spider|Large|Beast|unaligned|200|Monster Manual p.328
+Giant Rat|Small|Beast|unaligned|25|Monster Manual p.327
+Giant Lizard|Large|Beast|unaligned|50|Monster Manual p.326
+Giant Goat|Large|Beast|unaligned|100|Monster Manual p.326
+Giant Fire Beetle|Small|Beast|unaligned|10|Monster Manual p.325
+Giant Eagle|Large|Beast|neutral good|200|Monster Manual p.324
+Giant Centipede|Small|Beast|unaligned|50|Monster Manual p.323
+Eagle|Small|Beast|unaligned|10|Monster Manual p.322
+Dogmole|Medium|Beast|neutral|200|Tome of Beasts p.120
+Blood Hawk|Small|Beast|unaligned|25|Monster Manual p.319
+Black Bear|Medium|Beast|unaligned|100|Monster Manual p.318
+Bat|Tiny|Beast|unaligned|10|Monster Manual p.318
+Aurochs|Large|Beast|unaligned|450|Volo's Guide to Monsters p.207
+Pegasus|Large|Celestial|chaotic good|450|Monster Manual p.250
+Ki-rin|Huge|Celestial|lawful good|8,400|Volo's Guide to Monsters p.163
+Young Wind Dragon|Large|Dragon|chaotic neutral|2,300|Tome of Beasts p.144
+Young Void Dragon|Large|Dragon|chaotic neutral|5,000|Tome of Beasts p.140
+Young Silver Dragon|Large|Dragon|lawful good|5,000|Monster Manual p.118
+Young Sea Dragon|Large|Dragon|neutral evil|5,000|Tome of Beasts p.136
+Young Red Dragon|Large|Dragon|chaotic evil|5,900|Monster Manual p.98
+Young Mithral Dragon|Medium|Dragon|neutral|2,300|Tome of Beasts p.134
+Young Gold Dragon|Large|Dragon|lawful good|5,900|Monster Manual p.115
+Young Flame Dragon|Large|Dragon|chaotic evil|5,000|Tome of Beasts p.130
+Wind Dragon Wyrmling|Medium|Dragon|chaotic neutral|200|Tome of Beasts p.145
+Void Dragon Wyrmling|Medium|Dragon|chaotic neutral|450|Tome of Beasts p.140
+Star Drake|Large|Dragon|neutral|13,000|Tome of Beasts p.156
+Silver Dragon Wyrmling|Medium|Dragon|lawful good|450|Monster Manual p.118
+Red Dragon Wyrmling|Medium|Dragon|chaotic evil|1,100|Monster Manual p.98
+Gold Dragon Wyrmling|Medium|Dragon|lawful good|700|Monster Manual p.115
+Flame Dragon Wyrmling|Medium|Dragon|chaotic evil|700|Tome of Beasts p.131
+Faerie Dragon (yellow)|Tiny|Dragon|chaotic good|200|Monster Manual p.133
+Faerie Dragon (violet)|Tiny|Dragon|chaotic good|450|Monster Manual p.133
+Faerie Dragon (red)|Tiny|Dragon|chaotic good|200|Monster Manual p.133
+Faerie Dragon (orange)|Tiny|Dragon|chaotic good|200|Monster Manual p.133
+Faerie Dragon (indigo)|Tiny|Dragon|chaotic good|450|Monster Manual p.133
+Faerie Dragon (green)|Tiny|Dragon|chaotic good|450|Monster Manual p.133
+Faerie Dragon (blue)|Tiny|Dragon|chaotic good|450|Monster Manual p.133
+Ash Drake|Small|Dragon|neutral evil|1,100|Tome of Beasts p.149
+Ancient Wind Dragon|Gargantuan|Dragon|chaotic neutral|41,000|Tome of Beasts p.142
+Ancient Void Dragon|Gargantuan|Dragon|chaotic neutral|62,000|Tome of Beasts p.138
+Ancient Silver Dragon|Gargantuan|Dragon|lawful good|50,000|Monster Manual p.116
+Ancient Red Dragon|Gargantuan|Dragon|chaotic evil|62,000|Monster Manual p.97
+Ancient Mithral Dragon|Gargantuan|Dragon|neutral|20,000|Tome of Beasts p.132
+Ancient Gold Dragon|Gargantuan|Dragon|lawful good|62,000|Monster Manual p.113
+Ancient Flame Dragon|Gargantuan|Dragon|chaotic evil|62,000|Tome of Beasts p.128
+Adult Wind Dragon|Huge|Dragon|chaotic neutral|18,000|Tome of Beasts p.143
+Adult Void Dragon|Huge|Dragon|chaotic neutral|11,500|Tome of Beasts p.139
+Adult Silver Dragon|Huge|Dragon|lawful good|15,000|Monster Manual p.117
+Adult Red Dragon|Huge|Dragon|chaotic evil|18,000|Monster Manual p.98
+Adult Mithral Dragon|Huge|Dragon|neutral|11,500|Tome of Beasts p.133
+Adult Gold Dragon|Huge|Dragon|lawful good|18,000|Monster Manual p.114
+Adult Flame Dragon|Huge|Dragon|chaotic evil|15,000|Tome of Beasts p.129
+Water Weird|Large|Elemental|neutral|700|Monster Manual p.299
+Water Elemental|Large|Elemental|neutral|1,800|Monster Manual p.125
+Magma Mephit|Small|Elemental|neutral evil|100|Monster Manual p.216
+Invisible Stalker|Medium|Elemental|neutral|2,300|Monster Manual p.192
+Galeb Duhr|Medium|Elemental|neutral|2,300|Monster Manual p.139
+Fire Elemental|Large|Elemental|neutral|1,800|Monster Manual p.125
+Efreeti|Large|Elemental|lawful evil|7,200|Monster Manual p.145
+Earth Elemental|Large|Elemental|neutral|1,800|Monster Manual p.124
+Dao|Large|Elemental|neutral evil|7,200|Monster Manual p.143
+Air Elemental|Large|Elemental|neutral|1,800|Monster Manual p.124
+Bereginyas|Tiny|Fey|neutral evil|1,100|Tome of Beasts p.36
+Azza Gremlin|Small|Fey|neutral|50|Tome of Beasts p.28
+Annis Hag|Large|Fey|chaotic evil|2,300|Volo's Guide to Monsters p.159
+Tanarukk|Medium|Fiend (Demon, Orc)|chaotic evil|1,800|Volo's Guide to Monsters p.186
+Stuhac|Medium|Fiend|neutral evil|10,000|Tome of Beasts p.370
+Gnoll Fang of Yeenoghu|Medium|Fiend (Gnoll)|chaotic evil|1,100|Monster Manual p.163
+Barghest|Large|Fiend (Shapechanger)|neutral evil|1,100|Volo's Guide to Monsters p.123
+Venom Troll|Large|Giant|chaotic evil|2,900|Mordenkainen's Tome of Foes p.245
+Troll|Large|Giant|chaotic evil|1,800|Monster Manual p.291
+Storm Giant Quintessent|Huge|Giant (Storm Giant)|chaotic good|15,000|Volo's Guide to Monsters p.151
+Storm Giant|Huge|Giant|chaotic good|10,000|Monster Manual p.156
+Stone Giant Dreamwalker|Huge|Giant (Stone Giant)|chaotic neutral|5,900|Volo's Guide to Monsters p.150
+Stone Giant|Huge|Giant|neutral|2,900|Monster Manual p.156
+Spirit Troll|Large|Giant|chaotic evil|7,200|Mordenkainen's Tome of Foes p.244
+Rot Troll|Large|Giant|chaotic evil|5,000|Mordenkainen's Tome of Foes p.244
+Ogre Howdah|Large|Giant|chaotic evil|450|Mordenkainen's Tome of Foes p.221
+Ogre Chain Brute|Large|Giant|chaotic evil|700|Mordenkainen's Tome of Foes p.221
+Ogre Bolt Launcher|Large|Giant|chaotic evil|450|Mordenkainen's Tome of Foes p.220
+Ogre Battering Ram|Large|Giant|chaotic evil|1,100|Mordenkainen's Tome of Foes p.220
+Ogre|Large|Giant|chaotic evil|450|Monster Manual p.237
+Jotun Giant|Gargantuan|Giant|chaotic neutral|41,000|Tome of Beasts p.226
+Half-Ogre|Large|Giant|chaotic evil|200|Monster Manual p.238
+Frost Giant|Huge|Giant|neutral evil|3,900|Monster Manual p.155
+Flab Giant|Large|Giant|chaotic evil|1,100|Tome of Beasts p.223
+Fire Giant Dreadnought|Huge|Giant (Fire Giant)|lawful evil|11,500|Volo's Guide to Monsters p.147
+Fire Giant|Huge|Giant|lawful evil|5,000|Monster Manual p.154
+Ettin|Large|Giant|chaotic evil|1,100|Monster Manual p.132
+Dire Troll|Huge|Giant|chaotic evil|10,000|Mordenkainen's Tome of Foes p.243
+Cyclops|Huge|Giant|chaotic neutral|2,300|Monster Manual p.45
+Cloud Giant Smiling One|Huge|Giant (Cloud Giant)|chaotic neutral|7,200|Volo's Guide to Monsters p.146
+Cloud Giant|Huge|Giant|neutral good (50%) or neutral evil (50%)|5,000|Monster Manual p.154
+Yuan-ti Pureblood|Medium|Humanoid (Yuan-ti)|neutral evil|200|Monster Manual p.310
+Winged Kobold|Small|Humanoid (Kobold)|lawful evil|50|Monster Manual p.195
+Werebear|Medium|Humanoid (Human, Shapechanger)|neutral good|1,800|Monster Manual p.208
+Warlock of the Great Old One|Medium|Humanoid (Any Race)|any|2,300|Volo's Guide to Monsters p.220
+Warlock of the Archfey|Medium|Humanoid (Any Race)|any|1,100|Volo's Guide to Monsters p.219
+Tribal Warrior|Medium|Humanoid (any)|any|25|Monster Manual p.350
+Tortle Druid|Medium|Humanoid (Tortle)|lawful neutral|450|Mordenkainen's Tome of Foes p.242
+Tortle|Medium|Humanoid (Tortle)|lawful good|50|Mordenkainen's Tome of Foes p.242
+Spy|Medium|Humanoid (any)|any|200|Monster Manual p.349
+Scout|Medium|Humanoid (any)|any|100|Monster Manual p.349
+Orog|Medium|Humanoid (Orc)|chaotic evil|450|Monster Manual p.247
+Orc War Chief|Medium|Humanoid (Orc)|chaotic evil|1,100|Monster Manual p.246
+Orc Red Fang of Shargaas|Medium|Humanoid (Orc)|chaotic evil|700|Volo's Guide to Monsters p.185
+Orc Nurtured One of Yurtrus|Medium|Humanoid (Orc)|chaotic evil|100|Volo's Guide to Monsters p.184
+Orc Hand of Yurtrus|Medium|Humanoid (Orc)|chaotic evil|450|Volo's Guide to Monsters p.184
+Orc Eye of Gruumsh|Medium|Humanoid (Orc)|chaotic evil|450|Monster Manual p.247
+Orc Claw of Luthic|Medium|Humanoid (Orc)|chaotic evil|450|Volo's Guide to Monsters p.183
+Orc Blade of Ilneval|Medium|Humanoid (Orc)|chaotic evil|1,100|Volo's Guide to Monsters p.183
+Orc|Medium|Humanoid (Orc)|chaotic evil|100|Monster Manual p.246
+Kobold Scale Sorcerer|Small|Humanoid (Kobold)|lawful evil|200|Volo's Guide to Monsters p.167
+Kobold Inventor|Small|Humanoid (Kobold)|lawful evil|50|Volo's Guide to Monsters p.166
+Kobold Dragonshield|Small|Humanoid (Kobold)|lawful evil|200|Volo's Guide to Monsters p.165
+Kobold|Small|Humanoid (Kobold)|lawful evil|25|Monster Manual p.195
+Kenku|Medium|Humanoid (Kenku)|chaotic neutral|50|Monster Manual p.194
+Hobgoblin Warlord|Medium|Humanoid (Goblinoid)|lawful evil|2,300|Monster Manual p.187
+Hobgoblin Captain|Medium|Humanoid (Goblinoid)|lawful evil|700|Monster Manual p.186
+Hobgoblin|Medium|Humanoid (Goblinoid)|lawful evil|100|Monster Manual p.186
+Half-Red Dragon Veteran|Medium|Humanoid (Human)|any|1,800|Monster Manual p.180
+Goblin Boss|Small|Humanoid (Goblinoid)|neutral evil|200|Monster Manual p.166
+Goblin|Small|Humanoid (Goblinoid)|neutral evil|50|Monster Manual p.166
+Gnoll Pack Lord|Medium|Humanoid (Gnoll)|chaotic evil|450|Monster Manual p.163
+Gnoll|Medium|Humanoid (Gnoll)|chaotic evil|100|Monster Manual p.163
+Firenewt Warrior|Medium|Humanoid (Firenewt)|neutral evil|100|Volo's Guide to Monsters p.142
+Firenewt Warlock of Imix|Medium|Humanoid (Firenewt)|neutral evil|200|Volo's Guide to Monsters p.143
+Druid|Medium|Humanoid (any)|any|450|Monster Manual p.346
+Bugbear Chief|Medium|Humanoid (Goblinoid)|chaotic evil|700|Monster Manual p.33
+Bugbear|Medium|Humanoid (Goblinoid)|chaotic evil|200|Monster Manual p.33
+Berserker|Medium|Humanoid (any)|any chaotic|450|Monster Manual p.344
+Bandit Captain|Medium|Humanoid (any)|non-lawful|450|Monster Manual p.344
+Bandit|Medium|Humanoid (any)|non-lawful|25|Monster Manual p.343
+Assassin|Medium|Humanoid (any)|non-good|3,900|Monster Manual p.343
+Archdruid|Medium|Humanoid (Any Race)|any|8,400|Volo's Guide to Monsters p.210
+Acolyte|Medium|Humanoid (any)|any|50|Monster Manual p.342
+Aarakocra|Medium|Humanoid (Aarakocra)|neutral good|50|Monster Manual p.12
+Yuan-ti Malison|Medium|Monstrosity (Shapechanger, Yuan-ti)|neutral evil|700|Monster Manual p.309
+Yuan-ti Abomination|Large|Monstrosity (Shapechanger, Yuan-ti)|neutral evil|2,900|Monster Manual p.308
+Yeti|Large|Monstrosity|chaotic evil|700|Monster Manual p.305
+Tarrasque|Gargantuan|Monstrosity (Titan)|unaligned|155,000|Monster Manual p.286
+Roc|Gargantuan|Monstrosity|unaligned|7,200|Monster Manual p.260
+Phase Spider|Large|Monstrosity|unaligned|700|Monster Manual p.334
+Peryton|Large|Monstrosity|chaotic evil|450|Monster Manual p.251
+Owlbear|Large|Monstrosity|unaligned|700|Monster Manual p.249
+Medusa|Medium|Monstrosity|lawful evil|2,300|Monster Manual p.214
+Manticore|Large|Monstrosity|lawful evil|700|Monster Manual p.213
+Kot Bayun|Medium|Monstrosity|neutral|450|Tome of Beasts p.268
+Hydra|Huge|Monstrosity|unaligned|3,900|Monster Manual p.190
+Hippogriff|Large|Monstrosity|unaligned|200|Monster Manual p.184
+Harpy|Medium|Monstrosity|chaotic evil|200|Monster Manual p.181
+Griffon|Large|Monstrosity|unaligned|450|Monster Manual p.174
+Gorgon|Large|Monstrosity|unaligned|1,800|Monster Manual p.171
+Giant Strider|Large|Monstrosity|neutral evil|200|Volo's Guide to Monsters p.143
+Dogmole Juggernaut|Large|Monstrosity|neutral|1,800|Tome of Beasts p.121
+Chimera|Large|Monstrosity|chaotic evil|2,300|Monster Manual p.39
+Bulette|Large|Monstrosity|unaligned|1,800|Monster Manual p.34
+Blemmyes|Large|Monstrosity|chaotic evil|3,900|Tome of Beasts p.37
+Behir|Huge|Monstrosity|neutral evil|7,200|Monster Manual p.25
+Basilisk|Medium|Monstrosity|unaligned|700|Monster Manual p.24
+Abominable Yeti|Huge|Monstrosity|chaotic evil|5,000|Monster Manual p.306
+Zombie|Medium|Undead|neutral evil|50|Monster Manual p.316
+Wight|Medium|Undead|neutral evil|700|Monster Manual p.300
+Revenant|Medium|Undead|neutral|1,800|Monster Manual p.259
+Ogre Zombie|Large|Undead|neutral evil|450|Monster Manual p.316
+Ghoul|Medium|Undead|chaotic evil|200|Monster Manual p.148
+Ghast|Medium|Undead|chaotic evil|450|Monster Manual p.148
+Death Knight|Medium|Undead|chaotic evil|18,000|Monster Manual p.47
