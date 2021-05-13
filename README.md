@@ -40,12 +40,6 @@ tr:nth-child(even) {
 <p style="display:inline-block" id="xpbudget"></p>
 
 <script>
-function creatureSearch(){
-	var strings = "";
-	var fr = new FileReader(strings, "FILES\CREATURES\AQUATIC.TXT");
-	document.getElementById("creatures").innerHTML = fr.readAsText();
-}
-
 function calculateXP() {
   var level = document.getElementById("level").value;
   var numchar = document.getElementById("numchar").value;
@@ -338,10 +332,16 @@ function calculateXP() {
   };
   document.getElementById("xpbudget").innerHTML = xp + " XP";
 }
+
+function creatureSearch(){
+	document.getElementById('iframe').contentDocument.body.firstChild.innerHTML;
+}
+
 </script>
 <header>
 <h1>Creature Searcher</h1>
 </header>
+<iframe id='iframe' src = 'AQUATIC.txt' onload('creatureSearch'></iframe>
 <form>
 	<label for="crname">Creature Name:</label>
 	<input type="text" id="crname" name="crname" value=""><br>
