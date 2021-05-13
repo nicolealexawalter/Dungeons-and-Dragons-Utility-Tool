@@ -11,8 +11,8 @@ margin-bottom: 200%;
 border: none;
 padding: 5px;
 font: 14 courier-new;
-width: 800px;
-height: 200px;
+width: 500px;
+height: 250px;
 overflow: scroll;
 }
 
