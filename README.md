@@ -443,6 +443,7 @@ function creatureSearch(){
 	<option value="Volo's Guide to Monsters">Volo's Guide to Monsters</option>
 	<option value="Mordenkainen's Tome of Foes">Mordenkainen's Tome of Foes</option>
 	</select>
+    <br>
 </form>
 <button onclick="creatureSearch()">Search</button><br><br>
 <p class="creatureDisplay" id="creatures"></p>
