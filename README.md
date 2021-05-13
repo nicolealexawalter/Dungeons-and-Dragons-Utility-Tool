@@ -395,7 +395,47 @@ function creatureSearch(){
 </header>
 <form>
 	<label for="crname">Creature Name:</label>
-	<input type="text" id="crname" name="crname" value=""><br>
+	<input type="text" id="crname" name="crname" value="">
+	<label for="environment">Environment(s):</label>
+	<select name="environment" id="environment" multiple>
+	<option value="Aquatic">Aquatic</option>
+	<option value="Arctic">Arctic</option>
+	<option value="Cave">Cave</option>
+	<option value="Coast">Coast</option>
+	<option value="Desert">Desert</option>
+	<option value="Forest">Forest</option>
+	<option value="Grassland">Grassland</option>
+	<option value="Mountain">Mountain</option>
+	<option value="Planar">Planar</option>
+	<option value="Ruins">Ruins</option>
+	<option value="Swamp">Swamp</option>
+	<option value="Underground">Underground</option>
+	<option value="Urban">Urban</option>
+	</select>
+	<label for="creaturetype">Creature Type(s):</label>
+	<select name="creaturetype" id="creaturetype" multiple>
+	<option value="Aberration">Aberration</option>
+	<option value="Beast">Beast</option>
+	<option value="Celestial">Celestial</option>
+	<option value="Construct">Construct</option>
+	<option value="Dragon">Dragon</option>
+	<option value="Elemental">Elemental</option>
+	<option value="Fey">Fey</option>
+	<option value="Fiend">Fiend</option>
+	<option value="Giant">Giant</option>
+	<option value="Humanoid">Humanoid</option>
+	<option value="Monstrosity">Monstrosity</option>
+	<option value="Ooze">Ooze</option>
+	<option value="Plant">Plant</option>
+	<option value="Undead">Undead</option>
+	</select>
+	<label for="book">Book(s):</label>
+	<select name="book" id="book" multiple>
+	<option value="Tome of Beasts">Tome of Beasts</option>
+	<option value="Monster Manual">Monster Manual</option>
+	<option value="Volo's Guide to Monsters">Volo's Guide to Monsters</option>
+	<option value="Mordenkainen's Tome of Foes">Mordenkainen's Tome of Foes</option>
+	</select>
 </form>
 <button onclick="creatureSearch()">Search</button><br><br>
 <p class="creatureDisplay" id="creatures"></p>
