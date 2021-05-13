@@ -2,6 +2,40 @@
 <head>
 <link rel="shortcut icon" type="image/png" href="favicon.png">
 <style>
+body {
+margin-bottom: 200%;
+}
+
+/* Box styles */
+.creatureDisplay {
+border: none;
+padding: 5px;
+font: 14 courier-new;
+width: 800px;
+height: 200px;
+overflow: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 5px;
+height: 5px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid black;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+background: black;  
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #88ba1c;  
+}
+	
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -356,43 +390,6 @@ function creatureSearch(){
 	<input type="text" id="crname" name="crname" value=""><br>
 </form>
 <button onclick="creatureSearch()">Search</button><br><br>
-<p id="creatures"></p>
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-</table>
+<p class="creatureDisplay" id="creatures"></p>
 </body>
 </html>
