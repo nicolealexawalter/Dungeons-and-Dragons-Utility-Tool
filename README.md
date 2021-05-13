@@ -341,7 +341,7 @@ function creatureSearch(){
 <header>
 <h1>Creature Searcher</h1>
 </header>
-<iframe id='iframe' src = 'AQUATIC.txt' onload = 'creatureSearch()'></iframe>
+<iframe id='iframe' src = 'FILES/CREATURES/AQUATIC.txt' onload = 'creatureSearch()'></iframe>
 <form>
 	<label for="crname">Creature Name:</label>
 	<input type="text" id="crname" name="crname" value=""><br>
