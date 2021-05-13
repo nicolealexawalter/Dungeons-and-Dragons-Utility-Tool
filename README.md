@@ -40,9 +40,9 @@ tr:nth-child(even) {
 <p style="display:inline-block" id="xpbudget"></p>
 <script>
 function creatureSearch(){
-
-
-
+	var strings = "";
+	var fr = new FileReader(strings, "FILES\CREATURES\AQUATIC.TXT");
+	document.getElementById("xpbudget").innerHTML = fr.readAsText();
 }
 
 function calculateXP() {
@@ -346,6 +346,7 @@ function calculateXP() {
 	<input type="text" id="crname" name="crname" value=""><br>
 </form>
 <button onclick="creatureSearch()">Search</button><br><br>
+<p id="creatures"></p>
 <table>
   <tr>
     <th>Company</th>
