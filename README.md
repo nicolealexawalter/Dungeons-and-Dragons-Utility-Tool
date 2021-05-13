@@ -373,7 +373,7 @@ function loadFile(filePath){
 	  xmlhttp.open("GET", filePath, false);
 	  xmlhttp.send();
 	  if (xmlhttp.status==200) {
-		result = xmlhttp.responseText;
+		result = xmlhttp.readLines();
 	  }
 	  return result;
 }
