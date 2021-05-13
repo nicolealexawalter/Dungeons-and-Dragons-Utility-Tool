@@ -6,6 +6,10 @@ body {
 margin-bottom: 200%;
 }
 
+input[type=number]{
+    width: 70px;
+} 
+
 /* Box styles */
 .creatureDisplay {
 border: none;
@@ -395,8 +399,13 @@ function creatureSearch(){
 </header>
 <form>
 	<label for="crname">Creature Name:</label>
-	<input type="text" id="crname" name="crname" value="">
-	<label for="environment">Environment(s):</label>
+	<input type="text" id="crname" name="crname" value="" size="20">
+    <br><br>
+    <label for="minxp">Minimum XP:</label>
+	<input type="number" id="minxp" name="minxp" min="0" size="4">
+    <label for="maxxp">Maximum XP:</label>
+	<input type="number" id="maxxp" name="maxxp" size="4">
+	<br><br>
 	<select name="environment" id="environment" multiple>
 	<option value="Aquatic">Aquatic</option>
 	<option value="Arctic">Arctic</option>
@@ -412,7 +421,6 @@ function creatureSearch(){
 	<option value="Underground">Underground</option>
 	<option value="Urban">Urban</option>
 	</select>
-	<label for="creaturetype">Creature Type(s):</label>
 	<select name="creaturetype" id="creaturetype" multiple>
 	<option value="Aberration">Aberration</option>
 	<option value="Beast">Beast</option>
@@ -429,7 +437,6 @@ function creatureSearch(){
 	<option value="Plant">Plant</option>
 	<option value="Undead">Undead</option>
 	</select>
-	<label for="book">Book(s):</label>
 	<select name="book" id="book" multiple>
 	<option value="Tome of Beasts">Tome of Beasts</option>
 	<option value="Monster Manual">Monster Manual</option>
