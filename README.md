@@ -379,7 +379,10 @@ function loadFile(filePath){
 }
 
 function creatureSearch(){
-	document.getElementById("creatures").innerHTML = loadFile("FILES/CREATURES/AQUATIC.txt");
+	var output = "";
+	var fileoutput = loadFile("FILES/CREATURES/AQUATIC.txt");
+	fileoutput = fileoutput.split("\");
+	document.getElementById("creatures").innerHTML = fileoutput;
 }
 </script>
 <header>
