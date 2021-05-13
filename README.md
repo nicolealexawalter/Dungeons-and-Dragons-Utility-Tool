@@ -1,6 +1,23 @@
 <html>
 <head>
 <link rel="shortcut icon" type="image/png" href="favicon.png">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
 </head>
 <body>
 <header>
@@ -8,11 +25,11 @@
 </header>
 <form>
   <label for="numchar">Number Characters:</label>
-  <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
+  <input type="number" id="numchar" name="numchar" value="" min=1 max=99><br>
   <label for="level">Average Level:</label>
-  <input type="number" id="level" name="level" value="" min=1 max=20>
+  <input type="number" id="level" name="level" value="" min=1 max=20><br>
   <label for="difficulty">Difficulty:</label>
-  <select name="difficulty" id="difficulty">
+  <select name="difficulty" id="difficulty"><br>
   <option value="Easy">Easy</option>
   <option value="Medium">Medium</option>
   <option value="Hard">Hard</option>
@@ -22,6 +39,12 @@
 <button onclick="calculateXP()">Calculate</button>
 <p id="xpbudget"></p>
 <script>
+function creatureSearch(){
+
+
+
+}
+
 function calculateXP() {
   var level = document.getElementById("level").value;
   var numchar = document.getElementById("numchar").value;
@@ -317,6 +340,49 @@ function calculateXP() {
 </script>
 <header>
 <h1>Creature Searcher</h1>
+<p> 
 </header>
+<form>
+	<label for="crname">Creature Name:</label>
+	<input type="text" id="crname" name="crname" value=""><br>
+</form>
+<button onclick="creatureSearch()">Search</button><br><br>
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
 </body>
 </html>
