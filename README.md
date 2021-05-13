@@ -340,7 +340,6 @@ function calculateXP() {
 </script>
 <header>
 <h1>Creature Searcher</h1>
-<p> 
 </header>
 <form>
 	<label for="crname">Creature Name:</label>
