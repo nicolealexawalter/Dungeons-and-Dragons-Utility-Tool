@@ -375,13 +375,18 @@ function loadFile(filePath){
 	  if (xmlhttp.status==200) {
 		result = xmlhttp.responseText;
 	  }
-	  return result;
+	  result = result.split("/");
+	  var output = "";
+	  var i;
+	  for (i = 0; i < result.length; i++) {
+	    output += result[i] + "<br>";
+	  }
+	  return output;
 }
 
 function creatureSearch(){
 	var output = "";
 	var fileoutput = loadFile("FILES/CREATURES/AQUATIC.txt");
-	fileoutput = fileoutput.split("\");
 	document.getElementById("creatures").innerHTML = fileoutput;
 }
 </script>
