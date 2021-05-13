@@ -345,7 +345,7 @@ function loadFile(filePath){
 }
 
 function creatureSearch(){
-	document.getElementById("creatures").innerHTML = loadFile("FILES\CREATURES\AQUATIC.TXT")
+	document.getElementById("creatures").innerHTML = loadFile("FILES\CREATURES\AQUATIC.TXT");
 }
 </script>
 <header>
