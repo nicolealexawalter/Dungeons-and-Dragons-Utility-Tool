@@ -333,15 +333,24 @@ function calculateXP() {
   document.getElementById("xpbudget").innerHTML = xp + " XP";
 }
 
-function creatureSearch(){
-	document.getElementById('iframe').contentDocument.body.firstChild.innerHTML;
+function loadFile(filePath){
+	  var result = null;
+	  var xmlhttp = new XMLHttpRequest();
+	  xmlhttp.open("GET", filePath, false);
+	  xmlhttp.send();
+	  if (xmlhttp.status==200) {
+		result = xmlhttp.responseText;
+	  }
+	  return result;
 }
 
+function creatureSearch(){
+	document.getElementById("creatures").innerHTML = loadFile("FILES\CREATURES\AQUATIC.TXT")
+}
 </script>
 <header>
 <h1>Creature Searcher</h1>
 </header>
-<iframe id='iframe' src = 'FILES/CREATURES/AQUATIC.txt' onload = 'creatureSearch()'></iframe>
 <form>
 	<label for="crname">Creature Name:</label>
 	<input type="text" id="crname" name="crname" value=""><br>
