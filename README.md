@@ -412,7 +412,7 @@ function creatureSearch(){
 	}
 	
 	for (var i = 0; i < environments.length; i++) {
-		output += loadFile(environments[i].toUpperCase()) + "<br>";
+		output += loadFile("FILES\CREATURES\" + environments[i].toUpperCase() + ".txt") + "<br>";
 	}
 	
 	document.getElementById("creatures").innerHTML = output;
