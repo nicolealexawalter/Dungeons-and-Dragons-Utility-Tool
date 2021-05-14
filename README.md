@@ -78,6 +78,10 @@ tr:nth-child(even) {
 <p style="display:inline-block" id="xpbudget"></p>
 
 <script>
+function isEmpty(value){
+  return (value == null || value.length === 0);
+}
+
 function calculateXP() {
   var level = document.getElementById("level").value;
   var numchar = document.getElementById("numchar").value;
@@ -418,13 +422,93 @@ function creatureSearch(){
 		output += loadFile(filename);
 	}
 	
-	var tempsplit = output.split("<br>");
-	output = tempsplit.filter(function(value, index, self) { 
+	var deduped = output.split("<br>");
+	output = deduped.filter(function(value, index, self) { 
 	    return self.indexOf(value) === index;
-	}).join('<br>');
-	
-	document.getElementById("creatures").innerHTML = output;
+	});
+    
+    var tofilter = Array.from(output);
+	var filtered = new Array();
+    
+    for (var j = 0; j < tofilter.length; j++) {
+    	var creature = tofilter[j].split(" | ");
+        var name = String(creature[0]);
+        var size = String(creature[1]);
+        var type = String(creature[2]);
+        var alignment = String(creature[3]);
+        var xp = String(creature[4]);
+        var book = String(creature[5]);
+        
+        var xpint = parseInt(xp.replaceAll(",", ""));
+        
+        if(
+        	filterName(name.toLowerCase()) ||
+            filterXP(xpint) ||
+            filterType(type) ||
+            filterBook(book)
+        ){
+        	continue;
+        }
+        
+        var newcreature = [name, size, type, alignment, xp, book];
+        filtered.push(newcreature.join(" | "));
+    }
+    
+    
+    filtered.pop();
+    output = filtered;
+	document.getElementById("creatures").innerHTML = output.join("<br>");
 }
+
+//if filter returns true, we do filter the row
+function filterName(name){
+	var namefilter = String(document.getElementById("crname").value).slice(0).toLowerCase();
+    if (isEmpty(name) || 
+    	isEmpty(namefilter) ||
+		name.includes(namefilter)        
+        ){
+    	return false;
+    } else {
+    	return true;
+    }
+}
+
+//filter row if minxp is not null && less than xp
+//same in reverse for maxxp
+function filterXP(xp){
+	var minxp = document.getElementById("minxp").value;
+    var maxxp = document.getElementById("maxxp").value;
+    
+    if(!isEmpty(minxp) && minxp > xp) {
+    	return true;
+    }
+    
+    if(!isEmpty(maxxp) && maxxp < xp) {
+    	return true;
+    }
+    
+	return false;
+}
+
+//filter if the typefilters are not null, and the type is not included
+function filterType(type){
+	var typefilters = Array.from(document.getElementById('creaturetype').selectedOptions).map(({ value }) => value);
+    
+    /*if(!isEmpty(typefilters) && typefilters.includes(type)) {
+    	return false;
+    } else {
+    	return true;
+    }*/
+    
+    return false;
+}
+
+function filterBook(book){
+	var bookfilters = Array.from(document.getElementById('creaturetype').selectedOptions).map(({ value }) => value);
+    
+	return false;
+}
+
 </script>
 <header>
 <h1>Creature Searcher</h1>
