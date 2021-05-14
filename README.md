@@ -414,9 +414,14 @@ function creatureSearch(){
    	 }
     
 	for (var i = 0; i < environments.length; i++) {
-    	var filename = "FILES\\CREATURES\\" + environments[i].toUpperCase() + ".txt";
+    		var filename = "FILES\\CREATURES\\" + environments[i].toUpperCase() + ".txt";
 		output += loadFile(filename);
 	}
+	
+	var tempsplit = output.split("<br>");
+	output = tempsplit.filter(function(value, index, self) { 
+	    return self.indexOf(value) === index;
+	}).join('<br>');
 	
 	document.getElementById("creatures").innerHTML = output.length;
 }
