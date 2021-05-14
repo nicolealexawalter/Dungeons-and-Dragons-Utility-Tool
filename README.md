@@ -385,7 +385,7 @@ function loadFile(filePath){
 	  for (i = 0; i < result.length; i++) {
 	    output += result[i] + "<br>";
 	  }
-	  return output.replace("|", " | ");
+	  return output.replaceAll("|", " | ");
 }
 
 function creatureSearch(){
@@ -415,7 +415,7 @@ function creatureSearch(){
     
 	for (var i = 0; i < environments.length; i++) {
     	var filename = "FILES\\CREATURES\\" + environments[i].toUpperCase() + ".txt";
-		output += loadFile(filename) + "<br>";
+		output += loadFile(filename);
 	}
 	
 	document.getElementById("creatures").innerHTML = output;
