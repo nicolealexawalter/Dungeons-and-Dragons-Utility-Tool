@@ -390,8 +390,32 @@ function loadFile(filePath){
 
 function creatureSearch(){
 	var output = "";
-	var fileoutput = loadFile("FILES/CREATURES/AQUATIC.txt");
-	document.getElementById("creatures").innerHTML = fileoutput;
+	var environments = document.getElementById("environment").innerHTML;
+	
+	if (environments.length == 0) {
+		environments = {
+		"Aquatic",
+		"Arctic",
+		"Cave",
+		"Coast",
+		"Desert",
+		"Dungeon",
+		"Forest",
+		"Grassland",
+		"Mountain",
+		"Planar",
+		"Ruins",
+		"Swamp",
+		"Underground",
+		"Urban"
+		}
+	}
+	
+	for (var i = 0; i < environments.length; i++) {
+		output += loadFile(environments[i].toUpperCase()) + "<br>";
+	}
+	
+	document.getElementById("creatures").innerHTML = output;
 }
 </script>
 <header>
