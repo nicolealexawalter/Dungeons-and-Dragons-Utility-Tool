@@ -418,12 +418,12 @@ function creatureSearch(){
 		output += loadFile(filename);
 	}
 	
-	output = output.split("<br>");
-	var tempoutput = output.filter(function(value, index, self) { 
+	var tempsplit = output.split("<br>");
+	output = tempsplit.filter(function(value, index, self) { 
 	    return self.indexOf(value) === index;
-	});
+	}).join('<br>');
 	
-	document.getElementById("creatures").innerHTML = tempoutput.join("<br");
+	document.getElementById("creatures").innerHTML = output;
 }
 </script>
 <header>
