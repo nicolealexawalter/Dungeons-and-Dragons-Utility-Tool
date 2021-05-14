@@ -385,7 +385,7 @@ function loadFile(filePath){
 	  for (i = 0; i < result.length; i++) {
 	    output += result[i] + "<br>";
 	  }
-	  return output;
+	  return output.replace("|", " | ");
 }
 
 function creatureSearch(){
