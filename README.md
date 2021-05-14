@@ -419,11 +419,11 @@ function creatureSearch(){
 	}
 	
 	output = output.split("<br>");
-	output = output.filter(function(value, index, self) { 
+	var tempoutput = output.filter(function(value, index, self) { 
 	    return self.indexOf(value) === index;
 	});
 	
-	document.getElementById("creatures").innerHTML = output.join("<br");
+	document.getElementById("creatures").innerHTML = tempoutput.join("<br");
 }
 </script>
 <header>
