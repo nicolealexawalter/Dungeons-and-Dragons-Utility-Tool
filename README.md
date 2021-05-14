@@ -411,14 +411,14 @@ function creatureSearch(){
 		"Underground",
 		"Urban"
 		]
-    }
+   	 }
     
 	for (var i = 0; i < environments.length; i++) {
     	var filename = "FILES\\CREATURES\\" + environments[i].toUpperCase() + ".txt";
 		output += loadFile(filename);
 	}
 	
-	document.getElementById("creatures").innerHTML = output;
+	document.getElementById("creatures").innerHTML = output.length;
 }
 </script>
 <header>
