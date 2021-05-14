@@ -440,12 +440,15 @@ function creatureSearch(){
         var book = String(creature[5]);
         
         var xpint = parseInt(xp.replaceAll(",", ""));
+        var bookwithoutpage = String(book.split("p.")[0]);
         
         if(
         	filterName(name.toLowerCase()) ||
             filterXP(xpint) ||
             filterType(type.slice().trim()) ||
-            filterBook(book) ||
+            filterBook(bookwithoutpage.slice().trim()) ||
+            filterAlignment(alignment.slice().trim()) ||
+            filterSize(size.slice().trim()) ||
             isEmpty(name)
         ){
         	continue;
@@ -455,8 +458,6 @@ function creatureSearch(){
         filtered.push(newcreature.join(" | "));
     }
     
-    
-    //filtered.pop();
     output = filtered;
 	document.getElementById("creatures").innerHTML = output.join("<br>");
 }
@@ -495,10 +496,6 @@ function filterXP(xp){
 function filterType(type){
 	var typefilters = Array.from(document.getElementById('creaturetype').selectedOptions).map(({ value }) => value).join(",");
     
-    
-    //document.getElementById("debug").innerHTML += "<br>" + typefilters + " " + type + " " + typefilters.includes(type); 
-    
-    
     if(!isEmpty(typefilters) && !(typefilters.includes(type))) {
     	return true;
     }
@@ -507,9 +504,33 @@ function filterType(type){
 }
 
 function filterBook(book){
-	var bookfilters = Array.from(document.getElementById('creaturetype').selectedOptions).map(({ value }) => value);
+	var bookfilters = Array.from(document.getElementById('book').selectedOptions).map(({ value }) => value).join(",").trim();
     
-	return false;
+    if(!isEmpty(bookfilters) && !(bookfilters.includes(book))) {
+    	return true;
+    }
+    
+    return false;
+}
+
+function filterAlignment(alignment){
+	var alignmentfilters = Array.from(document.getElementById('alignment').selectedOptions).map(({ value }) => value).join(",").trim();
+    
+    if(!isEmpty(alignmentfilters) && !(alignmentfilters.includes(alignment))) {
+    	return true;
+    }
+    
+    return false;
+}
+
+function filterSize(size){
+	var sizefilters = Array.from(document.getElementById('size').selectedOptions).map(({ value }) => value).join(",").trim();
+    
+    if(!isEmpty(sizefilters) && !(sizefilters.includes(size))) {
+    	return true;
+    }
+    
+    return false;
 }
 
 </script>
@@ -522,11 +543,13 @@ function filterBook(book){
     <br><br>
     <label for="minxp">Minimum XP:</label>
 	<input type="number" id="minxp" name="minxp" min="0" size="4">
+    <br>
     <label for="maxxp">Maximum XP:</label>
 	<input type="number" id="maxxp" name="maxxp" size="4">
 	<br><br>
 	<select name="environment" id="environment" multiple>
-	<option value="Aquatic">Aquatic</option>
+	<option value="">Any</option>
+    <option value="Aquatic">Aquatic</option>
 	<option value="Arctic">Arctic</option>
 	<option value="Cave">Cave</option>
 	<option value="Coast">Coast</option>
@@ -541,7 +564,8 @@ function filterBook(book){
 	<option value="Urban">Urban</option>
 	</select>
 	<select name="creaturetype" id="creaturetype" multiple>
-	<option value="Aberration">Aberration</option>
+	<option value="">Any</option>
+    <option value="Aberration">Aberration</option>
 	<option value="Beast">Beast</option>
 	<option value="Celestial">Celestial</option>
 	<option value="Construct">Construct</option>
@@ -556,13 +580,41 @@ function filterBook(book){
 	<option value="Plant">Plant</option>
 	<option value="Undead">Undead</option>
 	</select>
+    <br><br>
 	<select name="book" id="book" multiple>
-	<option value="Tome of Beasts">Tome of Beasts</option>
+	<option value="">Any</option>
+    <option value="Tome of Beasts">Tome of Beasts</option>
 	<option value="Monster Manual">Monster Manual</option>
 	<option value="Volo's Guide to Monsters">Volo's Guide to Monsters</option>
 	<option value="Mordenkainen's Tome of Foes">Mordenkainen's Tome of Foes</option>
 	</select>
-    <br>
+    <br><br>
+    <select name="Alignment" id="alignment" multiple>
+	<option value="">Any</option>
+    <option value="non-chaotic">Non-Chaotic</option>
+    <option value="non-evil">Non-Evil</option>
+    <option value="non-good">Non-Good</option>
+    <option value="non-lawful">Non-Lawful</option>
+	<option value="unaligned">Unaligned</option>
+    <option value="lawful good">Lawful Good</option>
+    <option value="neutral good">Neutral Good</option>
+    <option value="chaotic good">Chaotic Good</option>
+    <option value="lawful neutral">Lawful Neutral</option>
+    <option value="neutral">Neutral</option>
+    <option value="chaotic neutral">Chaotic Neutral</option>
+    <option value="lawful evil">Lawful Evil</option>
+    <option value="neutral evil">Neutral Evil</option>
+    <option value="chaotic evil">Chaotic Evil</option>
+	</select>
+    <select name="Size" id="size" multiple>
+    <option value="">Any</option>
+	<option value="Tiny">Tiny</option>
+    <option value="Small">Small</option>
+    <option value="Medium">Medium</option>
+    <option value="Large">Large</option>
+    <option value="Huge">Huge</option>
+	<option value="Gargantuan">Gargantuan</option>
+	</select>
 </form>
 <button onclick="creatureSearch()">Search</button><br><br>
 <p class="creatureDisplay" id="creatures"></p>
