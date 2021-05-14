@@ -390,10 +390,12 @@ function loadFile(filePath){
 
 function creatureSearch(){
 	var output = "";
-	var environments = document.getElementById("environment").innerHTML;
-	
-	if (environments.length == 0) {
-		environments = {
+    
+    var selectElement = document.getElementById('environment');
+	var environments = Array.from(selectElement.selectedOptions).map(option => option.value);
+    
+    if(environments.length == 0){
+    	environments = [
 		"Aquatic",
 		"Arctic",
 		"Cave",
@@ -408,11 +410,12 @@ function creatureSearch(){
 		"Swamp",
 		"Underground",
 		"Urban"
-		}
-	}
-	
+		]
+    }
+    
 	for (var i = 0; i < environments.length; i++) {
-		output += loadFile("FILES\CREATURES\" + environments[i].toUpperCase() + ".txt") + "<br>";
+    	var filename = "FILES\\CREATURES\\" + environments[i].toUpperCase() + ".txt";
+		output += loadFile(filename) + "<br>";
 	}
 	
 	document.getElementById("creatures").innerHTML = output;
