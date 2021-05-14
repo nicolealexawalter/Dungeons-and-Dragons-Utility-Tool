@@ -423,24 +423,9 @@ function creatureSearch(){
 	    return self.indexOf(value) === index;
 	});
 	
-	tempoutput = output.slice();
-	output = "";
-	for (var j = 0; j < tempoutput.length; j++) {
-		var creaturesplit = tempoutput[j].split(" | ");
-		var name = creaturesplit[1];
-		var size = creaturesplit[2];
-		var type = creaturesplit[3];
-		var alignment = creaturesplit[4];
-		var stringxp = creaturesplit[5];
-		var xp = parseint(stringxp.replaceAll(",", ""));
-		var book = creaturesplit[6];
-		
-		if(name.includes(document.getElementById("crname").innerHTML)) {
-			output += tempoutput[j] + "<br>";
-		}
-	}
+
 	
-	document.getElementById("creatures").innerHTML = output;
+	document.getElementById("creatures").innerHTML = document.getElementById("crname").innerHTML;
 }
 </script>
 <header>
