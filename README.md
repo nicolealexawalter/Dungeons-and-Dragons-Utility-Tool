@@ -423,7 +423,7 @@ function creatureSearch(){
 	    return self.indexOf(value) === index;
 	}).join('<br>');
 	
-	document.getElementById("creatures").innerHTML = output.length;
+	document.getElementById("creatures").innerHTML = output;
 }
 </script>
 <header>
