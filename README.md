@@ -423,7 +423,7 @@ function creatureSearch(){
 	    return self.indexOf(value) === index;
 	});
 	
-	tempoutput = output;
+	tempoutput = output.slice();
 	output = "";
 	for (var j = 0; j < tempoutput.length; j++) {
 		var creaturesplit = tempoutput[j].split(" | ");
