@@ -444,8 +444,9 @@ function creatureSearch(){
         if(
         	filterName(name.toLowerCase()) ||
             filterXP(xpint) ||
-            filterType(type) ||
-            filterBook(book)
+            filterType(type.slice().trim()) ||
+            filterBook(book) ||
+            isEmpty(name)
         ){
         	continue;
         }
@@ -455,7 +456,7 @@ function creatureSearch(){
     }
     
     
-    filtered.pop();
+    //filtered.pop();
     output = filtered;
 	document.getElementById("creatures").innerHTML = output.join("<br>");
 }
@@ -492,13 +493,15 @@ function filterXP(xp){
 
 //filter if the typefilters are not null, and the type is not included
 function filterType(type){
-	var typefilters = Array.from(document.getElementById('creaturetype').selectedOptions).map(({ value }) => value);
+	var typefilters = Array.from(document.getElementById('creaturetype').selectedOptions).map(({ value }) => value).join(",");
     
-    /*if(!isEmpty(typefilters) && typefilters.includes(type)) {
-    	return false;
-    } else {
+    
+    //document.getElementById("debug").innerHTML += "<br>" + typefilters + " " + type + " " + typefilters.includes(type); 
+    
+    
+    if(!isEmpty(typefilters) && !(typefilters.includes(type))) {
     	return true;
-    }*/
+    }
     
     return false;
 }
