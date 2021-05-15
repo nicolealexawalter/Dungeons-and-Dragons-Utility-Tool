@@ -756,6 +756,6 @@ function generateEncounter(){
   </select><br
 </form>
   <button onclick="calculateXP()">Calculate XP</button>
-  <p style="display:inline-block" id="xpbudget"></p><br>
+  <p style="display:inline-block" id="xpbudget"></p>
 </body>
 </html>
