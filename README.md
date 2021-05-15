@@ -20,6 +20,15 @@ height: 250px;
 overflow: scroll;
 }
 
+.npcDisplay {
+border: none;
+padding: 5px;
+font: 14 courier-new;
+width: 500px;
+height: 300px;
+overflow: scroll;
+}
+
 /* Scrollbar styles */
 ::-webkit-scrollbar {
 width: 5px;
@@ -59,23 +68,14 @@ tr:nth-child(even) {
 </head>
 <body>
 <header>
-<h1>Encounter XP Calculator</h1>
+<h1>Non-Player Characters</h2>
 </header>
+
 <form>
-  <label for="numchar">Number Characters:</label>
-  <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
-  <label for="level">Average Level:</label>
-  <input type="number" id="level" name="level" value="" min=1 max=20>
-  <label for="difficulty">Difficulty:</label>
-  <select name="difficulty" id="difficulty">
-  <option value="Easy">Easy</option>
-  <option value="Medium">Medium</option>
-  <option value="Hard">Hard</option>
-  <option value="Deadly">Deadly</option>
-  </select>
+  <button onclick="createNPC()">Create NPC</button>
+  <p class="npcDisplay" id="npcs"></p>
+  <br>
 </form>
-  <button onclick="calculateXP()">Calculate</button>
-  <p style="display:inline-block" id="xpbudget"></p>
 <script>
 function isEmpty(value){
   return (value == null || value.length === 0);
@@ -738,5 +738,23 @@ function generateEncounter(){
 <br><br>
 <p id="totalEncounterXP"></p>
 <p class="creatureDisplay" id="creatures"></p>
+
+<header>
+<h3>Calculate XP Budget</h3>
+  <label for="numchar">Number Characters:</label>
+  <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
+  <label for="level">Average Level:</label>
+  <input type="number" id="level" name="level" value="" min=1 max=20>
+  <label for="difficulty">Difficulty:</label>
+  <select name="difficulty" id="difficulty">
+  <option value="Easy">Easy</option>
+  <option value="Medium">Medium</option>
+  <option value="Hard">Hard</option>
+  <option value="Deadly">Deadly</option>
+  </select><br>
+  <button onclick="calculateXP()">Calculate XP</button>
+  <p style="display:inline-block" id="xpbudget"></p><br>
+</header>
+
 </body>
 </html>
