@@ -67,7 +67,7 @@ tr:nth-child(even) {
   <label for="level">Average Level:</label>
   <input type="number" id="level" name="level" value="" min=1 max=20><br>
   <label for="difficulty">Difficulty:</label>
-  <select name="difficulty" id="difficulty"><br>
+  <select name="difficulty" id="difficulty">
   <option value="Easy">Easy</option>
   <option value="Medium">Medium</option>
   <option value="Hard">Hard</option>
@@ -533,17 +533,57 @@ function filterSize(size){
     return false;
 }
 
+function sortAlphabeticallyAscending(){
+	var output = document.getElementById("creatures").innerHTML.split("<br>");
+    
+    output = output.sort();
+    
+    document.getElementById("creatures").innerHTML = output.join("<br>");
+}
+
+function sortAlphabeticallyDescending(){
+	var output = document.getElementById("creatures").innerHTML.split("<br>");
+    
+    output = output.sort().reverse();
+    
+    document.getElementById("creatures").innerHTML = output.join("<br>");
+}
+
+function sortXP(ascending){
+	var creatures = document.getElementById("creatures").innerHTML.split("<br>");
+    
+    var splitapart = [];
+    for (var j = 0; j < creatures.length; j++) {
+    	var creature = creatures[j].split(" | ");
+        splitapart.push(creature);
+    }
+    
+    splitapart = splitapart.sort(function(a, b) {
+      return parseInt(a[4].replace(",", "")) - parseInt(b[4].replace(",", ""));
+    })
+    
+    if(!ascending){
+    	splitapart = splitapart.reverse();
+    }
+    
+    var output = [];
+    for (var j = 0; j < splitapart.length; j++) {
+    	var creature = splitapart[j];
+        output.push(creature.join(" | "));
+    }
+        
+    document.getElementById("creatures").innerHTML = output.join("<br>");
+}
+
 </script>
 <header>
 <h1>Creature Searcher</h1>
 </header>
 <form>
 	<label for="crname">Creature Name:</label>
-	<input type="text" id="crname" name="crname" value="" size="20">
-    <br><br>
+	<input type="text" id="crname" name="crname" value="" size="10">
     <label for="minxp">Minimum XP:</label>
 	<input type="number" id="minxp" name="minxp" min="0" size="4">
-    <br>
     <label for="maxxp">Maximum XP:</label>
 	<input type="number" id="maxxp" name="maxxp" size="4">
 	<br><br>
@@ -580,7 +620,6 @@ function filterSize(size){
 	<option value="Plant">Plant</option>
 	<option value="Undead">Undead</option>
 	</select>
-    <br><br>
 	<select name="book" id="book" multiple>
 	<option value="">Any</option>
     <option value="Tome of Beasts">Tome of Beasts</option>
@@ -588,14 +627,8 @@ function filterSize(size){
 	<option value="Volo's Guide to Monsters">Volo's Guide to Monsters</option>
 	<option value="Mordenkainen's Tome of Foes">Mordenkainen's Tome of Foes</option>
 	</select>
-    <br><br>
     <select name="Alignment" id="alignment" multiple>
 	<option value="">Any</option>
-    <option value="non-chaotic">Non-Chaotic</option>
-    <option value="non-evil">Non-Evil</option>
-    <option value="non-good">Non-Good</option>
-    <option value="non-lawful">Non-Lawful</option>
-	<option value="unaligned">Unaligned</option>
     <option value="lawful good">Lawful Good</option>
     <option value="neutral good">Neutral Good</option>
     <option value="chaotic good">Chaotic Good</option>
@@ -605,6 +638,7 @@ function filterSize(size){
     <option value="lawful evil">Lawful Evil</option>
     <option value="neutral evil">Neutral Evil</option>
     <option value="chaotic evil">Chaotic Evil</option>
+    <option value="unaligned">Unaligned</option>
 	</select>
     <select name="Size" id="size" multiple>
     <option value="">Any</option>
@@ -616,7 +650,12 @@ function filterSize(size){
 	<option value="Gargantuan">Gargantuan</option>
 	</select>
 </form>
-<button onclick="creatureSearch()">Search</button><br><br>
+<button onclick="creatureSearch()">Search</button>
+<button onclick="sortAlphabeticallyAscending()">Sort A-Z</button>
+<button onclick="sortAlphabeticallyDescending()">Sort Z-A</button>
+<button onclick="sortXP(false)">Sort by Highest XP</button>
+<button onclick="sortXP(true)">Sort by Lowest XP</button>
+<br><br>
 <p class="creatureDisplay" id="creatures"></p>
 </body>
 </html>
