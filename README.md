@@ -753,10 +753,9 @@ function generateEncounter(){
   <option value="Medium">Medium</option>
   <option value="Hard">Hard</option>
   <option value="Deadly">Deadly</option>
-  </select><br>
+  </select><br
+</form>
   <button onclick="calculateXP()">Calculate XP</button>
   <p style="display:inline-block" id="xpbudget"></p><br>
-</form>
-
 </body>
 </html>
