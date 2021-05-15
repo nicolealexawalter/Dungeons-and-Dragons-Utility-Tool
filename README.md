@@ -578,6 +578,7 @@ function sortXP(ascending){
 }
 
 function generateEncounter(){
+	creatureSearch();
 	var rawcreatures = document.getElementById("creatures").innerHTML.split("<br>");
     
     var splitapart = [];
