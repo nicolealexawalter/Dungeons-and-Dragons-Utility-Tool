@@ -63,9 +63,9 @@ tr:nth-child(even) {
 </header>
 <form>
   <label for="numchar">Number Characters:</label>
-  <input type="number" id="numchar" name="numchar" value="" min=1 max=99><br>
+  <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
   <label for="level">Average Level:</label>
-  <input type="number" id="level" name="level" value="" min=1 max=20><br>
+  <input type="number" id="level" name="level" value="" min=1 max=20>
   <label for="difficulty">Difficulty:</label>
   <select name="difficulty" id="difficulty">
   <option value="Easy">Easy</option>
@@ -73,9 +73,10 @@ tr:nth-child(even) {
   <option value="Hard">Hard</option>
   <option value="Deadly">Deadly</option>
   </select>
+  <br>
+  <button onclick="calculateXP()">Calculate</button>
+  <p style="display:inline-block" id="xpbudget"></p>
 </form>
-<button onclick="calculateXP()">Calculate</button>
-<p style="display:inline-block" id="xpbudget"></p>
 
 <script>
 function isEmpty(value){
@@ -373,6 +374,7 @@ function calculateXP() {
      	xp = 0;
   };
   document.getElementById("xpbudget").innerHTML = xp + " XP";
+  document.getElementById("encounterxp").value = xp;
 }
 
 function loadFile(filePath){
@@ -575,13 +577,31 @@ function sortXP(ascending){
     document.getElementById("creatures").innerHTML = output.join("<br>");
 }
 
+function generateEncounter(){
+	var creatures = document.getElementById("creatures").innerHTML.split("<br>");
+    
+    var splitapart = [];
+    for (var j = 0; j < creatures.length; j++) {
+    	var creature = creatures[j].split(" | ");
+        splitapart.push(creature);
+    }
+    
+    var output = [];
+    for (var j = 0; j < splitapart.length; j++) {
+    	var creature = splitapart[j];
+        output.push(creature.join(" | "));
+    }
+        
+    document.getElementById("creatures").innerHTML = output.join("<br>");
+}
+
 </script>
 <header>
 <h1>Creature Searcher</h1>
 </header>
 <form>
 	<label for="crname">Creature Name:</label>
-	<input type="text" id="crname" name="crname" value="" size="10">
+	<input type="text" id="crname" name="crname" value="" size="12">
     <label for="minxp">Minimum XP:</label>
 	<input type="number" id="minxp" name="minxp" min="0" size="4">
     <label for="maxxp">Maximum XP:</label>
@@ -652,9 +672,12 @@ function sortXP(ascending){
 </form>
 <button onclick="creatureSearch()">Search</button>
 <button onclick="sortAlphabeticallyAscending()">Sort A-Z</button>
-<button onclick="sortAlphabeticallyDescending()">Sort Z-A</button>
-<button onclick="sortXP(false)">Sort by Highest XP</button>
-<button onclick="sortXP(true)">Sort by Lowest XP</button>
+<button onclick="sortAlphabeticallyDescending()">Z-A</button>
+<button onclick="sortXP(false)">XP Highest</button>
+<button onclick="sortXP(true)">XP Lowest</button>
+<button onclick="generateEncounter()">Create Encounter</button>
+<label for="encounterxp">XP:</label>
+<input type="number" id="encounterxp" name="encounterxp" min="0" size="2">
 <br><br>
 <p class="creatureDisplay" id="creatures"></p>
 </body>
