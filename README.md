@@ -68,7 +68,7 @@ tr:nth-child(even) {
 </head>
 <body>
 <header>
-<h1>Non-Player Characters</h2>
+<h1>Non-Player Characters</h1>
 </header>
 
 <form>
@@ -741,6 +741,8 @@ function generateEncounter(){
 
 <header>
 <h3>Calculate XP Budget</h3>
+</header>
+<form>
   <label for="numchar">Number Characters:</label>
   <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
   <label for="level">Average Level:</label>
@@ -754,7 +756,7 @@ function generateEncounter(){
   </select><br>
   <button onclick="calculateXP()">Calculate XP</button>
   <p style="display:inline-block" id="xpbudget"></p><br>
-</header>
+</form>
 
 </body>
 </html>
