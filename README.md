@@ -596,7 +596,26 @@ function generateEncounter(){
     var encounter = [];
     
     while (totalxp > currentxp){
-    	var creature = creatures[Math.floor(Math.random() * creatures.length)];
+    	var acceptablecreatures = [];
+    
+    	for(var i=0;i<creatures.length;i++){
+        	var crtr = creatures[i];
+            var crtrxp = parseInt(crtr[4].replaceAll(",", ""));
+            var remainingxp = totalxp-currentxp;
+            var crtrwithinbounds = crtrxp <= remainingxp;
+            if(crtrwithinbounds){
+            	acceptablecreatures.push(crtr);
+            }
+        }
+        
+        var creature = [];
+        
+        if(acceptablecreatures.length < 1){
+        	creature = creatures[Math.floor(Math.random() * creatures.length)]
+        } else{
+        	creature = acceptablecreatures[Math.floor(Math.random() * acceptablecreatures.length)]
+        }
+        
         var creaturexp = parseInt(creature[4].replaceAll(",", ""));
         var newsize = 1+(encounter.length);
         var factor = 1;
