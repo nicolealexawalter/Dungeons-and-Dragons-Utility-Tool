@@ -59,7 +59,7 @@ tr:nth-child(even) {
 </head>
 <body>
 <header>
-<h1>XP Budget Calculator</h1>
+<h1>Encounter XP Calculator</h1>
 </header>
 <form>
   <label for="numchar">Number Characters:</label>
@@ -73,11 +73,9 @@ tr:nth-child(even) {
   <option value="Hard">Hard</option>
   <option value="Deadly">Deadly</option>
   </select>
-  <br>
+</form>
   <button onclick="calculateXP()">Calculate</button>
   <p style="display:inline-block" id="xpbudget"></p>
-</form>
-
 <script>
 function isEmpty(value){
   return (value == null || value.length === 0);
@@ -597,7 +595,7 @@ function generateEncounter(){
 
 </script>
 <header>
-<h1>Creature Searcher</h1>
+<h1>Creatures and Encounters</h1>
 </header>
 <form>
 	<label for="crname">Creature Name:</label>
