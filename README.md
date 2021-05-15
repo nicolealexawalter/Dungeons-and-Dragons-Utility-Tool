@@ -393,6 +393,8 @@ function loadFile(filePath){
 }
 
 function creatureSearch(){
+	document.getElementById("totalEncounterXP").innerHTML = "";
+
 	var output = "";
     
     var selectElement = document.getElementById('environment');
@@ -576,20 +578,57 @@ function sortXP(ascending){
 }
 
 function generateEncounter(){
-	var creatures = document.getElementById("creatures").innerHTML.split("<br>");
+	var rawcreatures = document.getElementById("creatures").innerHTML.split("<br>");
     
     var splitapart = [];
-    for (var j = 0; j < creatures.length; j++) {
-    	var creature = creatures[j].split(" | ");
+    for (var j = 0; j < rawcreatures.length; j++) {
+    	var creature = rawcreatures[j].split(" | ");
         splitapart.push(creature);
     }
     
+    var totalxp = document.getElementById("encounterxp").value;
+    
+    var currentxp = 0;
+    var rawtotalcreaturexp = 0;
+    
+    var creatures = Array.from(splitapart);
+    var encounter = [];
+    
+    while (totalxp > currentxp){
+    	var creature = creatures[Math.floor(Math.random() * creatures.length)];
+        var creaturexp = parseInt(creature[4].replaceAll(",", ""));
+        var newsize = 1+(encounter.length);
+        var factor = 1;
+        
+    	if(newsize == 1){
+        	factor = 1;
+        }else if(newsize == 2){
+        	factor = 1.5;
+        }else if(newsize >= 3 && newsize <=6){
+   			factor = 2;     	
+        }else if(newsize >= 7 && newsize <=10){
+        	factor = 2.5;
+        }else if(newsize >= 11 && newsize <=14){
+        	factor = 3;
+        }else if(newsize >= 15){
+        	factor = 4;
+        }else{
+        	factor = 1;
+        }
+        
+        rawtotalcreaturexp += creaturexp;
+        var updatedxp = factor * rawtotalcreaturexp;
+        encounter.push(creature);
+        currentxp = updatedxp;
+    }
+    
     var output = [];
-    for (var j = 0; j < splitapart.length; j++) {
-    	var creature = splitapart[j];
+    for (var j = 0; j < encounter.length; j++) {
+    	var creature = encounter[j];
         output.push(creature.join(" | "));
     }
-        
+    
+    document.getElementById("totalEncounterXP").innerHTML = "Total Encounter XP: " + currentxp;
     document.getElementById("creatures").innerHTML = output.join("<br>");
 }
 
@@ -677,6 +716,7 @@ function generateEncounter(){
 <label for="encounterxp">XP:</label>
 <input type="number" id="encounterxp" name="encounterxp" min="0" size="2">
 <br><br>
+<p id="totalEncounterXP"></p>
 <p class="creatureDisplay" id="creatures"></p>
 </body>
 </html>
