@@ -938,13 +938,13 @@ function loadFile(filePath){
 	  var output = "";
 	  var i;
 	  for (i = 0; i < result.length; i++) {
-	    var break = "";
+	    var linebreak = "";
 	    if(i == result.length-1){
-	    	break = "";
+	    	linebreak = "";
 	    }else{
-	    	break = "<br>";
+	    	linebreak = "<br>";
 	    }
-	    output += result[i] + break;
+	    output += result[i] + linebreak;
 	  }
 	  return output;
 }
