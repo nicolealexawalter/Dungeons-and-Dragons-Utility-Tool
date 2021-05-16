@@ -553,8 +553,8 @@ function constructNPC(){
     var stats = generateStats();
     
     //pick a random ideal / emotion / locale / activity / trade
-    var ideal = returnRandom(ideals);
-    var emotion = returnRandom(emotions);
+    var ideal = returnRandom(ideals).toLowerCase();
+    var emotion = returnRandom(emotions).toLowerCase();
     var locale = returnRandom(locales);
     var activity = returnRandom(activities);
     var trade = returnRandom(trades).toLowerCase();
