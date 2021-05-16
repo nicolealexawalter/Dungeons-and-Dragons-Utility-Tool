@@ -72,11 +72,36 @@ tr:nth-child(even) {
 </header>
 
 <form>
-  <button onclick="createNPC()">Create NPC</button>
-  <p class="npcDisplay" id="npcs"></p>
-  <br>
+  
+  
 </form>
-<script>
+<button onclick="createNPC()">Create NPC</button>
+<p class="npcDisplay" id="npcs"></p>
+<script src="https://unpkg.com/js-markov@3.0.3/dist/markov.js">
+
+const Markov = require('js-markov');
+
+function createNPC(){
+	
+	// Create a new Markov Chain
+    // By default, its type is text
+    var markov = new Markov();
+
+    // Add some states
+    markov.addStates([
+      'Today is sunny',
+      'Today is rainy',
+      'The weather is sunny',
+      'The weather for today is sunny',
+      'The weather for tomorrow might be rainy'
+    ]);
+
+    // Train the Markov Chain
+    markov.train();
+	
+	document.getElementById("npcs").innerHTML = markov.generateRandom() + "<br>";
+}
+
 function isEmpty(value){
   return (value == null || value.length === 0);
 }
@@ -753,9 +778,9 @@ function generateEncounter(){
   <option value="Medium">Medium</option>
   <option value="Hard">Hard</option>
   <option value="Deadly">Deadly</option>
-  </select>
+  </select><br>
 </form>
-  <button onclick="calculateXP()">Calculate XP</button>
-  <p style="display:inline-block" id="xpbudget"></p>
+<button onclick="calculateXP()">Calculate XP</button>
+<p style="display:inline-block" id="xpbudget"></p>
 </body>
 </html>
