@@ -526,20 +526,35 @@ var locales = loadFile("FILES\\NPC\\" + "LOCALES" + ".txt").split("<br>");
 var activities = loadFile("FILES\\NPC\\" + "ACTIVITIES" + ".txt").split("<br>");
 var trades = loadFile("FILES\\NPC\\" + "TRADES" + ".txt").split("<br>");
 var races = loadFile("FILES\\NPC\\" + "RACES" + ".txt").split("<br>");
-
+/*
+var traits = ["test", "test"];
+var ideals = ["test", "test"];
+var emotions = ["test", "test"];
+var locales = ["test", "test"];
+var activities = ["test", "test"];
+var trades = ["test", "test"];
+var races = ["Human-Human", "Human-Inhuman"];
+*/
 //load languages
 var lang_human_raw = loadFile("FILES\\NPC\\LANGUAGES\\" + "HUMAN" + ".txt").split("<br>");
+
+//var lang_human_raw = ["word", "sentence", "pargagraph", "paper", "listicle"];
 
 //generate language changes
 var lang_human = trainMarkovChain(lang_human_raw);
 
 function determineName(primaryrace){
+	var output = [];
+    
 	switch(primaryrace){
     	case "Human":
-        	return generateWord(lang_human, 2, true, 12);
+        	output = generateWord(lang_human, 2, true, 12);
+            break;
     	default:
-        	return generateWord(lang_human, 2, true, 12);
+        	output = generateWord(lang_human, 2, true, 12);
     }
+    
+    return output.join(" ");
 }
 
 function constructNPC(){
