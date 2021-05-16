@@ -1,4 +1,4 @@
-  Angry
+Angry
 Disgusted
 Sad
 Happy
@@ -93,7 +93,7 @@ Courageous
 Valued
 Respected
 Confident
-Succesful
+Successful
 Inquisitive
 Curious
 Joyful
