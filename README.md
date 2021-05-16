@@ -378,18 +378,17 @@ function generateWord(markov, numberwords, proper, maxlen){
 }
 
 //all global npc variables (global so they are only loaded once) go here
-var name = "Floopity Flin";
-var age = "Elderly";
-var sexuality = "Bi-Curious";
-var gender = "Agender";
-var race = "Orc";
-var stats = "STR +3 / BEA -2";
-var trait = "active";
-var ideal = "family";
-var emotion = "anxious";
-var locale = "in a rusty shack";
-var activity = "training dragons";
-var trade = "farmer";
+var orcish = trainMarkovChain(["Xaakt", "Turge", "Duma", "Podagog", "Woghuglat", "Matuk", "Xruul", "Burghed", "Viggulm", "Duma", "Kaghed", "Duma", "Arob", "Frug", "Zogugh", "Khagra", "Knorgh", "Silge", "Gul", "Narod", "Puiltag", "Bahgigoth", "Smogulg", "Prikdarok", "Vuiltag", "Trugagh", "Moth", "Varguk", "Rogdul", "Dular", "Glob", "Ushat", "Lagakh", "Bumph", "Shel", "Ulumpha", "Umog", "Lash", "Bolar", "Shelur", "Rolfish", "Gluronk", "Ghob", "Gonk", "Ushug", "Batul", "Shazgob", "Mor", "Burzob", ""]);
+var ages = ["Child","Youth","Adult","Senior"];
+var sexualities = ["Asexual", "Heterosexual", "Bicurious", "Bisexual", "Pansexual", "Androphilic", "Gynephillic", "Homosexual", "Demisexual", "Queer", "Questioning", "Sapiosexual", "Manasexual", "Chaser", "Graysexual"];
+var genders = ["Male-Passing", "Female-Passing", "Queer"];
+var races = [];
+var traits = ["Active", "Adaptable", "Admirable", "Adventurous", "Amiable"];
+var ideals = ["Change", "Creativity", "Freedom", "Independence", "No Limits", "Whimsy"];
+var emotions = ["Angry", "Disgusted", "Sad", "Happy", "Surprised"];
+var locales = ["in an abandoned squat", "in a lower-class home", "on top of a crowded tenement", "on the floor of a busy orphanage", "in a magical womb"];
+var activities = ["learning their parent's trade", "studying the blade", "as a knight's squire", "begging on the streets"];
+var trades = ["Foot Soldier", "Squire", "Aristocrat", "Village Idiot", "Acolyte"];
 
 function constructNPC(){
 	/*
@@ -400,6 +399,28 @@ function constructNPC(){
       Born /Locale, grew up /activity, currently works as a /trade
     */
 
+	//generate name
+	var name = generateWord(orcish, 1, true, 20);
+
+	//pick a random age / sexuality / gender
+    var age = returnRandom(ages);
+    var sexuality = returnRandom(sexualities);
+    var gender = returnRandom(genders);
+    
+    //pick a random race
+	var race = "to-do";
+
+	//generate stats
+    var stats = "to-do";
+    
+    //pick a random trait / ideal / emotion / locale / activity / trade
+    var trait = returnRandom(traits);
+    var ideal = returnRandom(ideals);
+    var emotion = returnRandom(emotions);
+    var locale = returnRandom(locales);
+    var activity = returnRandom(activities);
+    var trade = returnRandom(trades);
+	
 	return name + "<br>" + age + " " + sexuality + " " + gender + " " + race + " " + stats + "<br>" + "Is " + trait + ", Values " + ideal + ", Feels " + emotion + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is a " + trade;
 }
 
@@ -411,6 +432,10 @@ function newNPC(){
 
 function resetNPCs(){
 	document.getElementById("npcs").innerHTML = "";
+}
+
+function returnRandom(array){
+	return array[Math.floor(Math.random() * array.length)];
 }
 
 function capitalize(string){
