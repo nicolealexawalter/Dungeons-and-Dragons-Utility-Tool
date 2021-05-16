@@ -74,7 +74,8 @@ tr:nth-child(even) {
 <form>
 
 </form>
-  <button onclick="createNPC()">Create NPC</button>
+  <button onclick="newNPC()">Create NPC</button>
+  <button onclick="resetNPCs()">Reset</button>
   <p class="npcDisplay" id="npcs"></p>
 <script>
 
@@ -376,24 +377,40 @@ function generateWord(markov, numberwords, proper, maxlen){
     return output;
 }
 
-function createNPC(){
-	var array = [
-      "fleet",
-      "foot",
-      "found",
-      "find",
-      "fanned",
-      "finned",
-      "fooled",
-      "ruled",
-      "lead",
-    ];
-	
-    var markov = trainMarkovChain(array);
+//all global npc variables (global so they are only loaded once) go here
+var name = "Floopity Flin";
+var age = "Elderly";
+var sexuality = "Bi-Curious";
+var gender = "Agender";
+var race = "Orc";
+var stats = "STR +3 / BEA -2";
+var trait = "active";
+var ideal = "family";
+var emotion = "anxious";
+var locale = "in a rusty shack";
+var activity = "training dragons";
+var trade = "farmer";
+
+function constructNPC(){
+	/*
+     NPC Design
+      /Name
+      /Age /Sexuality /Gender /Race, /Stats
+      Is /Trait, Values /Ideal, Feels /Emotion
+      Born /Locale, grew up /activity, currently works as a /trade
+    */
+
+	return name + "<br>" + age + " " + sexuality + " " + gender + " " + race + " " + stats + "<br>" + "Is " + trait + ", Values " + ideal + ", Feels " + emotion + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is a " + trade;
+}
+
+function newNPC(){	
+    var output = constructNPC();
     
-    var output = generateWord(markov, 10, true, 5).join(", ");
-    
-    document.getElementById("npcs").innerHTML = output + "<br>";
+    document.getElementById("npcs").innerHTML += output + "<br><br>";
+}
+
+function resetNPCs(){
+	document.getElementById("npcs").innerHTML = "";
 }
 
 function capitalize(string){
