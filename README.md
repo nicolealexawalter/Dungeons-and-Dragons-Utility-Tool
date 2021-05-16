@@ -1,3 +1,4 @@
+<!-- Created by Nicole Walter -->
 <html>
 <head>
 <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -79,11 +80,96 @@ tr:nth-child(even) {
   <p class="npcDisplay" id="npcs"></p>
 <script>
 
+//credit https://github.com/rigoneri/indefinite-article.js
+/*
+ * indefinite-article.js v1.0.0, 12-18-2011
+ * 
+ * @author: Rodrigo Neri (@rigoneri)
+ * 
+ * (The MIT License)
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE. 
+ */ 
+ function determineArticle(phrase) {
+        
+    // Getting the first word 
+    var match = /\w+/.exec(phrase);
+    if (match)
+        var word = match[0];
+    else
+        return "an";
+    
+    var l_word = word.toLowerCase();
+    // Specific start of words that should be preceeded by 'an'
+    var alt_cases = ["honest", "hour", "hono"];
+    for (var i in alt_cases) {
+        if (l_word.indexOf(alt_cases[i]) == 0)
+            return "an";
+    }
+    
+    // Single letter word which should be preceeded by 'an'
+    if (l_word.length == 1) {
+        if ("aedhilmnorsx".indexOf(l_word) >= 0)
+            return "an";
+        else
+            return "a";
+    }
+    
+    // Capital words which should likely be preceeded by 'an'
+    if (word.match(/(?!FJO|[HLMNS]Y.|RY[EO]|SQU|(F[LR]?|[HL]|MN?|N|RH?|S[CHKLMNPTVW]?|X(YL)?)[AEIOU])[FHLMNRSX][A-Z]/)) {
+        return "an";
+    }
+    
+    // Special cases where a word that begins with a vowel should be preceeded by 'a'
+    regexes = [/^e[uw]/, /^onc?e\b/, /^uni([^nmd]|mo)/, /^u[bcfhjkqrst][aeiou]/]
+    for (var i in regexes) {
+        if (l_word.match(regexes[i]))
+            return "a"
+    }
+    
+    // Special capital words (UK, UN)
+    if (word.match(/^U[NK][AIEO]/)) {
+        return "a";
+    }
+    else if (word == word.toUpperCase()) {
+        if ("aedhilmnorsx".indexOf(l_word[0]) >= 0)
+            return "an";
+        else 
+            return "a";
+    }
+    
+    // Basic method of words that begin with a vowel being preceeded by 'an'
+    if ("aeiou".indexOf(l_word[0]) >= 0)
+        return "an";
+    
+    // Instances where y follwed by specific letters is preceeded by 'an'
+    if (l_word.match(/^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/))
+        return "an";
+    
+    return "a";
+}
+
 //credit https://github.com/Edwin-Pratt/js-markov
 /*
 MIT License
 
-Copyright (c) 2019 Edwin Pratt - note this is not the author of this site
+Copyright (c) 2019 Edwin Pratt
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -433,7 +519,7 @@ function generateStats(){
 var orcish = trainMarkovChain(["Xaakt", "Turge", "Duma", "Podagog", "Woghuglat", "Matuk", "Xruul", "Burghed", "Viggulm", "Duma", "Kaghed", "Duma", "Arob", "Frug", "Zogugh", "Khagra", "Knorgh", "Silge", "Gul", "Narod", "Puiltag", "Bahgigoth", "Smogulg", "Prikdarok", "Vuiltag", "Trugagh", "Moth", "Varguk", "Rogdul", "Dular", "Glob", "Ushat", "Lagakh", "Bumph", "Shel", "Ulumpha", "Umog", "Lash", "Bolar", "Shelur", "Rolfish", "Gluronk", "Ghob", "Gonk", "Ushug", "Batul", "Shazgob", "Mor", "Burzob", ""]);
 var ages = ["Young","Middle-Aged","Old"];
 var sexualities = ["Ace", "Heterosexual", "Bicurious", "Bisexual", "Pansexual", "Androphilic", "Gynephillic", "Homosexual", "Demisexual", "Queer", "Questioning", "Sapiosexual", "Manasexual", "Chaser", "Graysexual"];
-var genders = ["Male", "Female", "Queer"];
+var genders = ["Male", "Female", "Genderqueer"];
 var races = [];
 var traits = ["Active", "Adaptable", "Admirable", "Adventurous", "Amiable"];
 var ideals = ["Change", "Creativity", "Freedom", "Independence", "No Limits", "Whimsy"];
@@ -472,8 +558,9 @@ function constructNPC(){
     var locale = returnRandom(locales);
     var activity = returnRandom(activities);
     var trade = returnRandom(trades).toLowerCase();
+    trade = determineArticle(trade) + " " + trade;
 	
-	return name + "<br>" + trait + " " + age + " " + sexuality + " " + gender + " " + race + "<br>" + "Values " + ideal + " | Feels " + emotion + " | " + stats + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is a " + trade + ".";
+	return name + "<br>" + trait + " " + age + " " + sexuality + " " + gender + " " + race + "<br>" + "Values " + ideal + " | Feels " + emotion + " | " + stats + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is " + trade + ".";
 }
 
 function newNPC(){	
