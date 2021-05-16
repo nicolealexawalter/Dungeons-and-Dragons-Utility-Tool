@@ -78,6 +78,30 @@ tr:nth-child(even) {
   <p class="npcDisplay" id="npcs"></p>
 <script>
 
+//credit https://github.com/Edwin-Pratt/js-markov
+/*
+MIT License
+
+Copyright (c) 2019 Edwin Pratt - note this is not the author of this site
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
 class Markov {
   constructor (type = 'text') {
     // The type of values
@@ -309,25 +333,71 @@ class Markov {
   }
 }
 
-function createNPC(){
+function trainMarkovChain(strings){
+    
+    var splitstrings = [];
+    
+    for(var i = 0;i < strings.length;i++){
+    	splitstrings.push(String(strings[i].split("").join(" ")));
+    }
+        
     var markov = new Markov();
 
     // Add some states
-    markov.addStates([
-      'Today is sunny',
-      'Today is rainy',
-      'The weather is sunny',
-      'The weather for today is sunny',
-      'The weather for tomorrow might be rainy'
-    ]);
+    markov.addStates(splitstrings);
 
     // Train the Markov Chain
     markov.train();
 
-    // Generate an output
-    var output = markov.generateRandom();
+	return markov;    
+}
+
+function generateWord(markov, numberwords, proper, maxlen){
+
+	function generateWord(){
+    	var word = markov.generateRandom(maxlen).replaceAll(",", "").replaceAll(" ", ""); 
+    	if(proper){
+        	return capitalize(word);
+        } else{
+        	return word;
+        }
+    }
+    
+	var output = [];
+
+	if(numberwords == 1){
+    	output.push(generateWord());
+    } else {
+    	for(var j=0;j<numberwords;j++){
+        	output.push(generateWord());
+        }
+    }
+    
+    return output;
+}
+
+function createNPC(){
+	var array = [
+      "fleet",
+      "foot",
+      "found",
+      "find",
+      "fanned",
+      "finned",
+      "fooled",
+      "ruled",
+      "lead",
+    ];
+	
+    var markov = trainMarkovChain(array);
+    
+    var output = generateWord(markov, 10, true, 5).join(", ");
     
     document.getElementById("npcs").innerHTML = output + "<br>";
+}
+
+function capitalize(string){
+	return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function isEmpty(value){
