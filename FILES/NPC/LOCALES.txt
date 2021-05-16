@@ -1,138 +1,147 @@
-An abandoned squat.
-A lived-in squat.
-A lower-class home.
-A middle-class home.
-An upper-middle-class home.
-An upper-class home.
-A crowded tenement.
-A bustling apartment building.
-A rather quiet apartment building.
-A small apartment building, no more than 2 floors.
-An busy and raucous orphanage.
-A simple, small, and nice looking orphanage.
-A dirty orphanage, full of dirty and downtrodden looking orphans.
-A lavish, guarded mansion.
-An old mansion, guarded by fierce looking solders.
-A dirty mansion, fenced off but dilapidated.
-A temple to a Good Deity.
-A temple to a Neutral Deity.
-A Home of Ascetics.
-A monkish temple.
-A temple dedicated to an ancient order.
-A temple dedicated to a new order.
-An Abandoned Shrine.
-A functioning shrine to a God.
-A functioning shrine to an ideal.
-A functioning shrine to an ancient figure.
-A recently renovated shrine, dedicated to a god/ideal/ancient figure.
-An area under construction.
-A library dedicated to a study of religion.
-A library dedicated to a study of history.
-A library dedicated to a study of the sciences.
-An athletics house.
-A sports arena.
-A gym.
-An empty or abandoned warehouse.
-A heavily guarded warehouse, filled with expensive goods.
-A warehouse filled with cheap goods.
-A warehouse filled with bulk goods.
-A warehouse filled with live animals.
-A warehouse filled with weapons and armor.
-A warehouse filled with goods from a distant land.
-A warehouse that is actually a secret Smuggler's Den.
-An undertaker.
-A moneylender.
-A chandler.
-A smithy.
-A carpenter-shop.
-A weaver.
-A shoemaker.
-A furrier.
-A maidservant's quarters.
-A tailor.
-A barber.
-A jeweler.
-An old-clothes shop.
-A pastry shop.
-A wine-seller.
-A beer-seller.
-A pursemaker.
-A wood-seller.
-A book-binder.
-A butcher.
-A fishmonger.
-A painter.
-A roofer.
-A sculptor.
-A glovemaker.
-A woodcarver.
-A bookseller.
-A peasant house.
-A commoner house.
-A merchant house.
-A bereaucrat house.
-A political house.
-A noble house.
-A military house (barracks).
-A blacksmith.
-A carpenter.
-A glassblower.
-A tailor.
-A leatherwork.
-An armorsmith.
-A weaponsmith.
-An alchemist.
-A mageware-shop.
-A stable.
-A spice shop.
-A cloth shop.
-A rare/exotic materials shop.
-A brothel.
-An inn.
-A temple.
-A shrine.
-A church.
-A sanctuary.
-A spice market.
-A cloth market.
-A food market.
-An iron market.
-A granary.
-A quarry.
-A mine.
-A smelting furnace.
-A tavern.
-An inn.
-A pub.
-Some gladiator/fighter pits.
-A fighter school.
-A mage school.
-A library.
-A street/chimney sweep "shop".
-A town hall.
-A well.
-An aqueduct.
-A water source.
-An armory.
-An alchemy lab.
-A textile mill.
-A lumber mill.
-A library.
-A house.
-A grainery.
-A cistern.
-A cemetery.
-A bath house.
-A fountain.
-An administrative building.
-A fountain.
-A garden.
-A hospital.
-An office.
-A plaza.
-A restaurant.
-A stable.
-A shop.
-A tavern.
-A warehouse.
-An aslyum.
+in an abandoned squat
+in a lived-in squat
+in a lower-class home
+in a middle-class home
+in a upper-middle-class home
+in a upper-class home
+in a crowded tenement
+in a bustling apartment building
+in a rather quiet apartment building
+in a small apartment building, no more than 2 floors
+in an busy and raucous orphanage
+in a simple, small, and nice looking orphanage
+in a dirty orphanage, full of dirty and downtrodden looking orphans
+in a lavish, guarded mansion
+in an old mansion, guarded by fierce looking solders
+in a dirty mansion, fenced off but dilapidated
+in a temple to a Good Deity
+in a temple to a Neutral Deity
+in a Home of Ascetics
+in a monkish temple
+in a temple dedicated to an ancient order
+in a temple dedicated to a new order
+in an Abandoned Shrine
+in a functioning shrine to a God
+in a functioning shrine to an ideal
+in a functioning shrine to an ancient figure
+in a recently renovated shrine, dedicated to a god/ideal/ancient figure
+in an area under construction
+in a library dedicated to a study of religion
+in a library dedicated to a study of history
+in a library dedicated to a study of the sciences
+in an athletics house
+in a sports arena
+in a gym
+in an empty or abandoned warehouse
+in a heavily guarded warehouse, filled with expensive goods
+in a warehouse filled with cheap goods
+in a warehouse filled with bulk goods
+in a warehouse filled with live animals
+in a warehouse filled with weapons and armor
+in a warehouse filled with goods from a distant land
+in a warehouse that is actually a secret Smuggler's Den
+in an undertaker
+in a moneylender
+in a chandler
+in a smithy
+in a carpenter-shop
+in a weaver
+in a shoemaker
+in a furrier
+in a maidservant's quarters
+in a tailor
+in a barber
+in a jeweler
+in an old-clothes shop
+in a pastry shop
+in a wine-seller
+in a beer-seller
+in a pursemaker
+in a wood-seller
+in a book-binder
+in a butcher
+in a fishmonger
+in a painter
+in a roofer
+in a sculptor
+in a glovemaker
+in a woodcarver
+in a bookseller
+in a peasant house
+in a commoner house
+in a merchant house
+in a bereaucrat house
+in a political house
+in a noble house
+in a military house (barracks)
+in a blacksmith
+in a carpenter
+in a glassblower
+in a tailor
+in a leatherwork
+in an armorsmith
+in a weaponsmith
+in an alchemist
+in a mageware-shop
+in a stable
+in a spice shop
+in a cloth shop
+in a rare/exotic materials shop
+in a brothel
+in an inn
+in a temple
+in a shrine
+in a church
+in a sanctuary
+in a spice market
+in a cloth market
+in a food market
+in an iron market
+in a granary
+in a quarry
+in a mine
+in a smelting furnace
+in a tavern
+in an inn
+in a pub
+in some gladiator/fighter pit
+in a fighter school
+in a mage school
+in a library
+in a street/chimney sweep "shop"
+in a town hall
+in a well
+in an aqueduct
+in a water source
+in an armory
+in an alchemy lab
+in a textile mill
+in a lumber mill
+in a library
+in a house
+in a grainery
+in a cistern
+in a cemetery
+in a bath house
+in a fountain
+in an administrative building
+in a fountain
+in a garden
+in a hospital
+in an office
+in a plaza
+in a restaurant
+in a stable
+in a shop
+in a tavern
+in a warehouse
+in an aslyum
+on a boat
+in the wilds
+in the forest
+in a mine
+in a workshop
+on the street
+in a palace
+in a noble home
+in a rich home
