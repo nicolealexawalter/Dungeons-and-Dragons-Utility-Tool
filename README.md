@@ -591,7 +591,7 @@ function constructNPC(){
     var trade = returnRandom(trades).toLowerCase();
     trade = determineArticle(trade) + " " + trade;
 	
-	return race + "/" + primaryrace + "/" + descriprace + "/" + name;
+	return races + " / " + races.length + " / " + lang_human_raw + " / " + lang_human_raw.length;
 	//return name + "<br>" + trait + " " + age + " " + sexuality + " " + gender + " " + descriprace + "<br>" + "Values " + ideal + " | Feels " + emotion + " | " + stats + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is " + trade + ".";
 }
 
