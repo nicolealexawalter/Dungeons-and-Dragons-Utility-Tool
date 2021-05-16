@@ -909,7 +909,7 @@ function loadFile(filePath){
 	  for (i = 0; i < result.length; i++) {
 	    output += result[i] + "<br>";
 	  }
-	  return output.replaceAll("|", " | ");
+	  return output;
 }
 
 function creatureSearch(){
@@ -941,7 +941,7 @@ function creatureSearch(){
     
 	for (var i = 0; i < environments.length; i++) {
     		var filename = "FILES\\CREATURES\\" + environments[i].toUpperCase() + ".txt";
-		output += loadFile(filename).replaceAll("|", " |");
+		output += loadFile(filename).replaceAll("|", " | ");
 	}
 	
 	var deduped = output.split("<br>");
