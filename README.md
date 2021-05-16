@@ -526,30 +526,26 @@ var locales = loadFile("FILES\\NPC\\" + "LOCALES" + ".txt").split("<br>");
 var activities = loadFile("FILES\\NPC\\" + "ACTIVITIES" + ".txt").split("<br>");
 var trades = loadFile("FILES\\NPC\\" + "TRADES" + ".txt").split("<br>");
 var races = loadFile("FILES\\NPC\\" + "RACES" + ".txt").split("<br>");
-/*
-var traits = ["test", "test"];
-var ideals = ["test", "test"];
-var emotions = ["test", "test"];
-var locales = ["test", "test"];
-var activities = ["test", "test"];
-var trades = ["test", "test"];
-var races = ["Human-Human", "Human-Inhuman"];
-*/
-//load languages
-var lang_human_raw = loadFile("FILES\\NPC\\LANGUAGES\\" + "HUMAN" + ".txt").split("<br>");
 
-//var lang_human_raw = ["word", "sentence", "pargagraph", "paper", "listicle"];
+//load languages
+var lang_raw_human = loadFile("FILES\\NPC\\LANGUAGES\\" + "HUMAN" + ".txt").split("<br>");
+var lang_raw_elvish = loadFile("FILES\\NPC\\LANGUAGES\\" + "ELVISH" + ".txt").split("<br>");
 
 //generate language changes
-var lang_human = trainMarkovChain(lang_human_raw);
+var lang_human = trainMarkovChain(lang_raw_human);
+var lang_elvish = trainMarkovChain(lang_raw_elvish);
 
+//determine name by race
 function determineName(primaryrace){
 	var output = [];
     
 	switch(primaryrace){
     	case "Human":
         	output = generateWord(lang_human, 2, true, 12);
-            break;
+            	break;
+	case "Elf":
+		output = generateWord(lang_elvish, 3, true, 20);
+		break;
     	default:
         	output = generateWord(lang_human, 2, true, 12);
     }
