@@ -53,14 +53,13 @@ Traveling Merchant
 Archaeologist
 Beast Master
 Conjurist
-Hermit6
+Hermit
 Highwayman
 Holy Warrior
 Princess
 Watch Captain
 Guide
 Knight
-Aristocrat
 Sellsword
 Viking
 First Mate
@@ -75,7 +74,6 @@ Chieftain
 General
 Guild Master
 Queen
-Aristocrat
 Bandit Lord
 Bounty Hunter
 Captain
@@ -86,15 +84,11 @@ Saint
 High Priest
 King
 Mastern
-Acolyte
 Arcane Merchant
-Bandit
 Con Artist
 Courier
 Diplomat
 Entertainer
-Gladiator
-Guide
 Healer
 Hermit
 Hunter
@@ -103,2482 +97,195 @@ Merchant
 Noble Warrior
 Nomad
 Soldier
-Squire
 Thief
 Woodsman
-Acolyte
 Apprentice
-Farmer
 Guardian
-Healer
-Hermit
-Hunter
 Laborer
 Miner
 Serf
-Soldier
-Woodsman
-Apprentice
-Arcane Merchant
-Diplomat
 Fisherman
-Guide
-Merchant
 Pirate
 Seaman
-Apprentice
 Arcane Student
-Bandit
-Guide
-Healer
-Hermit
-Nomad
 Primitive
-Acolyte
-Apprentice
-Arcane Merchant
-Arcane Student
-Entertainer
-Guardian
-Guide
-Healer
-Merchant
 Scribe
 Stablehand
 Tavern Server
-Acolyte
 Animal Catcher
-Apprentice
-Arcane Merchant
-Arcane Student
 Athlete
-Beggar
-Con Artist
 Courtesan
-Courier
-Entertainer
-Gladiator
-Guardian
-Guide
-Healer
-Investigator
-Laborer
-Merchant
 Scholar
-Scribe
 Servant
-Soldier
-Stablehand
-Tavern Server
-Thief
-Apprentice
-Courtesan
-Courier
 Courtier
-Diplomat
-Entertainer
-Guardian
-Noble Warrior
-Servant
+Bandit Warrior
+Farmer Commoner
+Former Prisoner
+Magician
+Preist
+Bard
+Pirate Crewmember
+Tribal
+Carpenter
+Blacksmith
+Shoemaker
+Tanner
+Saddler
+Locksmith
+Baker
+Moneychanger
+Acrobat
+Alchemist
+Apothecarist
+Architect
+Armorer
+Artist
+Lawyer
+Bookbinder
+Bowyer (Bow Maker)
+Basket Weaver
+Brewer
+Brick Layer
+Butcher
+Calligrapher
+Candlemaker
+Cartographer
+Charcoal Burner
+Clerk
+Clothier
+Cook
+Coppersmith
+Cooper
+Dyer
+Engineer
+Engraver
+Falconer
+Fishmonger
+Forester
+Fortune-Teller
+Fruitier
+Furrier
+Glassblower
+Goldsmith
+Grocer
+Gardener
+Grain Merchant
+Grave Digger
+Haberdasher
+Herald
+Herbalist
+Inkeeper
+Interpreter
+Jester
+Jeweler
+Lacemaker
+Leatherworker
+Mason
+Mercer
+Miller
+Messenger
+Moneylender
+Navigator
+Needleworker
+Paint
+Peddler
+Physician
+Playwright
+Politican
+Potter
+Rat Catcher
+Sailor
+Shipwright
+Silversmith
+Solicitor
+Soapmaker
+Stonecarver
+Spy
+Tanner
+Towne Crier
+Vintner
+Washer Woman
+Waterman
+Weaver
+Wet Nurse
+Wheelwright Wood Carver
+Woodworker
+Game Keeper
+Poacher
+Animal-Fighter
+Tinkerer
+Astrologer
+Crossbow-Maker (Atilliator)
+Barber (Hair, Dentists, Surgeons, Blood-Letters)
+Bottler
+Chaplain
+Ewerer
+Stonemason
+Tailor
+Plowman
+Metalsmith
+Groom
+Page
+Draper
+Academic
+Ascetic
+Barber
+Barrister
+Bureaucrat
+Monk/Nun
+Adventurer
+Dilettante
+Professionals
+Bowyer
+Bricklayer
+Candlemaker
+Cartwright
+Cobbler
+Shoemaker
+Goldsmith
+Silversmith
+Hatter
+Inn-Keeper
+Tavern-Keeper
+Joiner
+Tax Collector
+Tinker
+Trader
+Boatman
+Coachman
+Gravedigger
+Herdsman
+Hunter
+Trapper
+Painter
+Ratcatcher
+Seamstress
+Stevedore
+Bodyguard
+Gatekeeper
+Toll Keeper
+Jailer
+Mercenary
 Soldier
-Squire
-Stablehand
-Bandit
-Con Artist
-Nomad
-Pirate
-Seaman
-Thief
-Foot Soldier
-Acolyte
-Bandit Warrior
-Farmer Commoner
-Guard
-Initiate
-Vagabond
-Wanderer
-Burglar
-Former Prisoner
-Trapper
-Cavalry
-Gladiator
-Raider
-Archaeologist
-Traveling Merchant
-Conjurist
-Magician
-Holy Warrior
-Hermit
-Hermit
-Guide
-Sellsword
-Sellsword
-Sellsword
-Priest
-Preist
-Bard
-Bounty Hunter
-Pirate Crewmember
-Courier
-Courier
-Courier
-Courier
-Courier
-Entertainer
-Hunter
-Hunter
-Merchant
-Investigator
-Nomad
-Nomad
-Nomad
-Nomad
-Nomad
-Woodsman
-Farmer
-Healer
-Hunter
-Laborer
-Laborer
-Laborer
-Miner
-Serf
-Serf
-Serf
-Fisherman
-Tribal
-Athlete
-Beggar
-Beggar
-Beggar
-Beggar
-Beggar
-Courtesan
-Seaman
-Seaman
-Seaman
-Seaman
-Foot Soldier
-Acolyte
-Bandit Warrior
-Farmer Commoner
-Guard
-Initiate
-Vagabond
-Wanderer
-Burglar
-Former Prisoner
-Trapper
-Cavalry
-Gladiator
-Raider
-Archaeologist
-Traveling Merchant
-Conjurist
-Magician
-Holy Warrior
-Hermit
-Hermit
-Guide
-Sellsword
-Sellsword
-Sellsword
-Priest
-Preist
-Bard
-Bounty Hunter
-Pirate Crewmember
-Courier
-Courier
-Courier
-Courier
-Courier
-Entertainer
-Hunter
-Hunter
-Merchant
-Investigator
-Nomad
-Nomad
-Nomad
-Nomad
-Nomad
-Woodsman
-Farmer
-Healer
-Hunter
-Laborer
-Laborer
-Laborer
-Miner
-Serf
-Serf
-Serf
-Fisherman
-Tribal
-Athlete
-Beggar
-Beggar
-Beggar
-Beggar
-Beggar
-Courtesan
-Seaman
-Seaman
-Seaman
-Seaman
-Foot Soldier
-Acolyte
-Bandit Warrior
-Farmer Commoner
-Guard
-Initiate
-Vagabond
-Wanderer
-Burglar
-Former Prisoner
-Trapper
-Cavalry
-Gladiator
-Raider
-Archaeologist
-Traveling Merchant
-Conjurist
-Magician
-Holy Warrior
-Hermit
-Hermit
-Guide
-Sellsword
-Sellsword
-Sellsword
-Priest
-Preist
-Bard
-Bounty Hunter
-Pirate Crewmember
-Courier
-Courier
-Courier
-Courier
-Courier
-Entertainer
-Hunter
-Hunter
-Merchant
-Investigator
-Nomad
-Nomad
-Nomad
-Nomad
-Nomad
-Woodsman
-Farmer
-Healer
-Hunter
-Laborer
-Laborer
-Laborer
-Miner
-Serf
-Serf
-Serf
-Fisherman
-Tribal
-Athlete
-Beggar
-Beggar
-Beggar
-Beggar
-Beggar
-Courtesan
-Seaman
-Seaman
-Seaman
-Foot Soldier
-Acolyte
-Bandit Warrior
-Farmer Commoner
-Guard
-Initiate
-Vagabond
-Wanderer
-Burglar
-Former Prisoner
-Trapper
-Cavalry
-Gladiator
-Raider
-Archaeologist
-Traveling Merchant
-Conjurist
-Magician
-Holy Warrior
-Hermit
-Hermit
-Guide
-Sellsword
-Sellsword
-Sellsword
-Priest
-Preist
-Bard
-Bounty Hunter
-Pirate Crewmember
-Courier
-Courier
-Courier
-Courier
-Courier
-Entertainer
-Hunter
-Hunter
-Merchant
-Investigator
-Nomad
-Nomad
-Nomad
-Nomad
-Nomad
-Woodsman
-Farmer
-Healer
-Hunter
-Laborer
-Laborer
-Laborer
-Miner
-Serf
-Serf
-Serf
-Fisherman
-Tribal
-Athlete
-Beggar
-Beggar
-Beggar
-Beggar
-Beggar
-Courtesan
-Seaman
-Seaman
-Seaman
-Foot Soldier
-Acolyte
-Bandit Warrior
-Farmer Commoner
-Guard
-Initiate
-Vagabond
-Wanderer
-Burglar
-Former Prisoner
-Trapper
-Cavalry
-Gladiator
-Raider
-Archaeologist
-Traveling Merchant
-Conjurist
-Magician
-Holy Warrior
-Hermit
-Hermit
-Guide
-Sellsword
-Sellsword
-Sellsword
-Priest
-Preist
-Bard
-Bounty Hunter
-Pirate Crewmember
-Courier
-Courier
-Courier
-Courier
-Courier
-Entertainer
-Hunter
-Hunter
-Merchant
-Investigator
-Nomad
-Nomad
-Nomad
-Nomad
-Nomad
-Woodsman
-Farmer
-Healer
-Hunter
-Laborer
-Laborer
-Laborer
-Miner
-Serf
-Serf
-Serf
-Fisherman
-Tribal
-Athlete
-Beggar
-Beggar
-Beggar
-Beggar
-Beggar
-Courtesan
-Seaman
-Seaman
-Seaman
-Foot Soldier
-Acolyte
-Bandit Warrior
-Farmer Commoner
-Guard
-Initiate
-Vagabond
-Wanderer
-Burglar
-Former Prisoner
-Trapper
-Cavalry
-Gladiator
-Raider
-Archaeologist
-Traveling Merchant
-Conjurist
-Magician
-Holy Warrior
-Hermit
-Hermit
-Guide
-Sellsword
-Sellsword
-Sellsword
-Priest
-Preist
-Bard
-Bounty Hunter
-Pirate Crewmember
-Courier
-Courier
-Courier
-Courier
-Courier
-Entertainer
-Hunter
-Hunter
-Merchant
-Investigator
-Nomad
-Nomad
-Nomad
-Nomad
-Nomad
-Woodsman
-Farmer
-Healer
-Hunter
-Laborer
-Laborer
-Laborer
-Miner
-Serf
-Serf
-Serf
-Fisherman
-Tribal
-Athlete
-Beggar
-Beggar
-Beggar
-Beggar
-Beggar
-Courtesan
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Seaman
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Commoner
-Carpenter
-Blacksmith
-Shoemaker
-Tanner
-Saddler
-Locksmith
-Baker
-Moneychanger
-Acrobat
-Alchemist
-Apothecarist
-Architect
-Armorer
-Artist
-Baker
-Lawyer
-Bookbinder
-Bowyer (Bow Maker)
-Basket Weaver
-Blacksmith
-Brewer
-Brick Layer
-Butcher
-Calligrapher
-Candlemaker
-Carpenter
-Cartographer
-Charcoal Burner
-Clerk
-Clothier
-Cook
-Coppersmith
-Cooper
-Diplomat
-Dyer
-Engineer
-Engraver
-Falconer
-Farmer
-Fisherman
-Fishmonger
-Forester
-Fortune-Teller
-Fruitier
-Furrier
-Glassblower
-Goldsmith
-Grocer
-Gardener
-Grain Merchant
-Grave Digger
-Haberdasher
-Herald
-Herbalist
-Hunter
-Inkeeper
-Interpreter
-Jester
-Jeweler
-Lacemaker
-Leatherworker
-Locksmith
-Mason
-Mercer
-Miller
-Minstrel
-Messenger
-Miner
-Moneylender
-Navigator
-Needleworker
-Paint
-Peddler
-Priest
-Physician
-Playwright
-Politican
-Potter
-Rat Catcher
-Sailor
-Scribe
-Servant
-Shipwright
-Shoemaker
-Silversmith
-Solicitor
-Soapmaker
-Stonecarver
-Storyteller
-Spy
-Tanner, Towne Crier
-Vintner
-Washer Woman
-Waterman
-Weaver
-Wet Nurse
-Wheelwright Wood Carver
-Woodworker
-Game Keeper
-Poacher
-Animal-Fighter
-Gladiator
-Tinkerer
-Astrologer
-Crossbow-Maker (Atilliator)
-Barber (Hair, Dentists, Surgeons, Blood-Letters)
-Bottler
-Chaplain
-Clerk
-Ewerer
-Herald
-Miller
-Stonemason
-Blacksmith
-Armorer
-Falconer
-Tailor
-Carpenter
-Plowman
-Butcher
-Goldsmith
-Metalsmith
-Groom
-Squire
-Page
-Silversmith
-Grocer
-Draper
-Furrier
-Fishmonger
-Baker
-Weaver
-Academic
-Architect
-Ascetic
-Barber
-Barrister
-Bureaucrat
-Engineer
-Herald
-Monk/Nun
-Scribe
-Adventurer
-Dilettante
-Diplomat
-Page
-Squire
-Professionals
-Armorer
-Artist
-Baker
-Blacksmith
-Bookbinder
-Bowyer
-Brewer
-Bricklayer
-Butcher
-Candlemaker or Chandler
-Carpenter
-Cartwright
-Clothier
-Cobbler or Shoemaker
-Cook
-Cooper
-Dyer
-Engraver
-Furrier
-Glassblower
-Goldsmith or Silversmith
-Hatter
-Inn or Tavern-Keeper
-Jeweler
-Joiner
-Leatherworker
-Locksmith
-Mason
-Merchant
-Moneylender
-Potter
-Shipwright
-Tax Collector
-Tinker
-Torturer
-Trader
-Vintner
-Weaver
-Boatman
-Coachman
-Farmer
-Fisherman
-Gravedigger
-Groom
-Herdsman
-Hunter or Trapper
-Messenger
-Miller
-Miner
-Painter or Limner
-Peddler
-Ratcatcher
-Sailor
-Seamstress
-Servant
-Stevedore
-Bodyguard
-Bounty Hunter
-Forester
-Gatekeeper or Toll Keeper
-Jailer
-Mercenary or Soldier
 Watchman
-Beggar
-Burglar
 Fence
 Gambler
-Pickpocket or Cutpurse
+Pickpocket
+Cutpurse
 Procurer 
-Prostitute
-Slaver
 Smuggler
-Wanderer
-Acrobat
 Actor
 Clown
 Dancer
 Fortune-teller
 Juggler
-Minstrel
 Prestidigitator
-Storyteller
 Mythical Creature Caretaker
-Bounty Hunter
 Wizard
-Servant
 Nanny
 Maid
-Medium
-Dragon Tamer
-Carpenter
-Blacksmith
-Shoemaker
-Tanner
-Saddler
-Locksmith
-Baker
-Moneychanger
-Acrobat
-Alchemist
-Apothecarist
-Architect
-Armorer
-Artist
-Baker
-Lawyer
-Bookbinder
-Bowyer (Bow Maker)
-Basket Weaver
-Blacksmith
-Brewer
-Brick Layer
-Butcher
-Calligrapher
-Candlemaker
-Carpenter
-Cartographer
-Charcoal Burner
-Clerk
-Clothier
-Cook
-Coppersmith
-Cooper
-Diplomat
-Dyer
-Engineer
-Engraver
-Falconer
-Farmer
-Fisherman
-Fishmonger
-Forester
-Fortune-Teller
-Fruitier
-Furrier
-Glassblower
-Goldsmith
-Grocer
-Gardener
-Grain Merchant
-Grave Digger
-Haberdasher
-Herald
-Herbalist
-Hunter
-Inkeeper
-Interpreter
-Jester
-Jeweler
-Lacemaker
-Leatherworker
-Locksmith
-Mason
-Mercer
-Miller
-Minstrel
-Messenger
-Miner
-Moneylender
-Navigator
-Needleworker
-Paint
-Peddler
-Priest
-Physician
-Playwright
-Politican
-Potter
-Rat Catcher
-Sailor
-Scribe
-Servant
-Shipwright
-Shoemaker
-Silversmith
-Solicitor
-Soapmaker
-Stonecarver
-Storyteller
-Spy
-Tanner, Towne Crier
-Vintner
-Washer Woman
-Waterman
-Weaver
-Wet Nurse
-Wheelwright Wood Carver
-Woodworker
-Game Keeper
-Poacher
-Animal-Fighter
-Gladiator
-Tinkerer
-Astrologer
-Crossbow-Maker (Atilliator)
-Barber (Hair, Dentists, Surgeons, Blood-Letters)
-Bottler
-Chaplain
-Clerk
-Ewerer
-Herald
-Miller
-Stonemason
-Blacksmith
-Armorer
-Falconer
-Tailor
-Carpenter
-Plowman
-Butcher
-Goldsmith
-Metalsmith
-Groom
-Squire
-Page
-Silversmith
-Grocer
-Draper
-Furrier
-Fishmonger
-Baker
-Weaver
-Academic
-Architect
-Ascetic
-Barber
-Barrister
-Bureaucrat
-Engineer
-Herald
-Monk/Nun
-Scribe
-Adventurer
-Dilettante
-Diplomat
-Page
-Squire
-Professionals
-Armorer
-Artist
-Baker
-Blacksmith
-Bookbinder
-Bowyer
-Brewer
-Bricklayer
-Butcher
-Candlemaker or Chandler
-Carpenter
-Cartwright
-Clothier
-Cobbler or Shoemaker
-Cook
-Cooper
-Dyer
-Engraver
-Furrier
-Glassblower
-Goldsmith or Silversmith
-Hatter
-Inn or Tavern-Keeper
-Jeweler
-Joiner
-Leatherworker
-Locksmith
-Mason
-Merchant
-Moneylender
-Potter
-Shipwright
-Tax Collector
-Tinker
-Torturer
-Trader
-Vintner
-Weaver
-Boatman
-Coachman
-Farmer
-Fisherman
-Gravedigger
-Groom
-Herdsman
-Hunter or Trapper
-Messenger
-Miller
-Miner
-Painter or Limner
-Peddler
-Ratcatcher
-Sailor
-Seamstress
-Servant
-Stevedore
-Bodyguard
-Bounty Hunter
-Forester
-Gatekeeper or Toll Keeper
-Jailer
-Mercenary or Soldier
-Watchman
-Beggar
-Burglar
-Fence
-Gambler
-Pickpocket or Cutpurse
-Procurer 
-Prostitute
-Slaver
-Smuggler
-Wanderer
-Acrobat
-Actor
-Clown
-Dancer
-Fortune-teller
-Juggler
-Minstrel
-Prestidigitator
-Storyteller
-Mythical Creature Caretaker
-Bounty Hunter
-Wizard
-Servant
-Nanny
-Maid
-Medium
-Dragon Tamer
-Carpenter
-Blacksmith
-Shoemaker
-Tanner
-Saddler
-Locksmith
-Baker
-Moneychanger
-Acrobat
-Alchemist
-Apothecarist
-Architect
-Armorer
-Artist
-Baker
-Lawyer
-Bookbinder
-Bowyer (Bow Maker)
-Basket Weaver
-Blacksmith
-Brewer
-Brick Layer
-Butcher
-Calligrapher
-Candlemaker
-Carpenter
-Cartographer
-Charcoal Burner
-Clerk
-Clothier
-Cook
-Coppersmith
-Cooper
-Diplomat
-Dyer
-Engineer
-Engraver
-Falconer
-Farmer
-Fisherman
-Fishmonger
-Forester
-Fortune-Teller
-Fruitier
-Furrier
-Glassblower
-Goldsmith
-Grocer
-Gardener
-Grain Merchant
-Grave Digger
-Haberdasher
-Herald
-Herbalist
-Hunter
-Inkeeper
-Interpreter
-Jester
-Jeweler
-Lacemaker
-Leatherworker
-Locksmith
-Mason
-Mercer
-Miller
-Minstrel
-Messenger
-Miner
-Moneylender
-Navigator
-Needleworker
-Paint
-Peddler
-Priest
-Physician
-Playwright
-Politican
-Potter
-Rat Catcher
-Sailor
-Scribe
-Servant
-Shipwright
-Shoemaker
-Silversmith
-Solicitor
-Soapmaker
-Stonecarver
-Storyteller
-Spy
-Tanner, Towne Crier
-Vintner
-Washer Woman
-Waterman
-Weaver
-Wet Nurse
-Wheelwright Wood Carver
-Woodworker
-Game Keeper
-Poacher
-Animal-Fighter
-Gladiator
-Tinkerer
-Astrologer
-Crossbow-Maker (Atilliator)
-Barber (Hair, Dentists, Surgeons, Blood-Letters)
-Bottler
-Chaplain
-Clerk
-Ewerer
-Herald
-Miller
-Stonemason
-Blacksmith
-Armorer
-Falconer
-Tailor
-Carpenter
-Plowman
-Butcher
-Goldsmith
-Metalsmith
-Groom
-Squire
-Page
-Silversmith
-Grocer
-Draper
-Furrier
-Fishmonger
-Baker
-Weaver
-Academic
-Architect
-Ascetic
-Barber
-Barrister
-Bureaucrat
-Engineer
-Herald
-Monk/Nun
-Scribe
-Adventurer
-Dilettante
-Diplomat
-Page
-Squire
-Professionals
-Armorer
-Artist
-Baker
-Blacksmith
-Bookbinder
-Bowyer
-Brewer
-Bricklayer
-Butcher
-Candlemaker or Chandler
-Carpenter
-Cartwright
-Clothier
-Cobbler or Shoemaker
-Cook
-Cooper
-Dyer
-Engraver
-Furrier
-Glassblower
-Goldsmith or Silversmith
-Hatter
-Inn or Tavern-Keeper
-Jeweler
-Joiner
-Leatherworker
-Locksmith
-Mason
-Merchant
-Moneylender
-Potter
-Shipwright
-Tax Collector
-Tinker
-Torturer
-Trader
-Vintner
-Weaver
-Boatman
-Coachman
-Farmer
-Fisherman
-Gravedigger
-Groom
-Herdsman
-Hunter or Trapper
-Messenger
-Miller
-Miner
-Painter or Limner
-Peddler
-Ratcatcher
-Sailor
-Seamstress
-Servant
-Stevedore
-Bodyguard
-Bounty Hunter
-Forester
-Gatekeeper or Toll Keeper
-Jailer
-Mercenary or Soldier
-Watchman
-Beggar
-Burglar
-Fence
-Gambler
-Pickpocket or Cutpurse
-Procurer 
-Prostitute
-Slaver
-Smuggler
-Wanderer
-Acrobat
-Actor
-Clown
-Dancer
-Fortune-teller
-Juggler
-Minstrel
-Prestidigitator
-Storyteller
-Mythical Creature Caretaker
-Bounty Hunter
-Wizard
-Servant
-Nanny
-Maid
-Medium
-Dragon Tamer
-Carpenter
-Blacksmith
-Shoemaker
-Tanner
-Saddler
-Locksmith
-Baker
-Moneychanger
-Acrobat
-Alchemist
-Apothecarist
-Architect
-Armorer
-Artist
-Baker
-Lawyer
-Bookbinder
-Bowyer (Bow Maker)
-Basket Weaver
-Blacksmith
-Brewer
-Brick Layer
-Butcher
-Calligrapher
-Candlemaker
-Carpenter
-Cartographer
-Charcoal Burner
-Clerk
-Clothier
-Cook
-Coppersmith
-Cooper
-Diplomat
-Dyer
-Engineer
-Engraver
-Falconer
-Farmer
-Fisherman
-Fishmonger
-Forester
-Fortune-Teller
-Fruitier
-Furrier
-Glassblower
-Goldsmith
-Grocer
-Gardener
-Grain Merchant
-Grave Digger
-Haberdasher
-Herald
-Herbalist
-Hunter
-Inkeeper
-Interpreter
-Jester
-Jeweler
-Lacemaker
-Leatherworker
-Locksmith
-Mason
-Mercer
-Miller
-Minstrel
-Messenger
-Miner
-Moneylender
-Navigator
-Needleworker
-Paint
-Peddler
-Priest
-Physician
-Playwright
-Politican
-Potter
-Rat Catcher
-Sailor
-Scribe
-Servant
-Shipwright
-Shoemaker
-Silversmith
-Solicitor
-Soapmaker
-Stonecarver
-Storyteller
-Spy
-Tanner, Towne Crier
-Vintner
-Washer Woman
-Waterman
-Weaver
-Wet Nurse
-Wheelwright Wood Carver
-Woodworker
-Game Keeper
-Poacher
-Animal-Fighter
-Gladiator
-Tinkerer
-Astrologer
-Crossbow-Maker (Atilliator)
-Barber (Hair, Dentists, Surgeons, Blood-Letters)
-Bottler
-Chaplain
-Clerk
-Ewerer
-Herald
-Miller
-Stonemason
-Blacksmith
-Armorer
-Falconer
-Tailor
-Carpenter
-Plowman
-Butcher
-Goldsmith
-Metalsmith
-Groom
-Squire
-Page
-Silversmith
-Grocer
-Draper
-Furrier
-Fishmonger
-Baker
-Weaver
-Academic
-Architect
-Ascetic
-Barber
-Barrister
-Bureaucrat
-Engineer
-Herald
-Monk/Nun
-Scribe
-Adventurer
-Dilettante
-Diplomat
-Page
-Squire
-Professionals
-Armorer
-Artist
-Baker
-Blacksmith
-Bookbinder
-Bowyer
-Brewer
-Bricklayer
-Butcher
-Candlemaker or Chandler
-Carpenter
-Cartwright
-Clothier
-Cobbler or Shoemaker
-Cook
-Cooper
-Dyer
-Engraver
-Furrier
-Glassblower
-Goldsmith or Silversmith
-Hatter
-Inn or Tavern-Keeper
-Jeweler
-Joiner
-Leatherworker
-Locksmith
-Mason
-Merchant
-Moneylender
-Potter
-Shipwright
-Tax Collector
-Tinker
-Torturer
-Trader
-Vintner
-Weaver
-Boatman
-Coachman
-Farmer
-Fisherman
-Gravedigger
-Groom
-Herdsman
-Hunter or Trapper
-Messenger
-Miller
-Miner
-Painter or Limner
-Peddler
-Ratcatcher
-Sailor
-Seamstress
-Servant
-Stevedore
-Bodyguard
-Bounty Hunter
-Forester
-Gatekeeper or Toll Keeper
-Jailer
-Mercenary or Soldier
-Watchman
-Beggar
-Burglar
-Fence
-Gambler
-Pickpocket or Cutpurse
-Procurer 
-Prostitute
-Slaver
-Smuggler
-Wanderer
-Acrobat
-Actor
-Clown
-Dancer
-Fortune-teller
-Juggler
-Minstrel
-Prestidigitator
-Storyteller
-Mythical Creature Caretaker
-Bounty Hunter
-Wizard
-Servant
-Nanny
-Maid
-Medium
-Dragon Tamer
-Carpenter
-Blacksmith
-Shoemaker
-Tanner
-Saddler
-Locksmith
-Baker
-Moneychanger
-Acrobat
-Alchemist
-Apothecarist
-Architect
-Armorer
-Artist
-Baker
-Lawyer
-Bookbinder
-Bowyer (Bow Maker)
-Basket Weaver
-Blacksmith
-Brewer
-Brick Layer
-Butcher
-Calligrapher
-Candlemaker
-Carpenter
-Cartographer
-Charcoal Burner
-Clerk
-Clothier
-Cook
-Coppersmith
-Cooper
-Diplomat
-Dyer
-Engineer
-Engraver
-Falconer
-Farmer
-Fisherman
-Fishmonger
-Forester
-Fortune-Teller
-Fruitier
-Furrier
-Glassblower
-Goldsmith
-Grocer
-Gardener
-Grain Merchant
-Grave Digger
-Haberdasher
-Herald
-Herbalist
-Hunter
-Inkeeper
-Interpreter
-Jester
-Jeweler
-Lacemaker
-Leatherworker
-Locksmith
-Mason
-Mercer
-Miller
-Minstrel
-Messenger
-Miner
-Moneylender
-Navigator
-Needleworker
-Paint
-Peddler
-Priest
-Physician
-Playwright
-Politican
-Potter
-Rat Catcher
-Sailor
-Scribe
-Servant
-Shipwright
-Shoemaker
-Silversmith
-Solicitor
-Soapmaker
-Stonecarver
-Storyteller
-Spy
-Tanner, Towne Crier
-Vintner
-Washer Woman
-Waterman
-Weaver
-Wet Nurse
-Wheelwright Wood Carver
-Woodworker
-Game Keeper
-Poacher
-Animal-Fighter
-Gladiator
-Tinkerer
-Astrologer
-Crossbow-Maker (Atilliator)
-Barber (Hair, Dentists, Surgeons, Blood-Letters)
-Bottler
-Chaplain
-Clerk
-Ewerer
-Herald
-Miller
-Stonemason
-Blacksmith
-Armorer
-Falconer
-Tailor
-Carpenter
-Plowman
-Butcher
-Goldsmith
-Metalsmith
-Groom
-Squire
-Page
-Silversmith
-Grocer
-Draper
-Furrier
-Fishmonger
-Baker
-Weaver
-Academic
-Architect
-Ascetic
-Barber
-Barrister
-Bureaucrat
-Engineer
-Herald
-Monk/Nun
-Scribe
-Adventurer
-Dilettante
-Diplomat
-Page
-Squire
-Professionals
-Armorer
-Artist
-Baker
-Blacksmith
-Bookbinder
-Bowyer
-Brewer
-Bricklayer
-Butcher
-Candlemaker or Chandler
-Carpenter
-Cartwright
-Clothier
-Cobbler or Shoemaker
-Cook
-Cooper
-Dyer
-Engraver
-Furrier
-Glassblower
-Goldsmith or Silversmith
-Hatter
-Inn or Tavern-Keeper
-Jeweler
-Joiner
-Leatherworker
-Locksmith
-Mason
-Merchant
-Moneylender
-Potter
-Shipwright
-Tax Collector
-Tinker
-Torturer
-Trader
-Vintner
-Weaver
-Boatman
-Coachman
-Farmer
-Fisherman
-Gravedigger
-Groom
-Herdsman
-Hunter or Trapper
-Messenger
-Miller
-Miner
-Painter or Limner
-Peddler
-Ratcatcher
-Sailor
-Seamstress
-Servant
-Stevedore
-Bodyguard
-Bounty Hunter
-Forester
-Gatekeeper or Toll Keeper
-Jailer
-Mercenary or Soldier
-Watchman
-Beggar
-Burglar
-Fence
-Gambler
-Pickpocket or Cutpurse
-Procurer 
-Prostitute
-Slaver
-Smuggler
-Wanderer
-Acrobat
-Actor
-Clown
-Dancer
-Fortune-teller
-Juggler
-Minstrel
-Prestidigitator
-Storyteller
-Mythical Creature Caretaker
-Bounty Hunter
-Wizard
-Servant
-Nanny
-Maid
-Medium
-Dragon Tamer
-Carpenter
-Blacksmith
-Shoemaker
-Tanner
-Saddler
-Locksmith
-Baker
-Moneychanger
-Acrobat
-Alchemist
-Apothecarist
-Architect
-Armorer
-Artist
-Baker
-Lawyer
-Bookbinder
-Bowyer (Bow Maker)
-Basket Weaver
-Blacksmith
-Brewer
-Brick Layer
-Butcher
-Calligrapher
-Candlemaker
-Carpenter
-Cartographer
-Charcoal Burner
-Clerk
-Clothier
-Cook
-Coppersmith
-Cooper
-Diplomat
-Dyer
-Engineer
-Engraver
-Falconer
-Farmer
-Fisherman
-Fishmonger
-Forester
-Fortune-Teller
-Fruitier
-Furrier
-Glassblower
-Goldsmith
-Grocer
-Gardener
-Grain Merchant
-Grave Digger
-Haberdasher
-Herald
-Herbalist
-Hunter
-Inkeeper
-Interpreter
-Jester
-Jeweler
-Lacemaker
-Leatherworker
-Locksmith
-Mason
-Mercer
-Miller
-Minstrel
-Messenger
-Miner
-Moneylender
-Navigator
-Needleworker
-Paint
-Peddler
-Priest
-Physician
-Playwright
-Politican
-Potter
-Rat Catcher
-Sailor
-Scribe
-Servant
-Shipwright
-Shoemaker
-Silversmith
-Solicitor
-Soapmaker
-Stonecarver
-Storyteller
-Spy
-Tanner, Towne Crier
-Vintner
-Washer Woman
-Waterman
-Weaver
-Wet Nurse
-Wheelwright Wood Carver
-Woodworker
-Game Keeper
-Poacher
-Animal-Fighter
-Gladiator
-Tinkerer
-Astrologer
-Crossbow-Maker (Atilliator)
-Barber (Hair, Dentists, Surgeons, Blood-Letters)
-Bottler
-Chaplain
-Clerk
-Ewerer
-Herald
-Miller
-Stonemason
-Blacksmith
-Armorer
-Falconer
-Tailor
-Carpenter
-Plowman
-Butcher
-Goldsmith
-Metalsmith
-Groom
-Squire
-Page
-Silversmith
-Grocer
-Draper
-Furrier
-Fishmonger
-Baker
-Weaver
-Academic
-Architect
-Ascetic
-Barber
-Barrister
-Bureaucrat
-Engineer
-Herald
-Monk/Nun
-Scribe
-Adventurer
-Dilettante
-Diplomat
-Page
-Squire
-Professionals
-Armorer
-Artist
-Baker
-Blacksmith
-Bookbinder
-Bowyer
-Brewer
-Bricklayer
-Butcher
-Candlemaker or Chandler
-Carpenter
-Cartwright
-Clothier
-Cobbler or Shoemaker
-Cook
-Cooper
-Dyer
-Engraver
-Furrier
-Glassblower
-Goldsmith or Silversmith
-Hatter
-Inn or Tavern-Keeper
-Jeweler
-Joiner
-Leatherworker
-Locksmith
-Mason
-Merchant
-Moneylender
-Potter
-Shipwright
-Tax Collector
-Tinker
-Torturer
-Trader
-Vintner
-Weaver
-Boatman
-Coachman
-Farmer
-Fisherman
-Gravedigger
-Groom
-Herdsman
-Hunter or Trapper
-Messenger
-Miller
-Miner
-Painter or Limner
-Peddler
-Ratcatcher
-Sailor
-Seamstress
-Servant
-Stevedore
-Bodyguard
-Bounty Hunter
-Forester
-Gatekeeper or Toll Keeper
-Jailer
-Mercenary or Soldier
-Watchman
-Beggar
-Burglar
-Fence
-Gambler
-Pickpocket or Cutpurse
-Procurer 
-Prostitute
-Slaver
-Smuggler
-Wanderer
-Acrobat
-Actor
-Clown
-Dancer
-Fortune-teller
-Juggler
-Minstrel
-Prestidigitator
-Storyteller
-Mythical Creature Caretaker
-Bounty Hunter
-Wizard
-Servant
-Nanny
-Maid
-Medium
-Dragon Tamer
-Carpenter
-Blacksmith
-Shoemaker
-Tanner
-Saddler
-Locksmith
-Baker
-Moneychanger
-Acrobat
-Alchemist
-Apothecarist
-Architect
-Armorer
-Artist
-Baker
-Lawyer
-Bookbinder
-Bowyer (Bow Maker)
-Basket Weaver
-Blacksmith
-Brewer
-Brick Layer
-Butcher
-Calligrapher
-Candlemaker
-Carpenter
-Cartographer
-Charcoal Burner
-Clerk
-Clothier
-Cook
-Coppersmith
-Cooper
-Diplomat
-Dyer
-Engineer
-Engraver
-Falconer
-Farmer
-Fisherman
-Fishmonger
-Forester
-Fortune-Teller
-Fruitier
-Furrier
-Glassblower
-Goldsmith
-Grocer
-Gardener
-Grain Merchant
-Grave Digger
-Haberdasher
-Herald
-Herbalist
-Hunter
-Inkeeper
-Interpreter
-Jester
-Jeweler
-Lacemaker
-Leatherworker
-Locksmith
-Mason
-Mercer
-Miller
-Minstrel
-Messenger
-Miner
-Moneylender
-Navigator
-Needleworker
-Paint
-Peddler
-Priest
-Physician
-Playwright
-Politican
-Potter
-Rat Catcher
-Sailor
-Scribe
-Servant
-Shipwright
-Shoemaker
-Silversmith
-Solicitor
-Soapmaker
-Stonecarver
-Storyteller
-Spy
-Tanner, Towne Crier
-Vintner
-Washer Woman
-Waterman
-Weaver
-Wet Nurse
-Wheelwright Wood Carver
-Woodworker
-Game Keeper
-Poacher
-Animal-Fighter
-Gladiator
-Tinkerer
-Astrologer
-Crossbow-Maker (Atilliator)
-Barber (Hair, Dentists, Surgeons, Blood-Letters)
-Bottler
-Chaplain
-Clerk
-Ewerer
-Herald
-Miller
-Stonemason
-Blacksmith
-Armorer
-Falconer
-Tailor
-Carpenter
-Plowman
-Butcher
-Goldsmith
-Metalsmith
-Groom
-Squire
-Page
-Silversmith
-Grocer
-Draper
-Furrier
-Fishmonger
-Baker
-Weaver
-Academic
-Architect
-Ascetic
-Barber
-Barrister
-Bureaucrat
-Engineer
-Herald
-Monk/Nun
-Scribe
-Adventurer
-Dilettante
-Diplomat
-Page
-Squire
-Professionals
-Armorer
-Artist
-Baker
-Blacksmith
-Bookbinder
-Bowyer
-Brewer
-Bricklayer
-Butcher
-Candlemaker or Chandler
-Carpenter
-Cartwright
-Clothier
-Cobbler or Shoemaker
-Cook
-Cooper
-Dyer
-Engraver
-Furrier
-Glassblower
-Goldsmith or Silversmith
-Hatter
-Inn or Tavern-Keeper
-Jeweler
-Joiner
-Leatherworker
-Locksmith
-Mason
-Merchant
-Moneylender
-Potter
-Shipwright
-Tax Collector
-Tinker
-Torturer
-Trader
-Vintner
-Weaver
-Boatman
-Coachman
-Farmer
-Fisherman
-Gravedigger
-Groom
-Herdsman
-Hunter or Trapper
-Messenger
-Miller
-Miner
-Painter or Limner
-Peddler
-Ratcatcher
-Sailor
-Seamstress
-Servant
-Stevedore
-Bodyguard
-Bounty Hunter
-Forester
-Gatekeeper or Toll Keeper
-Jailer
-Mercenary or Soldier
-Watchman
-Beggar
-Burglar
-Fence
-Gambler
-Pickpocket or Cutpurse
-Procurer 
-Prostitute
-Slaver
-Smuggler
-Wanderer
-Acrobat
-Actor
-Clown
-Dancer
-Fortune-teller
-Juggler
-Minstrel
-Prestidigitator
-Storyteller
-Mythical Creature Caretaker
-Bounty Hunter
-Wizard
-Servant
-Nanny
-Maid
-Medium
-Dragon Tamer
-Carpenter
-Blacksmith
-Shoemaker
-Tanner
-Saddler
-Locksmith
-Baker
-Moneychanger
-Acrobat
-Alchemist
-Apothecarist
-Architect
-Armorer
-Artist
-Baker
-Lawyer
-Bookbinder
-Bowyer (Bow Maker)
-Basket Weaver
-Blacksmith
-Brewer
-Brick Layer
-Butcher
-Calligrapher
-Candlemaker
-Carpenter
-Cartographer
-Charcoal Burner
-Clerk
-Clothier
-Cook
-Coppersmith
-Cooper
-Diplomat
-Dyer
-Engineer
-Engraver
-Falconer
-Farmer
-Fisherman
-Fishmonger
-Forester
-Fortune-Teller
-Fruitier
-Furrier
-Glassblower
-Goldsmith
-Grocer
-Gardener
-Grain Merchant
-Grave Digger
-Haberdasher
-Herald
-Herbalist
-Hunter
-Inkeeper
-Interpreter
-Jester
-Jeweler
-Lacemaker
-Leatherworker
-Locksmith
-Mason
-Mercer
-Miller
-Minstrel
-Messenger
-Miner
-Moneylender
-Navigator
-Needleworker
-Paint
-Peddler
-Priest
-Physician
-Playwright
-Politican
-Potter
-Rat Catcher
-Sailor
-Scribe
-Servant
-Shipwright
-Shoemaker
-Silversmith
-Solicitor
-Soapmaker
-Stonecarver
-Storyteller
-Spy
-Tanner, Towne Crier
-Vintner
-Washer Woman
-Waterman
-Weaver
-Wet Nurse
-Wheelwright Wood Carver
-Woodworker
-Game Keeper
-Poacher
-Animal-Fighter
-Gladiator
-Tinkerer
-Astrologer
-Crossbow-Maker (Atilliator)
-Barber (Hair, Dentists, Surgeons, Blood-Letters)
-Bottler
-Chaplain
-Clerk
-Ewerer
-Herald
-Miller
-Stonemason
-Blacksmith
-Armorer
-Falconer
-Tailor
-Carpenter
-Plowman
-Butcher
-Goldsmith
-Metalsmith
-Groom
-Squire
-Page
-Silversmith
-Grocer
-Draper
-Furrier
-Fishmonger
-Baker
-Weaver
-Academic
-Architect
-Ascetic
-Barber
-Barrister
-Bureaucrat
-Engineer
-Herald
-Monk/Nun
-Scribe
-Adventurer
-Dilettante
-Diplomat
-Page
-Squire
-Professionals
-Armorer
-Artist
-Baker
-Blacksmith
-Bookbinder
-Bowyer
-Brewer
-Bricklayer
-Butcher
-Candlemaker or Chandler
-Carpenter
-Cartwright
-Clothier
-Cobbler or Shoemaker
-Cook
-Cooper
-Dyer
-Engraver
-Furrier
-Glassblower
-Goldsmith or Silversmith
-Hatter
-Inn or Tavern-Keeper
-Jeweler
-Joiner
-Leatherworker
-Locksmith
-Mason
-Merchant
-Moneylender
-Potter
-Shipwright
-Tax Collector
-Tinker
-Torturer
-Trader
-Vintner
-Weaver
-Boatman
-Coachman
-Farmer
-Fisherman
-Gravedigger
-Groom
-Herdsman
-Hunter or Trapper
-Messenger
-Miller
-Miner
-Painter or Limner
-Peddler
-Ratcatcher
-Sailor
-Seamstress
-Servant
-Stevedore
-Bodyguard
-Bounty Hunter
-Forester
-Gatekeeper or Toll Keeper
-Jailer
-Mercenary or Soldier
-Watchman
-Beggar
-Burglar
-Fence
-Gambler
-Pickpocket or Cutpurse
-Procurer 
-Prostitute
-Slaver
-Smuggler
-Wanderer
-Acrobat
-Actor
-Clown
-Dancer
-Fortune-teller
-Juggler
-Minstrel
-Prestidigitator
-Storyteller
-Mythical Creature Caretaker
-Bounty Hunter
-Wizard
-Servant
-Nanny
-Maid
-Medium
 Dragon Tamer
 Ditcher
-Bricklayer
 Chimmney
 Sweep
 Dung
@@ -2586,10 +293,8 @@ Carter
 Builder
 Labourer
 Quarryman
-Sailor
 Raker (shit sweeper)
 Road worker
-Miner
 Foreman
 Lumberjack
 Scullion
@@ -2599,7 +304,6 @@ Fisherman
 Crofter 
 Freeholder
 Plowman 
-Hunter
 Swineherd 
 Goatherd
 Sheep 
@@ -2607,16 +311,14 @@ Shearer
 Oxherder
 Tillerman 
 Shepherd
-Cowherd
-
-Cobbler 
+CowherdCobbler 
 Wheelwright 
 Cooper 
 Glazier
 Furniture Maker 
-Paper/Parchmentmaker 
+Papermaker
+Parchmentmaker 
 Pastry Maker 
-Miller
 Launderer 
 Draper 
 Silversmith 
@@ -2630,11 +332,9 @@ Furrier
 Baker 
 Scabbard 
 Maker 
-Vintner
 Tailor 
 Mason 
 Blacksmith 
-Armorer
 Potter 
 Cook 
 Buckle Maker 
@@ -2642,11 +342,11 @@ Bleacher
 Weaver 
 Mercer 
 Butcher 
-Bookbinder
 Basket Maker 
 Soapmaker 
 Leatherworker 
-Bowyer/Fletcher
+Bowyer
+Fletcher
 Barber 
 Engraver 
 Plasterer 
@@ -2658,9 +358,7 @@ Distiller
 Builder 
 Chandler 
 Toymaker 
-Engineer
 Farrier 
-Weaver 
 Artist 
 Glass Maker
 Apprentice 
@@ -2673,7 +371,6 @@ Instrument Maker
 Cartwright 
 Roofer 
 Shipmaker
-Roofer 
 Woodcarver 
 Weaponsmith
 Paver 
@@ -2683,9 +380,8 @@ Skinner
 Fuller 
 Dye Maker
 Harper 
-Limner/Painter 
+Painter 
 Illuminator
-Herbalist 
 Taxidermist
 Locksmith 
 Vestment Maker
@@ -2699,7 +395,6 @@ Rug Maker
 Brazier (bronze)
 Wood Turner 
 Confectioner
-Girdler 
 Lantern Maker
 Rope Maker 
 Woodcarver
@@ -2709,29 +404,25 @@ Brewer
 Bone Carver
 Harness Maker 
 Patternmaker
-Locksmith 
 Sailmaker
 Gardener 
 Tile Maker
 Rat Catcher 
 Bell Maker
 Sea Captain 
-Joiner
 Gemcutter
-Goldsmith
-Silversmith
 Gilder
 Silk Maker
 Coiner
-Instrument Maker
 Master Builder
 Book Printer
 Server (tavern, inn, restaurant) 
+Waiter
+Actor
 Guide 
 City Page 
 Nannie & Governesse
 Slave 
-Harper 
 Groom 
 Wetnurse
 Domestic Servant 
@@ -2740,81 +431,54 @@ Midwife
 Butler
 Prostitute 
 Watercarrier 
-Squire
-Gardener 
 Undertaker
-Guide
 Wilderness
-Herald
 Messenger 
 Historian
 Caravaner 
-Astrologer
 Cartier 
 Dentist
+Dog Walker
 Carman 
-Physician
 Wagoner 
-Scribe
 Muleteer 
-Navigator
 Ship Provisioner 
 Accountant
-Bonesetter Lawer 
-
-Peddler 
+Lawyer
+Politician
 Dairy seller 
-Jeweler 
 Spice Merchant
 Grocer 
-Prostitute 
-Baker 
 Wool Merchant
 Warehouser 
 Livestock merchant 
 Pawnbroker 
 Bookseller
-Clothier 
 Tavern Keeper 
 Wine Merchant 
 Brothel Keeper
 Fruitier 
 Flowerseller 
 Beer Merchant 
-Perfumer
 Street Vendor 
 Ironmonger 
-Butcher 
-Potionmaker
 Oil Merchant 
 Fishmonger 
 Religious Souvenir Seller
-Saddler 
-Toymaker 
 Woodseller
 Slaver Inn Keeper 
 Hay Merchant
 Stationer 
-Armorer
-Herbalist 
-Instrument Maker
 Cloth Merchant 
 Navel Outfitter
 Landlord 
 Rug Maker
 Tobacco merchant
-Weaponsmith
-Clock Maker
-Grain Merchant
-Taxidermist
 Restaurantier
-Confectioner
-Moneylender
 Flaconer
 Gold Merchant
 Silver Merchant
 Banker
-Alchemist
 Silk Merchant
 Mercenary 
 Night Watchman 
@@ -2825,6 +489,11 @@ Soldier - Spearman
 Soldier - Seige Engineer 
 Admiral
 Guard (city) 
+Guard (town)
+Private Guard
+Bodyguard
+Bounty Hunter (Lawful)
+Bounty Hunter (Chaotic)
 Soldier - Swordsman 
 Soldier - Sapper 
 Soldier - Captain
@@ -2835,20 +504,16 @@ Guard (city) - Constable
 Sherrif 
 Balliff
 Soldier - Sergeant 
-Spy
 Soldier - Crossbowman 
-Barbarian (Berserker) Lvl 6
+Barbarian (Berserker)
 Soldier - Archer 
 Assassin
 Bounty Hunter 
-Swordmage Lvl 6
-Forester 
-
-Clerk 
+Swordmage
+Forester Clerk 
 Town Messenger 
 Scribe 
 Judge
-Guard (city) 
 Town Official 
 Summoner 
 Executioner
@@ -2859,50 +524,36 @@ Alderman
 Town Crier 
 Ambassador
 Beurocrat 
-Diplomat
 Chancellor
-Mayor
 Seneschal
 Lawyer 
 Cutpurse 
 Slaver 
-Bounty Hunter 
-Spy
 Pickpocket 
 Gambler 
 Fence 
-Assassin
 Thug 
 Mugger 
 Horse Thief 
-Rogue (Scoundrel) Lvl 6
+Rogue (Scoundrel)
 Gang Member 
 Bandit 
 Cattle Thief
-Prostitute 
 Brigand 
-Poacher
 Beggar 
 Vagabond 
 Procurer
 Pimp 
 Mercenary
 Gypsy 
-Smuggler 
-
-Minstrel 
-Painter 
-Harper 
-Bard
+Smuggler Minstrel 
 Fiddler 
 Storyteller 
 Jester 
-Playwright
 Piper 
 Acrobat 
 Writer
 Singer 
-Artist 
 Satirist
 Dancer 
 Circus Performer 
@@ -2910,17 +561,13 @@ Lutenist
 Juggler 
 Poet
 Sculptor
-Prestigitator 
-
-Student 
+Prestigitator Student 
 Scholar 
 Alchemist 
-Astrologer
 Tutor 
 Book Printer 
 Librarian 
 Astronomer
-Scribe 
 Writer 
 Mathematician 
 Dean
@@ -2928,36 +575,31 @@ Copyist
 Philosopher 
 Professor
 Theologian 
-Sage
-Historian
-Cartographer
-Architect
 Pilgrim 
 Priest/ess 
 Abbot/Abbess 
 Archbishop
-Scribe 
 Monk/Nun 
-Theologian 
-Druid (Protector) Lvl 6
+Druid (Protector)
 Curate 
 Cardinal
 Friar 
-Inquisitor 
-
-Page 
+Inquisitor Page 
 Knight/Dame 
 Count/ess 
 King/Queen
 Squire 
 Esquire
-Grand Duke/Grand
-Duchess 
+Grand Duke
+Grand Duchess 
 Regent
 Dilettante 
 Castellan 
-Margrave/Margravine 
 Prince Consort
 Princess Consort
 Paladin 
 Minor Wizard
+Concubine
+Warlock
+Sorceror
+Student
