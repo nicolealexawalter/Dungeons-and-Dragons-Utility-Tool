@@ -1,4 +1,1 @@
-Human-Human
-Human-Inhuman
-Human-Human Passing
-Human-Definitely Not Human
+Human-Human/Human-Inhuman/Human-Human Passing/Human-Definitely Not Human
