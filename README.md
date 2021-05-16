@@ -521,12 +521,12 @@ var ages = ["Young","Middle-Aged","Old"];
 var sexualities = ["Ace", "Heterosexual", "Bicurious", "Bisexual", "Pansexual", "Androphilic", "Gynephillic", "Homosexual", "Demisexual", "Queer", "Questioning", "Sapiosexual", "Manasexual", "Chaser", "Graysexual"];
 var genders = ["Male", "Female", "Genderqueer"];
 var races = [];
-var traits = ["Active", "Adaptable", "Admirable", "Adventurous", "Amiable"];
-var ideals = ["Change", "Creativity", "Freedom", "Independence", "No Limits", "Whimsy"];
-var emotions = ["Angry", "Disgusted", "Sad", "Happy", "Surprised"];
-var locales = ["in an abandoned squat", "in a lower-class home", "on top of a crowded tenement", "on the floor of a busy orphanage", "in a magical womb"];
-var activities = ["learning their parent's trade", "studying the blade", "as a knight's squire", "begging on the streets"];
-var trades = ["Foot Soldier", "Squire", "Aristocrat", "Village Idiot", "Acolyte"];
+var traits = loadFile("FILES\\NPC\\" + "TRAITS" + ".txt").split("<br>");
+var ideals = loadFile("FILES\\NPC\\" + "IDEALS" + ".txt").split("<br>");
+var emotions = loadFile("FILES\\NPC\\" + "EMOTIONS" + ".txt").split("<br>");
+var locales = loadFile("FILES\\NPC\\" + "LOCALES" + ".txt").split("<br>");
+var activities = loadFile("FILES\\NPC\\" + "ACTIVITIES" + ".txt").split("<br>");
+var trades = loadFile("FILES\\NPC\\" + "TRADES" + ".txt").split("<br>");
 
 function constructNPC(){
 	/*
