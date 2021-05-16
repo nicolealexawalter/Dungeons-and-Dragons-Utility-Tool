@@ -516,17 +516,25 @@ function generateStats(){
 }
 
 //all global npc variables (global so they are only loaded once) go here
-var orcish = trainMarkovChain(["Xaakt", "Turge", "Duma", "Podagog", "Woghuglat", "Matuk", "Xruul", "Burghed", "Viggulm", "Duma", "Kaghed", "Duma", "Arob", "Frug", "Zogugh", "Khagra", "Knorgh", "Silge", "Gul", "Narod", "Puiltag", "Bahgigoth", "Smogulg", "Prikdarok", "Vuiltag", "Trugagh", "Moth", "Varguk", "Rogdul", "Dular", "Glob", "Ushat", "Lagakh", "Bumph", "Shel", "Ulumpha", "Umog", "Lash", "Bolar", "Shelur", "Rolfish", "Gluronk", "Ghob", "Gonk", "Ushug", "Batul", "Shazgob", "Mor", "Burzob", ""]);
-var ages = ["Young","Middle-Aged","Old"];
 var sexualities = ["Ace", "Heterosexual", "Bicurious", "Bisexual", "Pansexual", "Androphilic", "Gynephillic", "Homosexual", "Demisexual", "Queer", "Questioning", "Sapiosexual", "Manasexual", "Chaser", "Graysexual"];
 var genders = ["Male", "Female", "Genderqueer"];
-var races = [];
 var traits = loadFile("FILES\\NPC\\" + "TRAITS" + ".txt").split("<br>");
 var ideals = loadFile("FILES\\NPC\\" + "IDEALS" + ".txt").split("<br>");
 var emotions = loadFile("FILES\\NPC\\" + "EMOTIONS" + ".txt").split("<br>");
 var locales = loadFile("FILES\\NPC\\" + "LOCALES" + ".txt").split("<br>");
 var activities = loadFile("FILES\\NPC\\" + "ACTIVITIES" + ".txt").split("<br>");
 var trades = loadFile("FILES\\NPC\\" + "TRADES" + ".txt").split("<br>");
+var races = loadFile("FILES\\NPC\\" + "RACES" + ".txt").split("<br>");
+var language_human = trainMarkovChain(loadFile("FILES\\NPC\\LANGUAGES\\" + "HUMAN" + ".txt").split("<br>"));
+
+function determineName(primaryrace){
+	switch(primaryrace){
+    	case "Human":
+        	return generateWord(language_human, 2, true, 12);
+    	default:
+        	return generateWord(language_human, 2, true, 12);
+    }
+}
 
 function constructNPC(){
 	/*
@@ -537,9 +545,6 @@ function constructNPC(){
       Born /Locale, grew up /Activity, currently works as a /Trade
     */
 
-	//generate name
-	var name = generateWord(orcish, 1, true, 20);
-
 	//pick a random trait / age / sexuality / gender
     var trait = returnRandom(traits).toLowerCase();
     var age = returnRandom(ages).toLowerCase();
@@ -547,7 +552,12 @@ function constructNPC(){
     var gender = returnRandom(genders).toLowerCase();
     
     //pick a random race
-	var race = "to-do";
+	var race = returnRandom(races);
+    
+    var primaryrace = race.split("-")[0];
+    var descriprace = race.split("-")[1];
+
+	var name = determineName(primaryrace);
 
 	//generate stats
     var stats = generateStats();
@@ -560,7 +570,7 @@ function constructNPC(){
     var trade = returnRandom(trades).toLowerCase();
     trade = determineArticle(trade) + " " + trade;
 	
-	return name + "<br>" + trait + " " + age + " " + sexuality + " " + gender + " " + race + "<br>" + "Values " + ideal + " | Feels " + emotion + " | " + stats + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is " + trade + ".";
+	return name + "<br>" + trait + " " + age + " " + sexuality + " " + gender + " " + descriprace + "<br>" + "Values " + ideal + " | Feels " + emotion + " | " + stats + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is " + trade + ".";
 }
 
 function newNPC(){	
