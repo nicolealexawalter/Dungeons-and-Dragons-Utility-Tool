@@ -234,3 +234,57 @@ competing in athletics
 as the only survivor of a monster raid
 as the only survivor of a vampire attack
 on a lonely island
+under the care of a guardian
+under the care of grandparents
+being viciously bullied
+with no friends of any sort
+as a weird little kid
+taking refuge in a temple
+taking refuge in the army
+taking refuge aboard a ship bound for distant lands
+taking refuge in the company of fellow runaways and orphans
+adopted by an adventuring party
+with strong religious convictions
+in the presence of the divine
+exploiting the innocence of others
+talking their way out of trouble
+fighting poverty
+seeking wealth
+fighting ignorance and bigotry
+fighting progress and diversity
+resisting authority of all kinds
+serving authority of all kinds
+learning my parent's lawful trade
+learning my parent's criminal trade
+hating my parent's trade
+playing songs on the street for money
+performing plays on the street for money
+reciting poetry on the street for money
+traveling in a dance troupe
+travling in an acting troupe
+seeking to join the Actor's Guild
+seeking to join the Merchant's Guild
+seeking to join a mercenary company
+earning coin by telling jokes
+earning coin performing odd jobs
+learning their destiny
+forging their own destiny
+resisting their destiny
+seeking to redeem themself
+seeking to redeem their family
+seeking to restore the nobility of their family
+seeking to restore the royalty of their family
+fighing to inherit that which is rightfully theirs
+awaiting their inheritance (wealth)
+awaiting their inheritance (power)
+learning about the world in a university
+learning about the world from a mentor
+learning about the world from various books and scrolls
+reading and studying texts in an expansive library
+building a library of books and texts from which they wished to learn
+serving an old wizard who taught them much
+enlisted in the army
+studying in a secluded monastery
+mastering monastic techniques
+studying recent history
+studying ancient history
