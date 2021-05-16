@@ -941,7 +941,7 @@ function creatureSearch(){
     
 	for (var i = 0; i < environments.length; i++) {
     		var filename = "FILES\\CREATURES\\" + environments[i].toUpperCase() + ".txt";
-		output += loadFile(filename);
+		output += loadFile(filename).replaceAll("|", " |");
 	}
 	
 	var deduped = output.split("<br>");
