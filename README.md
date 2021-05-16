@@ -525,16 +525,20 @@ var locales = loadFile("FILES\\NPC\\" + "LOCALES" + ".txt").split("<br>");
 var activities = loadFile("FILES\\NPC\\" + "ACTIVITIES" + ".txt").split("<br>");
 var trades = loadFile("FILES\\NPC\\" + "TRADES" + ".txt").split("<br>");
 var races = loadFile("FILES\\NPC\\" + "RACES" + ".txt").split("<br>");
-var language_human = trainMarkovChain(loadFile("FILES\\NPC\\LANGUAGES\\" + "HUMAN" + ".txt").split("<br>"));
+/*
+var lang_human_raw = loadFile("FILES\\NPC\\LANGUAGES\\" + "HUMAN" + ".txt").split("<br>");
+
+var lang_human_mark = trainMarkovChain(lang_human_raw);
 
 function determineName(primaryrace){
 	switch(primaryrace){
     	case "Human":
-        	return generateWord(language_human, 2, true, 12);
+        	return generateWord(lang_human_mark, 2, true, 12);
     	default:
-        	return generateWord(language_human, 2, true, 12);
+        	return generateWord(lang_human_mark, 2, true, 12);
     }
 }
+*/
 
 function constructNPC(){
 	/*
@@ -556,8 +560,9 @@ function constructNPC(){
     
     var primaryrace = race.split("-")[0];
     var descriprace = race.split("-")[1];
-
-	var name = determineName(primaryrace);
+	
+    //var name = determineName(primaryrace);
+	var name = primaryrace + "//" + descriprace;
 
 	//generate stats
     var stats = generateStats();
