@@ -591,8 +591,8 @@ function constructNPC(){
     var trade = returnRandom(trades).toLowerCase();
     trade = determineArticle(trade) + " " + trade;
 	
-	return races + " / " + races.length + " / " + lang_human_raw + " / " + lang_human_raw.length;
-	//return name + "<br>" + trait + " " + age + " " + sexuality + " " + gender + " " + descriprace + "<br>" + "Values " + ideal + " | Feels " + emotion + " | " + stats + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is " + trade + ".";
+	//return races + " / " + races.length + " / " + lang_human_raw + " / " + lang_human_raw.length;
+	return name + "<br>" + trait + " " + age + " " + sexuality + " " + gender + " " + descriprace + "<br>" + "Values " + ideal + " | Feels " + emotion + " | " + stats + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is " + trade + ".";
 }
 
 function newNPC(){	
@@ -939,7 +939,7 @@ function loadFile(filePath){
 	  var output = "";
 	  var i;
 	  for (i = 0; i < result.length; i++) {
-	    output += result[i] + "<br>";
+	    output += "<br>" + result[i];
 	  }
 	  return output;
 }
