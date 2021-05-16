@@ -518,6 +518,7 @@ function generateStats(){
 //all global npc variables (global so they are only loaded once) go here
 var sexualities = ["Ace", "Heterosexual", "Bicurious", "Bisexual", "Pansexual", "Androphilic", "Gynephillic", "Homosexual", "Demisexual", "Queer", "Questioning", "Sapiosexual", "Manasexual", "Chaser", "Graysexual"];
 var genders = ["Male", "Female", "Genderqueer"];
+var ages = ["Young","Middle-Aged","Old"];
 var traits = loadFile("FILES\\NPC\\" + "TRAITS" + ".txt").split("<br>");
 var ideals = loadFile("FILES\\NPC\\" + "IDEALS" + ".txt").split("<br>");
 var emotions = loadFile("FILES\\NPC\\" + "EMOTIONS" + ".txt").split("<br>");
@@ -525,8 +526,7 @@ var locales = loadFile("FILES\\NPC\\" + "LOCALES" + ".txt").split("<br>");
 var activities = loadFile("FILES\\NPC\\" + "ACTIVITIES" + ".txt").split("<br>");
 var trades = loadFile("FILES\\NPC\\" + "TRADES" + ".txt").split("<br>");
 var races = loadFile("FILES\\NPC\\" + "RACES" + ".txt").split("<br>");
-/*
-var lang_human_raw = loadFile("FILES\\NPC\\LANGUAGES\\" + "HUMAN" + ".txt").split("<br>");
+/*var lang_human_raw = loadFile("FILES\\NPC\\LANGUAGES\\" + "HUMAN" + ".txt").split("<br>");
 
 var lang_human_mark = trainMarkovChain(lang_human_raw);
 
@@ -537,8 +537,7 @@ function determineName(primaryrace){
     	default:
         	return generateWord(lang_human_mark, 2, true, 12);
     }
-}
-*/
+}*/
 
 function constructNPC(){
 	/*
