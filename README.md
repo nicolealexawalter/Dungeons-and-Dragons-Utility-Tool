@@ -377,11 +377,63 @@ function generateWord(markov, numberwords, proper, maxlen){
     return output;
 }
 
+var stats = [
+	"STR",
+    "DEX",
+    "CON",
+    "INT",
+    "WIS",
+    "CHA",
+    "BEA"
+];
+
+function generateStats(){
+	var numberstats = returnRandom([1, 2, 3]);
+    
+    var mystats = Array.from(stats);
+    
+    var chosenstats = [];
+    for(var x=0;x<numberstats;x++){
+		var chosenstat = returnRandom(mystats);
+        mystats = removeValue(mystats, chosenstat);
+        chosenstats.push(chosenstat);
+    }
+    
+    for(var y=0;y<chosenstats.length;y++){
+    	var modifier = returnRandom(["+4", "+3", "+2", "+1", "-1", "-2", "-3", "-4"]);
+        chosenstats[y] += " " + modifier;
+    }
+    
+    function statOrdinal(stat){
+    	if(stat.includes("STR")){
+        	return 1;
+        }else if(stat.includes("DEX")){
+        	return 2;
+        }else if(stat.includes("CON")){
+        	return 3;
+        }else if(stat.includes("INT")){
+        	return 4;
+        }else if(stat.includes("WIS")){
+        	return 5;
+        }else if(stat.includes("CHA")){
+        	return 6;
+        }else if(stat.includes("BEA")){
+        	return 7;
+        }else{
+        	return 0;
+        }
+    }
+    
+    var output = chosenstats.sort(function(a, b){return statOrdinal(a) - statOrdinal(b)});
+    
+    return output.join(" / ");
+}
+
 //all global npc variables (global so they are only loaded once) go here
 var orcish = trainMarkovChain(["Xaakt", "Turge", "Duma", "Podagog", "Woghuglat", "Matuk", "Xruul", "Burghed", "Viggulm", "Duma", "Kaghed", "Duma", "Arob", "Frug", "Zogugh", "Khagra", "Knorgh", "Silge", "Gul", "Narod", "Puiltag", "Bahgigoth", "Smogulg", "Prikdarok", "Vuiltag", "Trugagh", "Moth", "Varguk", "Rogdul", "Dular", "Glob", "Ushat", "Lagakh", "Bumph", "Shel", "Ulumpha", "Umog", "Lash", "Bolar", "Shelur", "Rolfish", "Gluronk", "Ghob", "Gonk", "Ushug", "Batul", "Shazgob", "Mor", "Burzob", ""]);
-var ages = ["Child","Youth","Adult","Senior"];
-var sexualities = ["Asexual", "Heterosexual", "Bicurious", "Bisexual", "Pansexual", "Androphilic", "Gynephillic", "Homosexual", "Demisexual", "Queer", "Questioning", "Sapiosexual", "Manasexual", "Chaser", "Graysexual"];
-var genders = ["Male-Passing", "Female-Passing", "Queer"];
+var ages = ["Young","Middle-Aged","Old"];
+var sexualities = ["Ace", "Heterosexual", "Bicurious", "Bisexual", "Pansexual", "Androphilic", "Gynephillic", "Homosexual", "Demisexual", "Queer", "Questioning", "Sapiosexual", "Manasexual", "Chaser", "Graysexual"];
+var genders = ["Male", "Female", "Queer"];
 var races = [];
 var traits = ["Active", "Adaptable", "Admirable", "Adventurous", "Amiable"];
 var ideals = ["Change", "Creativity", "Freedom", "Independence", "No Limits", "Whimsy"];
@@ -394,44 +446,60 @@ function constructNPC(){
 	/*
      NPC Design
       /Name
-      /Age /Sexuality /Gender /Race, /Stats
-      Is /Trait, Values /Ideal, Feels /Emotion
-      Born /Locale, grew up /activity, currently works as a /trade
+      /Trait /Age /Sexuality /Gender /Race
+      /Stats, Values /Ideal, Feels /Emotion
+      Born /Locale, grew up /Activity, currently works as a /Trade
     */
 
 	//generate name
 	var name = generateWord(orcish, 1, true, 20);
 
-	//pick a random age / sexuality / gender
-    var age = returnRandom(ages);
-    var sexuality = returnRandom(sexualities);
-    var gender = returnRandom(genders);
+	//pick a random trait / age / sexuality / gender
+    var trait = returnRandom(traits).toLowerCase();
+    var age = returnRandom(ages).toLowerCase();
+    var sexuality = returnRandom(sexualities).toLowerCase();
+    var gender = returnRandom(genders).toLowerCase();
     
     //pick a random race
 	var race = "to-do";
 
 	//generate stats
-    var stats = "to-do";
+    var stats = generateStats();
     
-    //pick a random trait / ideal / emotion / locale / activity / trade
-    var trait = returnRandom(traits);
+    //pick a random ideal / emotion / locale / activity / trade
     var ideal = returnRandom(ideals);
     var emotion = returnRandom(emotions);
     var locale = returnRandom(locales);
     var activity = returnRandom(activities);
-    var trade = returnRandom(trades);
+    var trade = returnRandom(trades).toLowerCase();
 	
-	return name + "<br>" + age + " " + sexuality + " " + gender + " " + race + " " + stats + "<br>" + "Is " + trait + ", Values " + ideal + ", Feels " + emotion + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is a " + trade;
+	return name + "<br>" + trait + " " + age + " " + sexuality + " " + gender + " " + race + "<br>" + "Values " + ideal + " | Feels " + emotion + " | " + stats + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is a " + trade + ".";
 }
 
 function newNPC(){	
     var output = constructNPC();
     
-    document.getElementById("npcs").innerHTML += output + "<br><br>";
+    var current = document.getElementById("npcs").innerHTML;
+    
+    document.getElementById("npcs").innerHTML = output + "<br><br>" + current;
 }
 
 function resetNPCs(){
 	document.getElementById("npcs").innerHTML = "";
+}
+
+function removeValue(array, value){
+	var output = [];
+    
+    for(var t=0;t<array.length;t++){
+    	if(array[t] == value){
+        	//dont keep it	
+        }else{
+        	output.push(array[t]);
+        }
+    }
+    
+    return output;
 }
 
 function returnRandom(array){
