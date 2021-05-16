@@ -145,3 +145,38 @@ on the street
 in a palace
 in a noble home
 in a rich home
+in a brothel
+in their famiy home
+in the home of a local healer
+in the home of a divine healer
+in the presence of the divine
+in a cave
+in a field
+in a temple
+on a battlefield
+in an alley
+on a street
+in a tavern
+in an inn
+in a castle
+in a battlement
+in a tower
+in a mage's tower
+in a warlock's lair
+in the underdark
+on the other side of the world
+deep underwater
+in the sewers
+on a rubbish heap
+in a prison
+in a rundown shack
+in a military encampment
+in an apartment
+in a small house
+in a mansion
+in a palace
+in a castle
+with serious birth defects
+cursed
+blessed
+with a magical rune atop their forehead
