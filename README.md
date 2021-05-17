@@ -1522,11 +1522,11 @@ function determineWords(){
 </header>
 <form>
   <label for="numwords">Number Words:</label>
-  <input type="number" id="numwords" name="numwords" value="" min=1 size="2">
+  <input type="number" id="numwords" name="numwords" value="1" min=1 size="2">
   <label for="minlength">Min Length:</label>
-  <input type="number" id="minlength" name="minlength" value="" min=1 size="2">
+  <input type="number" id="minlength" name="minlength" value="1" min=1 size="2">
   <label for="maxlength">Max Length:</label>
-  <input type="number" id="maxlength" name="maxlength" value="" min=3 size="2">
+  <input type="number" id="maxlength" name="maxlength" value="3" min=3 size="2">
   <label for="chosenlang">Language:</label>
   <select name="chosenlang" id="chosenlang">
   <option value="Dwarf">Dwarvish</option>
@@ -1555,7 +1555,7 @@ function determineWords(){
   </select>
 </form>
   <button onclick="determineWords()">Generate Words</button>
-  <p style="display:inline-block" id="wordbank"></p>
+  <p id="wordbank"></p>
 
 
 </body>
