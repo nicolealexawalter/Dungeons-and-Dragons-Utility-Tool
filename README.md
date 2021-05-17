@@ -1489,10 +1489,10 @@ function generateTreasure(){
 		case 2:
 			output = generateSecondBracketTreasure();
 			break;
-		case 2:
+		case 3:
 			output = generateThirdBracketTreasure();
 			break;
-		case 2:
+		case 4:
 			output = generateFourthBracketTreasure();
 			break;
 		default: 
