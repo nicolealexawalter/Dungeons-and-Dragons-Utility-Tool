@@ -989,18 +989,19 @@ function creatureSearch(){
     	var creature = tofilter[j].split(" | ");
         var name = String(creature[0]);
         var size = String(creature[1]);
-        var type = String(creature[2]);
+        var type = String(creature[2]).split("(")[0];
         var alignment = String(creature[3]);
         var xp = String(creature[4]);
         var book = String(creature[5]);
         
         var xpint = parseInt(xp.replaceAll(",", ""));
+	var typewithoutsubtype = "";
         var bookwithoutpage = String(book.split("p.")[0]);
         
         if(
         	filterName(name.toLowerCase()) ||
             filterXP(xpint) ||
-            filterType(type.slice().trim()) ||
+            filterType(typewithoutsubtype.slice().trim()) ||
             filterBook(bookwithoutpage.slice().trim()) ||
             filterAlignment(alignment.slice().trim()) ||
             filterSize(size.slice().trim()) ||
@@ -1049,7 +1050,7 @@ function filterXP(xp){
 
 //filter if the typefilters are not null, and the type is not included
 function filterType(type){
-	var typefilters = Array.from(document.getElementById('creaturetype').selectedOptions).map(({ value }) => value).join(",");
+    var typefilters = Array.from(document.getElementById('creaturetype').selectedOptions).map(({ value }) => value).join(",");
     
     if(!isEmpty(typefilters) && !(typefilters.includes(type))) {
     	return true;
