@@ -1460,7 +1460,7 @@ var tablei = loadFile("FILES\\MAGIC\\" + "TABLEI" + ".txt").split("<br>");
 var magicaleffects = loadFile("FILES\\MAGIC\\" + "NETLIBRAMOFRANDOMMAGICALEFFECTS" + ".txt").split("<br>");
 
 function generateTreasure(){
-	var output = returnRandom(50gp) + " / " + returnRandom(tablea);
+	var output = returnRandom(gp50) + " / " + returnRandom(tablea);
 	
 	document.getElementById("treasure").innerHTML = output + "<br><br>" + document.getElementById("treasure").innerHTML;
 }
