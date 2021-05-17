@@ -1436,7 +1436,7 @@ function generateTreasure(){
 	
 	
 	
-	document.getElementById("treasure").innerHTML = output + "<br>" + document.getElementById("treasure").innerHTML;
+	document.getElementById("treasure").innerHTML = output + "<br><br>" + document.getElementById("treasure").innerHTML;
 }
 
 </script>
