@@ -1494,17 +1494,17 @@ function generatePL4(){
 function customMagicItem(pl){
 	var output = "";
 	//based on pl, fork into one of four different case
-	case (pl){
-		switch 1:
+	switch (pl){
+		case 1:
 			output = generatePL1();
 			break;
-		switch 2:
+		case 2:
 			output = generatePL2();
 			break;
-		switch 3:
+		case 3:
 			output = generatePL3();
 			break;
-		switch 4:
+		case 4:
 			output = generatePL4();
 			break;
 		default:
