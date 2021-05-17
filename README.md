@@ -450,7 +450,7 @@ function generateWord(markov, numberwords, proper, maxlen, minlen){
 
 	function generateWord(){
 		var word = markov.generateRandom(100).replaceAll(",", "").replaceAll(" ", ""); 
-		(while word.length < minlen){
+		while(word.length < minlen){
 			word += markov.generateRandom(100).replaceAll(",", "").replaceAll(" ", "");
 		}
 		
