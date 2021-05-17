@@ -1551,7 +1551,6 @@ function generateTreasure(){
 <form>
   <label for="treasurexp">XP:</label>
   <input type="number" id="treasurexp" name="treasurexp" value="" min=0>
-  </select>
 </form>
   <button onclick="generateTreasure()">Generate Treasure</button>
   <button onclick="clearTreasure()">Clear</button>
