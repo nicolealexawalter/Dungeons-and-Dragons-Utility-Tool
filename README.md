@@ -1408,7 +1408,7 @@ function determineWords(){
               output = generateWord(lang_human, numwords, false, maximumlength, minimumlength);
     }
     
-    return output.join(" ");
+    document.getElementById("wordbank").innerHTML = output.join(" ") + "<br>";
 }
 
 </script>
