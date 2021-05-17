@@ -30,6 +30,15 @@ height: 300px;
 overflow: scroll;
 }
 
+.treasureDisplay {
+border: none;
+padding: 5px;
+font: 14 courier-new;
+width: 750px;
+height: 250px;
+overflow: scroll;
+}
+
 /* Scrollbar styles */
 ::-webkit-scrollbar {
 width: 5px;
@@ -1040,6 +1049,7 @@ function calculateXP() {
   };
   document.getElementById("xpbudget").innerHTML = xp + " XP";
   document.getElementById("encounterxp").value = xp;
+  document.getElementyById("treasurexp").value = xp;
 }
 
 function loadFile(filePath){
@@ -1323,7 +1333,9 @@ function generateEncounter(){
     }
     
     document.getElementById("totalEncounterXP").innerHTML = "Total Encounter XP: " + currentxp;
+    document.getElementById("treasurexp").value = currentxp;
     document.getElementById("creatures").innerHTML = output.join("<br>");
+    generateTreasure();
 }
 
 function determineWords(){
@@ -1413,6 +1425,18 @@ function determineWords(){
 
 function clearWords(){
 	document.getElementById("wordbank").innerHTML = "";
+}
+
+function clearTreasure()(
+	document.getElementById("treasure").innerHTML = "";
+}
+
+function generateTreasure(){
+	var output = "testing!";
+	
+	
+	
+	document.getElementById("treasure").innerHTML = "testing!" + "<br>" + document.getElementById("treasure").innerHTML;
 }
 
 </script>
@@ -1520,7 +1544,18 @@ function clearWords(){
 </form>
   <button onclick="calculateXP()">Calculate XP</button>
   <p style="display:inline-block" id="xpbudget"></p>
-  
+
+<header>
+<h2>Treasure Hoard</h2>
+</header>
+<form>
+  <label for="treasurexp">XP:</label>
+  <input type="number" id="treasurexp" name="treasurexp" value="" min=0>
+</form>
+  <button onclick="generateTreasure()">Generate Treasure</button>
+  <button onclick="clearTreasure()">Clear</button>
+  <p class="treasureDisplay" id="treasure"></p>
+
 <header>
 <h3>Generate Words</h3>
 </header>
