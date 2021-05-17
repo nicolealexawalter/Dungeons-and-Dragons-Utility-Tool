@@ -25,7 +25,7 @@ overflow: scroll;
 border: none;
 padding: 5px;
 font: 14 courier-new;
-width: 500px;
+width: 600px;
 height: 300px;
 overflow: scroll;
 }
