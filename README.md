@@ -989,13 +989,13 @@ function creatureSearch(){
     	var creature = tofilter[j].split(" | ");
         var name = String(creature[0]);
         var size = String(creature[1]);
-        var type = String(creature[2]).split("(")[0];
+        var type = String(creature[2]);
         var alignment = String(creature[3]);
         var xp = String(creature[4]);
         var book = String(creature[5]);
         
         var xpint = parseInt(xp.replaceAll(",", ""));
-	var typewithoutsubtype = "";
+	var typewithoutsubtype = type.split("(")[0];
         var bookwithoutpage = String(book.split("p.")[0]);
         
         if(
