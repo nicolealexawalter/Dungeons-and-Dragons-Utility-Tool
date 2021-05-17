@@ -1492,7 +1492,23 @@ function generatePL3(){
 }
 
 function generatePL4(){
-	return "An item with the following effects:" + breakTab() + returnRandom(returnRandom([blessings, boons])) + breakTab() + returnRandom(returnRandom([shorttermmadness, longtermmadness]));
+	var item = "An item with the following effects:" + breakTab() + returnRandom(returnRandom([blessings, boons])) + breakTab() + returnRandom(returnRandom([shorttermmadness, longtermmadness]));
+	
+	switch(generateNumber(1, 4)){
+		case 1:
+			item += breakTab() + "It is sentient, but can only communicate emotion. Roll an NPC to see who it used to be.";
+			break;
+		case 2:
+			item += breakTab() + "It is sentient, but can only communicate telepathically. Roll an NPC to see who it used to be.";
+			break;
+		case 3:
+			item += breakTab() + "It is sentient, but can only communicate through speech. Roll an NPC to see who it used to be.";
+			break;
+		default:
+			break;
+	}
+	
+	return item;
 }
 
 function customMagicItem(pl){
