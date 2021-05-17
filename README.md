@@ -1456,11 +1456,46 @@ var tableg = loadFile("FILES\\MAGIC\\" + "TABLEG" + ".txt").split("<br>");
 var tableh = loadFile("FILES\\MAGIC\\" + "TABLEH" + ".txt").split("<br>");
 var tablei = loadFile("FILES\\MAGIC\\" + "TABLEI" + ".txt").split("<br>");
 
-//load netlibram
-var magicaleffects = loadFile("FILES\\MAGIC\\" + "NETLIBRAMOFRANDOMMAGICALEFFECTS" + ".txt").split("<br>");
+//load custom items
+var netlibram = loadFile("FILES\\MAGIC\\" + "NETLIBRAMOFRANDOMMAGICALEFFECTS" + ".txt").split("<br>");
+var blessings = loadFile("FILES\\CUSTOM ITEMS\\" + "BLESSINGS AND CHARMS" + ".txt").split("<br>");
+var boons = loadFile("FILES\\CUSTOM ITEMS\\" + "BOONS" + ".txt").split("<br>");
+var longtermmadness = loadFile("FILES\\CUSTOM ITEMS\\" + "LONG TERM MADNESS" + ".txt").split("<br>");
+var majorbene = loadFile("FILES\\CUSTOM ITEMS\\" + "MAJOR BENE" + ".txt").split("<br>");
+var majordetr = loadFile("FILES\\CUSTOM ITEMS\\" + "MAJOR DETR" + ".txt").split("<br>");
+var minorbene = loadFile("FILES\\CUSTOM ITEMS\\" + "MINOR BENE" + ".txt").split("<br>");
+var minordetr = loadFile("FILES\\CUSTOM ITEMS\\" + "MINOR DETR" + ".txt").split("<br>");
+var minorprop = loadFile("FILES\\CUSTOM ITEMS\\" + "MINOR PROPERTIES" + ".txt").split("<br>");
+var quirks = loadFile("FILES\\CUSTOM ITEMS\\" + "QUIRKS" + ".txt").split("<br>");
+var shorttermmadness = loadFile("FILES\\CUSTOM ITEMS\\" + "SHORT TERM MADNESS" + ".txt").split("<br>");
 
+/*
+ideas:
+	- net libram of random magical effects
+	- quirk + minor propery (143) as adjective/noun
+	- minor beneficial properties (219)
+	- minor detrimental properties (220)
+	- major beneficial properties (219)
+	- major detrimental prop (220)
+	- blessings/charms (228)
+	- epic boons (232)
+	- madness (259/260)
+	- sentience (214/215)
+PL1:
+	- adjective/noun + random magical effect
+PL2:
+	- minor beneficial / minor detrimental
+PL3:
+	- major beneficial / major detrimental 
+PL4:
+	- blessing charm or a boon / madness or sentience
+*/
 function customMagicItem(pl){
-	return "Magic Item of PL:" + pl;
+	//based on pl, fork into one of four different case
+	
+	//generate a name
+	
+	return "Magic Item of PL: " + pl;
 }
 
 function generateFirstBracketTreasure(){
