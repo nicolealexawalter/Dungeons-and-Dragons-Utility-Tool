@@ -1467,10 +1467,40 @@ function customMagicItem(){
     - Grab items: 0-1 of 100gp, 1 of 50gp, 1-2 of 25gp, 2-3 of 10gp
     - Determine if we will generate our own random PL1 magical item, or grab an item from magical item tables A-C
 */
-function generateFirstBracketTreasure(){
-	var goodies = "";
+function generateFirstBracketTreatablea.concat(tableb).concat(tablec);sure(){
+	var goodies = [];
 	
-	goodies = generateNumber(1, 10);
+	var rarenum = generateNumber(0,1);
+	var uncommonnum = generateNumber(1, 2);
+	var commonnum = generateNumber(2, 3);
+	
+	var rareset = gp100;
+	var unrareset = gp50;
+	var uncommonset = gp25;
+	var commonset = gp10;
+	
+	if(rarenum == 1){
+		goodies.push(returnRandom(rareset));
+	}
+	
+	goodies.push(returnRandom(unrareset));
+	
+	for(var x=0;x<uncommonnum;x++){
+		goodies.push(returnRandom(uncommonset));
+	}
+	
+	for(var y=0;y<commonnum;y++){
+		goodies.push(returnRandom(commonset));
+	}
+	
+	var itemset = tablea.concat(tableb).concat(tablec);
+	var isCustom = generateNumber(0, 1);
+	
+	if(isCustom == 1){
+		goodies.push(customMagicItem());
+	}else {
+		goodies.push(returnRandom(itemset));
+	}
 	
 	return goodies;	
 }
@@ -1514,7 +1544,7 @@ function generateFourthBracketTreasure(){
 }
 
 function generateTreasure(){
-	var output = "";
+	var output = [];
 	
 	switch(determineBracket()){
 		case 1:
@@ -1530,10 +1560,10 @@ function generateTreasure(){
 			output = generateFourthBracketTreasure();
 			break;
 		default: 
-			output = "You must set an XP value first!";
+			output = ["Error!", "You must first set an XP value."];
 	}
 	
-	document.getElementById("treasure").innerHTML = output + "<br><br>" + document.getElementById("treasure").innerHTML;
+	document.getElementById("treasure").innerHTML = output.join("<br>") + "<br><br>" + document.getElementById("treasure").innerHTML;
 }
 
 function determineBracket(){
