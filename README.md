@@ -1427,7 +1427,7 @@ function clearWords(){
 	document.getElementById("wordbank").innerHTML = "";
 }
 
-function clearTreasure()(
+function clearTreasure(){
 	document.getElementById("treasure").innerHTML = "";
 }
 
@@ -1436,7 +1436,7 @@ function generateTreasure(){
 	
 	
 	
-	document.getElementById("treasure").innerHTML = "testing!" + "<br>" + document.getElementById("treasure").innerHTML;
+	document.getElementById("treasure").innerHTML = output + "<br>" + document.getElementById("treasure").innerHTML;
 }
 
 </script>
