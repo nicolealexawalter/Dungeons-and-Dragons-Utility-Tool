@@ -530,8 +530,8 @@ function generateStats(){
 }
 
 //all global npc variables (global so they are only loaded once) go here
-var sexualities = ["Ace", "Heterosexual", "Bicurious", "Bisexual", "Pansexual", "Androphilic", "Gynephillic", "Homosexual", "Demisexual", "Queer", "Questioning", "Sapiosexual", "Manasexual", "Chaser", "Graysexual"];
-var genders = ["Male", "Female", "Genderqueer"];
+var sexualities = ["Ace", "Straight", "Bisexual","Gay", "Queer"];
+var genders = ["Male", "Female"];
 var ages = ["Young","Middle-Aged","Old"];
 var traits = loadFile("FILES\\NPC\\" + "TRAITS" + ".txt").split("<br>");
 var ideals = loadFile("FILES\\NPC\\" + "IDEALS" + ".txt").split("<br>");
