@@ -1557,6 +1557,7 @@ function clearWords(){
   <option value="Beastfolk">Beastfolk</option>
   <option value="Genasi">Genasi</option>
   </select>
+	<br>
 </form>
   <button onclick="determineWords()">Generate Words</button>
   <button onclick="clearWords()">Clear</button>
