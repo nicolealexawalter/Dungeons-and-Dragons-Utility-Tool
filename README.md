@@ -1433,17 +1433,17 @@ function clearTreasure(){
 
 
 //load loot
-var 10gp = loadFile("FILES\\LOOT\\" + "10GP" + ".txt").split("<br>");
-var 25gp = loadFile("FILES\\LOOT\\" + "25GP" + ".txt").split("<br>");
-var 50gp = loadFile("FILES\\LOOT\\" + "50GP" + ".txt").split("<br>");
-var 100gp = loadFile("FILES\\LOOT\\" + "100GP" + ".txt").split("<br>");
-var 250gp = loadFile("FILES\\LOOT\\" + "250GP" + ".txt").split("<br>");
-var 500gp = loadFile("FILES\\LOOT\\" + "500GP" + ".txt").split("<br>");
-var 750gp = loadFile("FILES\\LOOT\\" + "750GP" + ".txt").split("<br>");
-var 1000gp = loadFile("FILES\\LOOT\\" + "1000GP" + ".txt").split("<br>");
-var 2500gp = loadFile("FILES\\LOOT\\" + "2500GP" + ".txt").split("<br>");
-var 5000gp = loadFile("FILES\\LOOT\\" + "5000GP" + ".txt").split("<br>");
-var 7500gp = loadFile("FILES\\LOOT\\" + "7500GP" + ".txt").split("<br>");
+var gp10 = loadFile("FILES\\LOOT\\" + "10GP" + ".txt").split("<br>");
+var gp25 = loadFile("FILES\\LOOT\\" + "25GP" + ".txt").split("<br>");
+var gp50 = loadFile("FILES\\LOOT\\" + "50GP" + ".txt").split("<br>");
+var gp100 = loadFile("FILES\\LOOT\\" + "100GP" + ".txt").split("<br>");
+var gp250 = loadFile("FILES\\LOOT\\" + "250GP" + ".txt").split("<br>");
+var gp500 = loadFile("FILES\\LOOT\\" + "500GP" + ".txt").split("<br>");
+var gp750 = loadFile("FILES\\LOOT\\" + "750GP" + ".txt").split("<br>");
+var gp1000 = loadFile("FILES\\LOOT\\" + "1000GP" + ".txt").split("<br>");
+var gp2500 = loadFile("FILES\\LOOT\\" + "2500GP" + ".txt").split("<br>");
+var gp5000 = loadFile("FILES\\LOOT\\" + "5000GP" + ".txt").split("<br>");
+var gp7500 = loadFile("FILES\\LOOT\\" + "7500GP" + ".txt").split("<br>");
 
 //load magic tables
 var tablea = loadFile("FILES\\MAGIC\\" + "TABLEA" + ".txt").split("<br>");
