@@ -444,6 +444,7 @@ function generateWord(markov, numberwords, proper, maxlen){
 	function generateWord(){
     	var word = markov.generateRandom(maxlen).replaceAll(",", "").replaceAll(" ", ""); 
     	if(proper){
+		word = word.toLowerCase();
         	return capitalize(word);
         } else{
         	return word;
