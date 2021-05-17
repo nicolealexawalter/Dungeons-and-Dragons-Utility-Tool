@@ -1049,7 +1049,7 @@ function calculateXP() {
   };
   document.getElementById("xpbudget").innerHTML = xp + " XP";
   document.getElementById("encounterxp").value = xp;
-  document.getElementyById("treasurexp").value = xp;
+  document.getElementById("treasurexp").value = xp;
 }
 
 function loadFile(filePath){
