@@ -1469,6 +1469,10 @@ var minorprop = loadFile("FILES\\CUSTOM ITEMS\\" + "MINOR PROPERTIES" + ".txt").
 var quirks = loadFile("FILES\\CUSTOM ITEMS\\" + "QUIRKS" + ".txt").split("<br>");
 var shorttermmadness = loadFile("FILES\\CUSTOM ITEMS\\" + "SHORT TERM MADNESS" + ".txt").split("<br>");
 
+function breakTab(){
+	return "<br>&emsp;&emsp;";
+}
+
 /*
 PL1:	- adjective/noun + random magical effect
 PL2:	- minor beneficial / minor detrimental
@@ -1476,19 +1480,19 @@ PL3:	- major beneficial / major detrimental
 PL4:	- blessing charm or a boon / madness or sentience
 */
 function generatePL1(){
-	return returnRandom(quirks) + " " + returnRandom(minorprop).toLowerCase() + " with the effect of: <br>&emsp;&emsp;" + returnRandom(netlibram);
+	return returnRandom(quirks) + " " + returnRandom(minorprop).toLowerCase() + " with the effect of:" + breakTab() + returnRandom(netlibram);
 }
 
 function generatePL2(){
-	return "test";
+	return "An item with the following effects:" + breakTab() + returnRandom(minorbene) + breakTab() + returnRandom(minordetr);
 }
 
 function generatePL3(){
-	return "test";
+	return "An item with the following effects:" + breakTab() + returnRandom(majorbene) + breakTab() + returnRandom(majordetr);
 }
 
 function generatePL4(){
-	return "test";
+	return "An item with the following effects:" + breakTab() + returnRandom(returnRandom([blessings, boons])) + breakTab() + returnRandom(returnRandom([shorttermmadness, longtermmadness]));
 }
 
 function customMagicItem(pl){
