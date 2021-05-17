@@ -1431,10 +1431,36 @@ function clearTreasure(){
 	document.getElementById("treasure").innerHTML = "";
 }
 
+
+//load loot
+var 10gp = loadFile("FILES\\LOOT\\" + "10GP" + ".txt").split("<br>");
+var 25gp = loadFile("FILES\\LOOT\\" + "25GP" + ".txt").split("<br>");
+var 50gp = loadFile("FILES\\LOOT\\" + "50GP" + ".txt").split("<br>");
+var 100gp = loadFile("FILES\\LOOT\\" + "100GP" + ".txt").split("<br>");
+var 250gp = loadFile("FILES\\LOOT\\" + "250GP" + ".txt").split("<br>");
+var 500gp = loadFile("FILES\\LOOT\\" + "500GP" + ".txt").split("<br>");
+var 750gp = loadFile("FILES\\LOOT\\" + "750GP" + ".txt").split("<br>");
+var 1000gp = loadFile("FILES\\LOOT\\" + "1000GP" + ".txt").split("<br>");
+var 2500gp = loadFile("FILES\\LOOT\\" + "2500GP" + ".txt").split("<br>");
+var 5000gp = loadFile("FILES\\LOOT\\" + "5000GP" + ".txt").split("<br>");
+var 7500gp = loadFile("FILES\\LOOT\\" + "7500GP" + ".txt").split("<br>");
+
+//load magic tables
+var tablea = loadFile("FILES\\MAGIC\\" + "TABLEA" + ".txt").split("<br>");
+var tableb = loadFile("FILES\\MAGIC\\" + "TABLEB" + ".txt").split("<br>");
+var tablec = loadFile("FILES\\MAGIC\\" + "TABLEC" + ".txt").split("<br>");
+var tabled = loadFile("FILES\\MAGIC\\" + "TABLED" + ".txt").split("<br>");
+var tablee = loadFile("FILES\\MAGIC\\" + "TABLEE" + ".txt").split("<br>");
+var tablef = loadFile("FILES\\MAGIC\\" + "TABLEF" + ".txt").split("<br>");
+var tableg = loadFile("FILES\\MAGIC\\" + "TABLEG" + ".txt").split("<br>");
+var tableh = loadFile("FILES\\MAGIC\\" + "TABLEH" + ".txt").split("<br>");
+var tablei = loadFile("FILES\\MAGIC\\" + "TABLEI" + ".txt").split("<br>");
+
+//load netlibram
+var magicaleffects = loadFile("FILES\\MAGIC\\" + "NETLIBRAMOFRANDOMMAGICALEFFECTS" + ".txt").split("<br>");
+
 function generateTreasure(){
-	var output = "testing!";
-	
-	
+	var output = returnRandom(50gp) + " / " + returnRandom(tablea);
 	
 	document.getElementById("treasure").innerHTML = output + "<br><br>" + document.getElementById("treasure").innerHTML;
 }
