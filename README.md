@@ -1559,7 +1559,7 @@ function clearWords(){
   </select>
 </form>
   <button onclick="determineWords()">Generate Words</button>
-  <button onclick="clearWords()">Generate Words</button>
+  <button onclick="clearWords()">Clear</button>
   <p id="wordbank"></p>
 
 
