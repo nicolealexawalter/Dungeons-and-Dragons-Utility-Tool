@@ -438,17 +438,30 @@ function trainMarkovChain(strings){
 
 	return markov;    
 }
+		
+function truncateString(str, num) {
+	if (str.length <= num) {
+ 	   return str
+  	}
+  	return str.slice(0, num);
+}
 
-function generateWord(markov, numberwords, proper, maxlen){
+function generateWord(markov, numberwords, proper, maxlen, minlen){
 
 	function generateWord(){
-    	var word = markov.generateRandom(maxlen).replaceAll(",", "").replaceAll(" ", ""); 
-    	if(proper){
-		word = word.toLowerCase();
-        	return capitalize(word);
-        } else{
-        	return word;
-        }
+		var word = markov.generateRandom(100).replaceAll(",", "").replaceAll(" ", ""); 
+		while(word.length < minlen){
+			word += markov.generateRandom(100).replaceAll(",", "").replaceAll(" ", "");
+		}
+		
+		word = truncateString(word, maxlen);
+
+		if(proper){
+			word = word.toLowerCase();
+			return capitalize(word);
+		} else{
+			return word;
+		}
     }
     
 	var output = [];
@@ -585,76 +598,76 @@ function determineName(primaryrace){
     
 	switch(primaryrace){
     	case "Dwarf":
-        	output = generateWord(lang_dwarvish, 2, true, 12);
+        	output = generateWord(lang_dwarvish, 2, true, 15, 10);
             	break;
 	case "Elf":
-		output = generateWord(lang_elvish, 2, true, 20);
+		output = generateWord(lang_elvish, 3, true, 20, 10);
 		break;
 	case "Halfling":
-		output = generateWord(lang_halfling, 2, true, 20);
+		output = generateWord(lang_halfling, 4, true, 10, 5);
 		break;
 	case "Human":
-		output = generateWord(lang_human, 2, true, 20);
+		output = generateWord(lang_human, 3, true, 15, 3);
 		break;
 	case "Dragonborn":
-		output = generateWord(lang_dragonborn, 2, true, 20);
+		output = generateWord(lang_dragonborn, 2, true, 20, 15);
 		break;
 	case "Gnome":
-		output = generateWord(lang_gnome, 2, true, 20);
+		output = generateWord(lang_gnome, 1, true, 30, 5);
 		break;
 	case "Aasimar":
-		output = generateWord(lang_aasimar, 2, true, 20);
+		output = generateWord(lang_aasimar, 1, true, 25, 5);
 		break;
 	case "Tiefling":
-		output = generateWord(lang_tiefling, 2, true, 20);
+		output = generateWord(lang_tiefling, 1, true, 25, 5);
 		break;
 	case "Shifter":
-		output = generateWord(lang_shifter, 2, true, 20);
+		output = generateWord(lang_shifter, 2, true, 20, 5);
 		break;
 	case "Gith":
-		output = generateWord(lang_gith, 2, true, 20);
+		output = generateWord(lang_gith, 2, true, 20, 5);
 		break;
 	case "Firbolg":
-		output = generateWord(lang_firbolg, 2, true, 20);
+		output = generateWord(lang_firbolg, 2, true, 20, 5);
 		break;
 	case "Goliath":
-		output = generateWord(lang_goliath, 2, true, 20);
+		output = generateWord(lang_goliath, 2, true, 20, 5);
 		break;
 	case "Kenku":
-		output = generateWord(lang_kenku, 2, true, 20);
+		output = generateWord(lang_kenku, 2, true, 20, 5);
 		break;
 	case "Lizardfolk":
-		output = generateWord(lang_lizardfolk, 2, true, 20);
+		output = generateWord(lang_lizardfolk, 2, true, 20, 5);
 		break;
 	case "Tabaxi":
-		output = generateWord(lang_tabaxi, 2, true, 20);
+		output = generateWord(lang_tabaxi, 2, true, 20, 5);
 		break;
 	case "Triton":
-		output = generateWord(lang_triton, 2, true, 20);
+		output = generateWord(lang_triton, 2, true, 20, 5);
 		break;
 	case "Goblinoid":
-		output = generateWord(lang_goblinoid, 2, true, 20);
+		output = generateWord(lang_goblinoid, 5, true, 6, 3);
 		break;
 	case "Kobold":
-		output = generateWord(lang_kobold, 2, true, 20);
+		output = generateWord(lang_kobold, 2, true, 20, 5);
 		break;
 	case "Yuan Ti":
-		output = generateWord(lang_yuanti, 2, true, 20);
+		output = generateWord(lang_yuanti, 2, true, 20, 10);
 		break;
 	case "Orc":
-		output = generateWord(lang_orcish, 2, true, 20);
+		output = generateWord(lang_orcish, 2, true, 20, 5);
 		break;
 	case "Warforged":
-		output = generateWord(lang_warforged, 2, true, 20);
+		output = generateWord(lang_warforged, 2, true, 20, 5);
 		break;
 	case "Beastfolk":
-		output = generateWord(lang_beastfolk, 2, true, 20);
+		output = generateWord(lang_beastfolk, 2, true, 20, 5);
 		break;
 	case "Genasi":
-		output = generateWord(lang_genasi, 2, true, 20);
+		output = generateWord(lang_genasi, 2, true, 20, 5);
 		break;	
     	default:
-        	output = generateWord(lang_human, 2, true, 12);
+        	output = generateWord(lang_human, 2, true, 12, 2);
     }
     
     return output.join(" ");
