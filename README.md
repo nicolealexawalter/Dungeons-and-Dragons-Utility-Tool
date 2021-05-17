@@ -530,22 +530,128 @@ var races = loadFile("FILES\\NPC\\" + "RACES" + ".txt").split("<br>");
 //load languages
 var lang_raw_human = loadFile("FILES\\NPC\\LANGUAGES\\" + "HUMAN" + ".txt").split("<br>");
 var lang_raw_elvish = loadFile("FILES\\NPC\\LANGUAGES\\" + "ELVISH" + ".txt").split("<br>");
+var lang_raw_aasimar = loadFile("FILES\\NPC\\LANGUAGES\\" + "AASIMAR" + ".txt").split("<br>");
+var lang_raw_beastfolk = loadFile("FILES\\NPC\\LANGUAGES\\" + "BEASTFOLK" + ".txt").split("<br>");
+var lang_raw_dragonborn = loadFile("FILES\\NPC\\LANGUAGES\\" + "DRAGONBORN" + ".txt").split("<br>");
+var lang_raw_dwarvish = loadFile("FILES\\NPC\\LANGUAGES\\" + "DWARVISH" + ".txt").split("<br>");
+var lang_raw_firbolg = loadFile("FILES\\NPC\\LANGUAGES\\" + "FIRBOLG" + ".txt").split("<br>");
+var lang_raw_genasi = loadFile("FILES\\NPC\\LANGUAGES\\" + "GENASI" + ".txt").split("<br>");
+var lang_raw_gith = loadFile("FILES\\NPC\\LANGUAGES\\" + "GITH" + ".txt").split("<br>");
+var lang_raw_gnomish = loadFile("FILES\\NPC\\LANGUAGES\\" + "GNOMISH" + ".txt").split("<br>");
+var lang_raw_goblinoid = loadFile("FILES\\NPC\\LANGUAGES\\" + "GOBLINOID" + ".txt").split("<br>");
+var lang_raw_goliath = loadFile("FILES\\NPC\\LANGUAGES\\" + "GOLIATH" + ".txt").split("<br>");
+var lang_raw_halfling = loadFile("FILES\\NPC\\LANGUAGES\\" + "HALFLING" + ".txt").split("<br>");
+var lang_raw_kenku = loadFile("FILES\\NPC\\LANGUAGES\\" + "KENKU" + ".txt").split("<br>");
+var lang_raw_kobold = loadFile("FILES\\NPC\\LANGUAGES\\" + "KOBOLD" + ".txt").split("<br>");
+var lang_raw_lizardfolk = loadFile("FILES\\NPC\\LANGUAGES\\" + "LIZARDFOLK" + ".txt").split("<br>");
+var lang_raw_orcish = loadFile("FILES\\NPC\\LANGUAGES\\" + "ORCISH" + ".txt").split("<br>");
+var lang_raw_shifter = loadFile("FILES\\NPC\\LANGUAGES\\" + "SHIFTER" + ".txt").split("<br>");
+var lang_raw_tabaxi = loadFile("FILES\\NPC\\LANGUAGES\\" + "TABAXI" + ".txt").split("<br>");
+var lang_raw_tiefling = loadFile("FILES\\NPC\\LANGUAGES\\" + "TIEFLING" + ".txt").split("<br>");
+var lang_raw_triton = loadFile("FILES\\NPC\\LANGUAGES\\" + "TRITON" + ".txt").split("<br>");
+var lang_raw_warforged = loadFile("FILES\\NPC\\LANGUAGES\\" + "WARFORGED" + ".txt").split("<br>");
+var lang_raw_yuanti = loadFile("FILES\\NPC\\LANGUAGES\\" + "YUAN TI" + ".txt").split("<br>");
+
 
 //generate language changes
 var lang_human = trainMarkovChain(lang_raw_human);
 var lang_elvish = trainMarkovChain(lang_raw_elvish);
+var lang_aasimar = trainMarkovChain(lang_raw_aasimar);
+var lang_beastfolk = trainMarkovChain(lang_raw_beastfolk);
+var lang_dragonborn = trainMarkovChain(lang_raw_dragonborn);
+var lang_dwarvish = trainMarkovChain(lang_raw_dwarvish);
+var lang_firbolg = trainMarkovChain(lang_raw_firbolg);
+var lang_genasi = trainMarkovChain(lang_raw_genasi);
+var lang_gith = trainMarkovChain(lang_raw_gith);
+var lang_gnomish = trainMarkovChain(lang_raw_gnomish);
+var lang_goblinoid = trainMarkovChain(lang_raw_goblinoid);
+var lang_goliath = trainMarkovChain(lang_raw_goliath);
+var lang_halfling = trainMarkovChain(lang_raw_halfling);
+var lang_kenku = trainMarkovChain(lang_raw_kenku);
+var lang_kobold = trainMarkovChain(lang_raw_kobold);
+var lang_lizardfolk = trainMarkovChain(lang_raw_lizardfolk);
+var lang_orcish = trainMarkovChain(lang_raw_orcish);
+var lang_shifter = trainMarkovChain(lang_raw_shifter);
+var lang_tabaxi = trainMarkovChain(lang_raw_tabaxi);
+var lang_tiefling = trainMarkovChain(lang_raw_tiefling);
+var lang_triton = trainMarkovChain(lang_raw_triton);
+var lang_warforged = trainMarkovChain(lang_raw_warforged);
+var lang_yuanti = trainMarkovChain(lang_raw_yuanti);
 
 //determine name by race
 function determineName(primaryrace){
 	var output = [];
     
 	switch(primaryrace){
-    	case "Human":
-        	output = generateWord(lang_human, 2, true, 12);
+    	case "Dwarf":
+        	output = generateWord(lang_dwarvish, 2, true, 12);
             	break;
 	case "Elf":
-		output = generateWord(lang_elvish, 3, true, 20);
+		output = generateWord(lang_elvish, 2, true, 20);
 		break;
+	case "Halfling":
+		output = generateWord(lang_halfling, 2, true, 20);
+		break;
+	case "Human":
+		output = generateWord(lang_human, 2, true, 20);
+		break;
+	case "Dragonborn":
+		output = generateWord(lang_dragonborn, 2, true, 20);
+		break;
+	case "Gnome":
+		output = generateWord(lang_gnome, 2, true, 20);
+		break;
+	case "Aasimar":
+		output = generateWord(lang_aasimar, 2, true, 20);
+		break;
+	case "Tiefling":
+		output = generateWord(lang_tiefling, 2, true, 20);
+		break;
+	case "Shifter":
+		output = generateWord(lang_shifter, 2, true, 20);
+		break;
+	case "Gith":
+		output = generateWord(lang_gith, 2, true, 20);
+		break;
+	case "Firbolg":
+		output = generateWord(lang_firbolg, 2, true, 20);
+		break;
+	case "Goliath":
+		output = generateWord(lang_goliath, 2, true, 20);
+		break;
+	case "Kenku":
+		output = generateWord(lang_kenku, 2, true, 20);
+		break;
+	case "Lizardfolk":
+		output = generateWord(lang_lizardfolk, 2, true, 20);
+		break;
+	case "Tabaxi":
+		output = generateWord(lang_tabaxi, 2, true, 20);
+		break;
+	case "Triton":
+		output = generateWord(lang_triton, 2, true, 20);
+		break;
+	case "Goblinoid":
+		output = generateWord(lang_goblinoid, 2, true, 20);
+		break;
+	case "Kobold":
+		output = generateWord(lang_kobold, 2, true, 20);
+		break;
+	case "Yuan Ti":
+		output = generateWord(lang_yuanti, 2, true, 20);
+		break;
+	case "Orc":
+		output = generateWord(lang_orcish, 2, true, 20);
+		break;
+	case "Warforged":
+		output = generateWord(lang_warforged, 2, true, 20);
+		break;
+	case "Beastfolk":
+		output = generateWord(lang_beastfolk, 2, true, 20);
+		break;
+	case "Genasi":
+		output = generateWord(lang_genasi, 2, true, 20);
+		break;	
     	default:
         	output = generateWord(lang_human, 2, true, 12);
     }
