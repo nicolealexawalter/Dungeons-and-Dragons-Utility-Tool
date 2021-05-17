@@ -1518,7 +1518,7 @@ function determineWords(){
   <p style="display:inline-block" id="xpbudget"></p>
   
 <header>
-<h3>Generate XP</h3>
+<h3>Generate Words</h3>
 </header>
 <form>
   <label for="numwords">Number Words:</label>
