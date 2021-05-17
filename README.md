@@ -1326,6 +1326,91 @@ function generateEncounter(){
     document.getElementById("creatures").innerHTML = output.join("<br>");
 }
 
+function determineWords(){
+	var output = [];
+    
+    var numwords = document.getElementById("numwords").value;
+    var minimumlength = document.getElementById("minlength").value;
+    var maximumlength = document.getElementById("maxlength").value;
+    var race = document.getElementById("chosenlang").value;
+    
+	switch(race){
+      case "Dwarf":
+          output = generateWord(lang_dwarvish, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Elf":
+          output = generateWord(lang_elvish, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Halfling":
+          output = generateWord(lang_halfling, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Human":
+          output = generateWord(lang_human, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Dragonborn":
+          output = generateWord(lang_dragonborn, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Gnome":
+          output = generateWord(lang_gnome, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Aasimar":
+          output = generateWord(lang_aasimar, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Tiefling":
+          output = generateWord(lang_tiefling, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Shifter":
+          output = generateWord(lang_shifter, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Gith":
+          output = generateWord(lang_gith, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Firbolg":
+          output = generateWord(lang_firbolg, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Goliath":
+          output = generateWord(lang_goliath, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Kenku":
+          output = generateWord(lang_kenku, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Lizardfolk":
+          output = generateWord(lang_lizardfolk, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Tabaxi":
+          output = generateWord(lang_tabaxi, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Triton":
+          output = generateWord(lang_triton, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Goblinoid":
+          output = generateWord(lang_goblinoid, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Kobold":
+          output = generateWord(lang_kobold, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Yuan Ti":
+          output = generateWord(lang_yuanti, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Orc":
+          output = generateWord(lang_orcish, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Warforged":
+          output = generateWord(lang_warforged, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Beastfolk":
+          output = generateWord(lang_beastfolk, numwords, false, maximumlength, minimumlength);
+          break;
+      case "Genasi":
+          output = generateWord(lang_genasi, numwords, false, maximumlength, minimumlength);
+          break;	
+          default:
+              output = generateWord(lang_human, numwords, false, maximumlength, minimumlength);
+    }
+    
+    return output.join(" ");
+}
+
 </script>
 <header>
 <h1>Creatures and Encounters</h1>
@@ -1431,5 +1516,47 @@ function generateEncounter(){
 </form>
   <button onclick="calculateXP()">Calculate XP</button>
   <p style="display:inline-block" id="xpbudget"></p>
+  
+<header>
+<h3>Generate XP</h3>
+</header>
+<form>
+  <label for="numwords">Number Words:</label>
+  <input type="number" id="numwords" name="numwords" value="" min=1 size="2">
+  <label for="minlength">Min Length:</label>
+  <input type="number" id="minlength" name="minlength" value="" min=1 size="2">
+  <label for="maxlength">Max Length:</label>
+  <input type="number" id="maxlength" name="maxlength" value="" min=3 size="2">
+  <label for="chosenlang">Language:</label>
+  <select name="chosenlang" id="chosenlang">
+  <option value="Dwarf">Dwarvish</option>
+  <option value="Elf">Elvish</option>
+  <option value="Halfling">Halfling</option>
+  <option value="Human">Human</option>
+  <option value="Dragonborn">Dragonborn</option>
+  <option value="Gnome">Gnome</option>
+  <option value="Aasimar">Aasimar</option>
+  <option value="Tiefling">Tiefling</option>
+  <option value="Shifter">Shifter</option>
+  <option value="Gith">Gith</option>
+  <option value="Firbolg">Firbolg</option>
+  <option value="Goliath">Goliath</option>
+  <option value="Kenku">Kenku</option>
+  <option value="Lizardfolk">Lizardfolk</option>
+  <option value="Tabaxi">Tabaxi</option>
+  <option value="Triton">Triton</option>
+  <option value="Goblinoid">Goblinoid</option>
+  <option value="Kobold">Kobold</option>
+  <option value="Yuan Ti">Yuan Ti</option>
+  <option value="Orc">Orcish</option>
+  <option value="Warforged">Warforged</option>
+  <option value="Beastfolk">Beastfolk</option>
+  <option value="Genasi">Genasi</option>
+  </select>
+</form>
+  <button onclick="determineWords()">Generate Words</button>
+  <p style="display:inline-block" id="wordbank"></p>
+
+
 </body>
 </html>
