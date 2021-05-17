@@ -1459,10 +1459,60 @@ var tablei = loadFile("FILES\\MAGIC\\" + "TABLEI" + ".txt").split("<br>");
 //load netlibram
 var magicaleffects = loadFile("FILES\\MAGIC\\" + "NETLIBRAMOFRANDOMMAGICALEFFECTS" + ".txt").split("<br>");
 
+function customMagicItem(){
+	return "this aint nothing yet";
+}
+
+function generateFirstBracketTreasure(){
+	return "bracket 1";	
+}
+
+function generateSecondBracketTreasure(){
+	return "bracket 2";
+}
+
+function generateThirdBracketTreasure(){
+	return "bracket 3";
+}
+
+function generateFourthBracketTreasure(){
+	return "bracket 4";
+}
+
 function generateTreasure(){
-	var output = returnRandom(gp50) + " / " + returnRandom(tablea);
+	var output = "";
+	
+	switch(determineBracket()){
+		case 1:
+			output = generateFirstBracketTreasure();
+			break;
+		case 2:
+			output = generateSecondBracketTreasure();
+			break;
+		case 2:
+			output = generateThirdBracketTreasure();
+			break;
+		case 2:
+			output = generateFourthBracketTreasure();
+			break;
+		default: 
+			output = "You must set an XP value first!";
+	}
 	
 	document.getElementById("treasure").innerHTML = output + "<br><br>" + document.getElementById("treasure").innerHTML;
+}
+
+function determineBracket(){
+	var xp = document.getElementById("treasurexp").value;
+	if(xp <= 1100){
+		return 1;
+	}else if(xp <= 5900){
+		return 2;
+	}else if(xp <= 15000){
+		return 3;
+	}else{
+		return 4;
+	}
 }
 
 </script>
