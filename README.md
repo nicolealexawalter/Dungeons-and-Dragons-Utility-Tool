@@ -1470,32 +1470,49 @@ var quirks = loadFile("FILES\\CUSTOM ITEMS\\" + "QUIRKS" + ".txt").split("<br>")
 var shorttermmadness = loadFile("FILES\\CUSTOM ITEMS\\" + "SHORT TERM MADNESS" + ".txt").split("<br>");
 
 /*
-ideas:
-	- net libram of random magical effects
-	- quirk + minor propery (143) as adjective/noun
-	- minor beneficial properties (219)
-	- minor detrimental properties (220)
-	- major beneficial properties (219)
-	- major detrimental prop (220)
-	- blessings/charms (228)
-	- epic boons (232)
-	- madness (259/260)
-	- sentience (214/215)
-PL1:
-	- adjective/noun + random magical effect
-PL2:
-	- minor beneficial / minor detrimental
-PL3:
-	- major beneficial / major detrimental 
-PL4:
-	- blessing charm or a boon / madness or sentience
+PL1:	- adjective/noun + random magical effect
+PL2:	- minor beneficial / minor detrimental
+PL3:	- major beneficial / major detrimental 
+PL4:	- blessing charm or a boon / madness or sentience
 */
+function generatePL1(){
+	return returnRandom(quirks) + " " + returnRandom(minorprop) + "with the effect of: <br>         " + returnRandom(netlibram);
+}
+
+function generatePL2(){
+	return "test";
+}
+
+function generatePL3(){
+	return "test";
+}
+
+function generatePL4(){
+	return "test";
+}
+
 function customMagicItem(pl){
+	var output = "";
 	//based on pl, fork into one of four different case
-	
+	case (pl){
+		switch 1:
+			output = generatePL1();
+			break;
+		switch 2:
+			output = generatePL2();
+			break;
+		switch 3:
+			output = generatePL3();
+			break;
+		switch 4:
+			output = generatePL4();
+			break;
+		default:
+			output = "Item unable to be generated";	
+	}
 	//generate a name
 	
-	return "Magic Item of PL: " + pl;
+	return output;
 }
 
 function generateFirstBracketTreasure(){
