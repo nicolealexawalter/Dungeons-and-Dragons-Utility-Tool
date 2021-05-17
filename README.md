@@ -76,7 +76,7 @@ tr:nth-child(even) {
 
 </form>
   <button onclick="newNPC()">Create NPC</button>
-  <button onclick="resetNPCs()">Reset</button>
+  <button onclick="clearNPCs()">Clear</button>
   <p class="npcDisplay" id="npcs"></p>
 <script>
 
@@ -718,7 +718,7 @@ function newNPC(){
     document.getElementById("npcs").innerHTML = output + "<br><br>" + current;
 }
 
-function resetNPCs(){
+function clearNPCs(){
 	document.getElementById("npcs").innerHTML = "";
 }
 
