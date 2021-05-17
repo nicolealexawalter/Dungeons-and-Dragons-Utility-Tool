@@ -1467,7 +1467,7 @@ function customMagicItem(){
     - Grab items: 0-1 of 100gp, 1 of 50gp, 1-2 of 25gp, 2-3 of 10gp
     - Determine if we will generate our own random PL1 magical item, or grab an item from magical item tables A-C
 */
-function generateFirstBracketTreatablea.concat(tableb).concat(tablec);sure(){
+function generateFirstBracketTreasure(){
 	var goodies = [];
 	
 	var rarenum = generateNumber(0,1);
