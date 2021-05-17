@@ -1459,20 +1459,17 @@ var tablei = loadFile("FILES\\MAGIC\\" + "TABLEI" + ".txt").split("<br>");
 //load netlibram
 var magicaleffects = loadFile("FILES\\MAGIC\\" + "NETLIBRAMOFRANDOMMAGICALEFFECTS" + ".txt").split("<br>");
 
-function customMagicItem(){
-	return "this aint nothing yet";
+function customMagicItem(pl){
+	return "Magic Item of PL:" + pl;
 }
 
-/*
-    - Grab items: 0-1 of 100gp, 1 of 50gp, 1-2 of 25gp, 2-3 of 10gp
-    - Determine if we will generate our own random PL1 magical item, or grab an item from magical item tables A-C
-*/
 function generateFirstBracketTreasure(){
 	var goodies = [];
 	
 	var rarenum = generateNumber(0,1);
+	var unrarenum = generateNumber(0,1);
 	var uncommonnum = generateNumber(1, 2);
-	var commonnum = generateNumber(2, 3);
+	var commonnum = generateNumber(1, 2);
 	
 	var rareset = gp100;
 	var unrareset = gp50;
@@ -1483,7 +1480,9 @@ function generateFirstBracketTreasure(){
 		goodies.push(returnRandom(rareset));
 	}
 	
-	goodies.push(returnRandom(unrareset));
+	if(unrarenum == 1){
+		goodies.push(returnRandom(unrareset));
+	}
 	
 	for(var x=0;x<uncommonnum;x++){
 		goodies.push(returnRandom(uncommonset));
@@ -1497,7 +1496,7 @@ function generateFirstBracketTreasure(){
 	var isCustom = generateNumber(0, 1);
 	
 	if(isCustom == 1){
-		goodies.push(customMagicItem());
+		goodies.push(customMagicItem(1));
 	}else {
 		goodies.push(returnRandom(itemset));
 	}
@@ -1505,40 +1504,136 @@ function generateFirstBracketTreasure(){
 	return goodies;	
 }
 
-/*
-    - Grab items: 0-1 of 500gp, 1 of 250gp, 1-2 of 100gp, 2-3 of 50gp
-    - Grab an item from A-C
-    - Determine if we will generate our own random PL2 magical item, or grab one item from C-F
-*/
 function generateSecondBracketTreasure(){
-	var goodies = "";
+	var goodies = [];
 	
-	goodies = generateNumber(1, 10);
+	var rarenum = generateNumber(0,1);
+	var unrarenum = generateNumber(0,1);
+	var uncommonnum = generateNumber(1, 2);
+	var commonnum = generateNumber(1, 2);
 	
-	return goodies;	}
-
-/*
-    - Grab items: 0-1 of 1000gp, 1 of 750gp, 1-2 of 500gp, 1-3 of 250gp
-    - Grab 2 items from A-F
-    - Determine if we will generate our own random PL3 magical item, or grab one item from F-G
-*/
-function generateThirdBracketTreasure(){
-	var goodies = "";
+	var rareset = gp500;
+	var unrareset = gp250;
+	var uncommonset = gp100;
+	var commonset = gp50;
 	
-	goodies = generateNumber(1, 10);
+	if(rarenum == 1){
+		goodies.push(returnRandom(rareset));
+	}
+	
+	if(unrarenum == 1){
+		goodies.push(returnRandom(unrareset));
+	}
+	
+	for(var x=0;x<uncommonnum;x++){
+		goodies.push(returnRandom(uncommonset));
+	}
+	
+	for(var y=0;y<commonnum;y++){
+		goodies.push(returnRandom(commonset));
+	}
+	
+	goodies.push(returnRandom(tablea.concat(tableb).concat(tablec)));
+	
+	var itemset = tablec.concat(tabled).concat(tablee).concat(tablef);
+	var isCustom = generateNumber(0, 1);
+	
+	if(isCustom == 1){
+		goodies.push(customMagicItem(2));
+	}else {
+		goodies.push(returnRandom(itemset));
+	}
 	
 	return goodies;	
 }
 
-/*
-    - Grab items: 0-1 of 7500gp, 1 of 5000gp, 1-2 of 2500gp, 1-3 of 1000gp
-    - Grab 3 items from A-G
-    - Determine if we will generate our own random PL4 magical item, or grab one item from H-I
-*/
-function generateFourthBracketTreasure(){
-	var goodies = "";
+function generateThirdBracketTreasure(){
+	var goodies = [];
 	
-	goodies = generateNumber(1, 10);
+	var rarenum = generateNumber(0,1);
+	var unrarenum = generateNumber(0,1);
+	var uncommonnum = generateNumber(1, 2);
+	var commonnum = generateNumber(1, 2);
+	
+	var rareset = gp1000;
+	var unrareset = gp750;
+	var uncommonset = gp500;
+	var commonset = gp250;
+	
+	if(rarenum == 1){
+		goodies.push(returnRandom(rareset));
+	}
+	
+	if(unrarenum == 1){
+		goodies.push(returnRandom(unrareset));
+	}
+	
+	for(var x=0;x<uncommonnum;x++){
+		goodies.push(returnRandom(uncommonset));
+	}
+	
+	for(var y=0;y<commonnum;y++){
+		goodies.push(returnRandom(commonset));
+	}
+	
+	var combinedset = tablea.concat(tableb).concat(tablec).concat(tabled).concat(tablee).concat(tablef);
+	goodies.push(returnRandom(combinedset));
+	goodies.push(returnRandom(combinedset));
+	
+	var itemset = tablef.concat(tableg);
+	var isCustom = generateNumber(0, 1);
+	
+	if(isCustom == 1){
+		goodies.push(customMagicItem(3));
+	}else {
+		goodies.push(returnRandom(itemset));
+	}
+	
+	return goodies;	
+}
+
+function generateFourthBracketTreasure(){
+	var goodies = [];
+	
+	var rarenum = generateNumber(0,1);
+	var unrarenum = generateNumber(0,1);
+	var uncommonnum = generateNumber(1, 2);
+	var commonnum = generateNumber(1, 2);
+	
+	var rareset = gp7500;
+	var unrareset = gp5000;
+	var uncommonset = gp2500;
+	var commonset = gp1000;
+	
+	if(rarenum == 1){
+		goodies.push(returnRandom(rareset));
+	}
+	
+	if(unrarenum == 1){
+		goodies.push(returnRandom(unrareset));
+	}
+	
+	for(var x=0;x<uncommonnum;x++){
+		goodies.push(returnRandom(uncommonset));
+	}
+	
+	for(var y=0;y<commonnum;y++){
+		goodies.push(returnRandom(commonset));
+	}
+	
+	var combinedset = tablea.concat(tableb).concat(tablec).concat(tabled).concat(tablee).concat(tablef).concat(tableg);
+	goodies.push(returnRandom(combinedset));
+	goodies.push(returnRandom(combinedset));
+	goodies.push(returnRandom(combinedset));
+	
+	var itemset = tableh.concat(tablei);
+	var isCustom = generateNumber(0, 1);
+	
+	if(isCustom == 1){
+		goodies.push(customMagicItem(4));
+	}else {
+		goodies.push(returnRandom(itemset));
+	}
 	
 	return goodies;	
 }
