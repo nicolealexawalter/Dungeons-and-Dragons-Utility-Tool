@@ -995,12 +995,13 @@ function creatureSearch(){
         var book = String(creature[5]);
         
         var xpint = parseInt(xp.replaceAll(",", ""));
+	var typewithoutsubtype = type.split("(")[0];
         var bookwithoutpage = String(book.split("p.")[0]);
         
         if(
         	filterName(name.toLowerCase()) ||
             filterXP(xpint) ||
-            filterType(type.slice().trim()) ||
+            filterType(typewithoutsubtype.slice().trim()) ||
             filterBook(bookwithoutpage.slice().trim()) ||
             filterAlignment(alignment.slice().trim()) ||
             filterSize(size.slice().trim()) ||
@@ -1049,7 +1050,7 @@ function filterXP(xp){
 
 //filter if the typefilters are not null, and the type is not included
 function filterType(type){
-	var typefilters = Array.from(document.getElementById('creaturetype').selectedOptions).map(({ value }) => value).join(",");
+    var typefilters = Array.from(document.getElementById('creaturetype').selectedOptions).map(({ value }) => value).join(",");
     
     if(!isEmpty(typefilters) && !(typefilters.includes(type))) {
     	return true;
