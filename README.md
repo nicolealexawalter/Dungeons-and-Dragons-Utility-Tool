@@ -1463,20 +1463,54 @@ function customMagicItem(){
 	return "this aint nothing yet";
 }
 
+/*
+    - Grab items: 0-1 of 100gp, 1 of 50gp, 1-2 of 25gp, 2-3 of 10gp
+    - Determine if we will generate our own random PL1 magical item, or grab an item from magical item tables A-C
+*/
 function generateFirstBracketTreasure(){
-	return "bracket 1";	
+	var goodies = "";
+	
+	goodies = generateNumber(1, 10);
+	
+	return goodies;	
 }
 
+/*
+    - Grab items: 0-1 of 500gp, 1 of 250gp, 1-2 of 100gp, 2-3 of 50gp
+    - Grab an item from A-C
+    - Determine if we will generate our own random PL2 magical item, or grab one item from C-F
+*/
 function generateSecondBracketTreasure(){
-	return "bracket 2";
-}
+	var goodies = "";
+	
+	goodies = generateNumber(1, 10);
+	
+	return goodies;	}
 
+/*
+    - Grab items: 0-1 of 1000gp, 1 of 750gp, 1-2 of 500gp, 1-3 of 250gp
+    - Grab 2 items from A-F
+    - Determine if we will generate our own random PL3 magical item, or grab one item from F-G
+*/
 function generateThirdBracketTreasure(){
-	return "bracket 3";
+	var goodies = "";
+	
+	goodies = generateNumber(1, 10);
+	
+	return goodies;	
 }
 
+/*
+    - Grab items: 0-1 of 7500gp, 1 of 5000gp, 1-2 of 2500gp, 1-3 of 1000gp
+    - Grab 3 items from A-G
+    - Determine if we will generate our own random PL4 magical item, or grab one item from H-I
+*/
 function generateFourthBracketTreasure(){
-	return "bracket 4";
+	var goodies = "";
+	
+	goodies = generateNumber(1, 10);
+	
+	return goodies;	
 }
 
 function generateTreasure(){
@@ -1513,6 +1547,10 @@ function determineBracket(){
 	}else{
 		return 4;
 	}
+}
+
+function generateNumber(min, max) { 
+    return Math.floor(Math.random() * ((max+1) - min) + min);
 }
 
 </script>
