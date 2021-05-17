@@ -1411,6 +1411,10 @@ function determineWords(){
     document.getElementById("wordbank").innerHTML += output.join("   ").toLowerCase() + "<br>";
 }
 
+function clearWords(){
+	document.getElementById("wordbank").innerHTML = "";
+}
+
 </script>
 <header>
 <h1>Creatures and Encounters</h1>
@@ -1555,6 +1559,7 @@ function determineWords(){
   </select>
 </form>
   <button onclick="determineWords()">Generate Words</button>
+  <button onclick="clearWords()">Generate Words</button>
   <p id="wordbank"></p>
 
 
