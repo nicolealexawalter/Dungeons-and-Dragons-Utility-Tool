@@ -1416,8 +1416,8 @@ function determineWords(){
       case "Genasi":
           output = generateWord(lang_genasi, numwords, false, maximumlength, minimumlength);
           break;	
-          default:
-              output = generateWord(lang_human, numwords, false, maximumlength, minimumlength);
+       default:
+          output = "Unable to generate word";
     }
     
     document.getElementById("wordbank").innerHTML = output.join("   ").toLowerCase() + "<br>" + document.getElementById("wordbank").innerHTML;
