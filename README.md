@@ -610,19 +610,19 @@ function determineName(primaryrace){
         	output = generateWord(lang_dwarvish, 2, true, 12, 8);
             	break;
 	case "Elf":
-		output = generateWord(lang_elvish, 4, true, 8, 6).replaceAll(" ", "`");
+		output = generateWord(lang_elvish, 4, true, 8, 6);
 		break;
 	case "Halfling":
-		output = generateWord(lang_halfling, 4, true, 10, 5);
+		output = generateWord(lang_halfling, 5, true, 6, 2);
 		break;
 	case "Human":
-		output = generateWord(lang_human, 3, true, 15, 3);
+		output = generateWord(lang_human, 2, true, 8, 3);
 		break;
 	case "Dragonborn":
-		output = generateWord(lang_dragonborn, 2, true, 20, 15);
+		output = generateWord(lang_dragonborn, 1, true, 20, 15);
 		break;
 	case "Gnome":
-		output = generateWord(lang_gnome, 1, true, 30, 5);
+		output = generateWord(lang_gnome, 3, true, 8, 6);
 		break;
 	case "Aasimar":
 		output = generateWord(lang_aasimar, 1, true, 25, 5);
@@ -631,19 +631,19 @@ function determineName(primaryrace){
 		output = generateWord(lang_tiefling, 1, true, 25, 5);
 		break;
 	case "Shifter":
-		output = generateWord(lang_shifter, 2, true, 20, 5);
+		output = generateWord(lang_shifter, 1, true, 4, 2);
 		break;
 	case "Gith":
-		output = generateWord(lang_gith, 2, true, 20, 5);
+		output = generateWord(lang_gith, 2, true, 25, 5);
 		break;
 	case "Firbolg":
-		output = generateWord(lang_firbolg, 2, true, 20, 5);
+		output = generateWord(lang_firbolg, 1, true, 12, 10);
 		break;
 	case "Goliath":
-		output = generateWord(lang_goliath, 2, true, 20, 5);
+		output = generateWord(lang_goliath, 2, true, 25, 5);
 		break;
 	case "Kenku":
-		output = generateWord(lang_kenku, 2, true, 20, 5);
+		output = generateWord(lang_kenku, 1, true, 5, 2);
 		break;
 	case "Lizardfolk":
 		output = generateWord(lang_lizardfolk, 2, true, 20, 5);
@@ -652,22 +652,22 @@ function determineName(primaryrace){
 		output = generateWord(lang_tabaxi, 2, true, 20, 5);
 		break;
 	case "Triton":
-		output = generateWord(lang_triton, 2, true, 20, 5);
+		output = generateWord(lang_triton, 3, true, 18, 12);
 		break;
 	case "Goblinoid":
-		output = generateWord(lang_goblinoid, 5, true, 6, 3);
+		output = generateWord(lang_goblinoid, 6, true, 4, 2);
 		break;
 	case "Kobold":
 		output = generateWord(lang_kobold, 2, true, 20, 5);
 		break;
 	case "Yuan Ti":
-		output = generateWord(lang_yuanti, 2, true, 20, 10);
+		output = generateWord(lang_yuanti, 1, true, 30, 5);
 		break;
 	case "Orc":
 		output = generateWord(lang_orcish, 2, true, 20, 5);
 		break;
 	case "Warforged":
-		output = generateWord(lang_warforged, 2, true, 20, 5);
+		output = generateWord(lang_warforged, 1, true, 20, 5);
 		break;
 	case "Beastfolk":
 		output = generateWord(lang_beastfolk, 2, true, 20, 5);
