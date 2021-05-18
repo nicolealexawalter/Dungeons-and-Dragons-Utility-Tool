@@ -1832,7 +1832,7 @@ function generateNumber(min, max) {
     <option value="chaotic evil">Chaotic Evil</option>
     <option value="unaligned">Unaligned</option>
 	</select>
-	<br class="size">
+	<br class="mobileShow">
 	<label for="size" class="mobileShow">Type:</label>
     <select name="Size" id="size" multiple>
     <option value="">Any</option>
