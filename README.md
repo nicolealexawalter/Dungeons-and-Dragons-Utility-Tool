@@ -1833,7 +1833,7 @@ function generateNumber(min, max) {
     <option value="unaligned">Unaligned</option>
 	</select>
 	<br class="size">
-	<label for="creatureType" class="size">Type:</label>
+	<label for="size" class="mobileShow">Type:</label>
     <select name="Size" id="size" multiple>
     <option value="">Any</option>
 	<option value="Tiny">Tiny</option>
