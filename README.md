@@ -1845,10 +1845,13 @@ function generateNumber(min, max) {
 	</select>
 </form>
 <button onclick="creatureSearch()">Search</button>
+<br class="mobileShow">
 <button onclick="sortAlphabeticallyAscending()">Sort A-Z</button>
 <button onclick="sortAlphabeticallyDescending()">Z-A</button>
+<br class="mobileShow">
 <button onclick="sortXP(false)">XP Highest</button>
 <button onclick="sortXP(true)">XP Lowest</button>
+<br class="mobileShow">
 <button onclick="generateEncounter()">Create Encounter</button>
 <label for="encounterxp">XP:</label>
 <input type="number" id="encounterxp" name="encounterxp" min="0" size="2">
