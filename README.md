@@ -1488,7 +1488,7 @@ PL3:	- major beneficial / major detrimental
 PL4:	- blessing charm or a boon / madness or sentience
 */
 function generatePL1(){
-	return returnRandom(quirks) + " " + returnRandom(minorprop).toLowerCase() + " with the effect of:" + breakTab() + returnRandom(netlibram);
+	return "A " + returnRandom(quirks).toLowerCase() + "token of " + returnRandom(minorprop).toLowerCase() + " with the effect of:" + breakTab() + returnRandom(netlibram);
 }
 
 function generatePL2(){
