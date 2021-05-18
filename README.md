@@ -1766,11 +1766,13 @@ function generateNumber(min, max) {
 	<label for="crname">Creature Name:</label>
 	<input type="text" id="crname" name="crname" value="" size="12">
 	<br class="mobileShow">
-    <label for="minxp">Minimum XP:</label>
+    	<label for="minxp">Minimum XP:</label>
 	<input type="number" id="minxp" name="minxp" min="0" size="4">
-    <label for="maxxp">Maximum XP:</label>
+	<br class="mobileShow">
+    	<label for="maxxp">Maximum XP:</label>
 	<input type="number" id="maxxp" name="maxxp" size="4">
 	<br><br>
+	<label for="environment" class="mobileShow">Environment:</label>
 	<select name="environment" id="environment" multiple>
 	<option value="">Any</option>
     <option value="Aquatic">Aquatic</option>
@@ -1787,6 +1789,7 @@ function generateNumber(min, max) {
 	<option value="Underground">Underground</option>
 	<option value="Urban">Urban</option>
 	</select>
+	<br class="mobileShow">
 	<select name="creaturetype" id="creaturetype" multiple>
 	<option value="">Any</option>
     <option value="Aberration">Aberration</option>
