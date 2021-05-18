@@ -12,6 +12,33 @@ input[type=number]{
 } 
 
 /* Box styles */
+.creatureDisplayMobile {
+border: none;
+padding: 5px;
+font: 14 courier-new;
+width: 450px;
+height: 250px;
+overflow: scroll;
+}
+
+.npcDisplayMobile {
+border: none;
+padding: 5px;
+font: 14 courier-new;
+width: 450px;
+height: 250px;
+overflow: scroll;
+}
+
+.treasureDisplayMobile {
+border: none;
+padding: 5px;
+font: 14 courier-new;
+width: 450px;
+height: 250px;
+overflow: scroll;
+}
+	
 .creatureDisplay {
 border: none;
 padding: 5px;
@@ -80,6 +107,13 @@ tr:nth-child(even) {
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px){ .mobileShow { display: inline;}}
+
+.mobileHide { display: inline;}
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){ .mobileShow { display: none;}}
+
 	
 </style>
 </head>
@@ -94,7 +128,8 @@ and (max-device-width : 480px){ .mobileShow { display: inline;}}
 </form>
   <button onclick="newNPC()">Create NPC</button>
   <button onclick="clearNPCs()">Clear</button>
-  <p class="npcDisplay" id="npcs"></p>
+  <p class="npcDisplayMobile mobileShow" id="npcs"></p>
+	<p class="npcDisplay mobileHide" id="npcs"></p>
 <script>
 	
 //credit https://github.com/rigoneri/indefinite-article.js
@@ -1857,7 +1892,8 @@ function generateNumber(min, max) {
 <input type="number" id="encounterxp" name="encounterxp" min="0" size="2">
 <br><br>
 <p id="totalEncounterXP"></p>
-<p class="creatureDisplay" id="creatures"></p>
+<p class="creatureDisplayMobile mobileShow" id="creatures"></p>
+<p class="creatureDisplay mobileHide" id="creatures"></p>
 
 <header>
 <h3>Calculate XP Budget</h3>
@@ -1890,7 +1926,8 @@ function generateNumber(min, max) {
 </form>
   <button onclick="generateTreasure()">Generate Treasure</button>
   <button onclick="clearTreasure()">Clear</button>
-  <p class="treasureDisplay" id="treasure"></p>
+  <p class="treasureDisplayMobile showMobile" id="treasure"></p>
+	<p class="treasureDisplay hideMobile" id="treasure"></p>
 
 <header>
 <h3>Generate Words</h3>
