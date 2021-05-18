@@ -1363,7 +1363,7 @@ function determineWords(){
           output = generateWord(lang_dragonborn, numwords, false, maximumlength, minimumlength);
           break;
       case "Gnome":
-          output = generateWord(lang_gnome, numwords, false, maximumlength, minimumlength);
+          output = generateWord(lang_gnomish, numwords, false, maximumlength, minimumlength);
           break;
       case "Aasimar":
           output = generateWord(lang_aasimar, numwords, false, maximumlength, minimumlength);
