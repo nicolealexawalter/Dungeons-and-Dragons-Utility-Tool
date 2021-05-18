@@ -607,7 +607,7 @@ function determineName(primaryrace){
     
 	switch(primaryrace){
     	case "Dwarf":
-        	output = generateWord(lang_dwarvish, 2, true, 15, 10);
+        	output = generateWord(lang_dwarvish, 2, true, 15, 10).replaceAll(" ", "-");
             	break;
 	case "Elf":
 		output = generateWord(lang_elvish, 3, true, 20, 10);
