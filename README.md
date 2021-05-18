@@ -74,9 +74,17 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+.mobileShow { display: none;}
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){ .mobileShow { display: inline;}}
+	
 </style>
 </head>
 <body>
+	
 <header>
 <h1>Non-Player Characters</h1>
 </header>
@@ -88,7 +96,7 @@ tr:nth-child(even) {
   <button onclick="clearNPCs()">Clear</button>
   <p class="npcDisplay" id="npcs"></p>
 <script>
-
+	
 //credit https://github.com/rigoneri/indefinite-article.js
 /*
  * indefinite-article.js v1.0.0, 12-18-2011
@@ -1757,6 +1765,7 @@ function generateNumber(min, max) {
 <form>
 	<label for="crname">Creature Name:</label>
 	<input type="text" id="crname" name="crname" value="" size="12">
+	<br class="mobileShow">
     <label for="minxp">Minimum XP:</label>
 	<input type="number" id="minxp" name="minxp" min="0" size="4">
     <label for="maxxp">Maximum XP:</label>
