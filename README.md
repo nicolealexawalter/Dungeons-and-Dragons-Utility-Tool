@@ -1790,6 +1790,7 @@ function generateNumber(min, max) {
 	<option value="Urban">Urban</option>
 	</select>
 	<br class="mobileShow">
+	<label for="creatureType" class="mobileShow">Type:</label>
 	<select name="creaturetype" id="creaturetype" multiple>
 	<option value="">Any</option>
     <option value="Aberration">Aberration</option>
@@ -1807,6 +1808,8 @@ function generateNumber(min, max) {
 	<option value="Plant">Plant</option>
 	<option value="Undead">Undead</option>
 	</select>
+	<br class="mobileShow">
+	<label for="book" class="mobileShow">Book:</label>
 	<select name="book" id="book" multiple>
 	<option value="">Any</option>
     <option value="Tome of Beasts">Tome of Beasts</option>
@@ -1814,6 +1817,8 @@ function generateNumber(min, max) {
 	<option value="Volo's Guide to Monsters">Volo's Guide to Monsters</option>
 	<option value="Mordenkainen's Tome of Foes">Mordenkainen's Tome of Foes</option>
 	</select>
+	<br class="mobileShow">
+	<label for="alignment" class="mobileShow">Alignment:</label>
     <select name="Alignment" id="alignment" multiple>
 	<option value="">Any</option>
     <option value="lawful good">Lawful Good</option>
@@ -1827,6 +1832,8 @@ function generateNumber(min, max) {
     <option value="chaotic evil">Chaotic Evil</option>
     <option value="unaligned">Unaligned</option>
 	</select>
+	<br class="size">
+	<label for="creatureType" class="size">Type:</label>
     <select name="Size" id="size" multiple>
     <option value="">Any</option>
 	<option value="Tiny">Tiny</option>
@@ -1855,15 +1862,18 @@ function generateNumber(min, max) {
 <form>
   <label for="numchar">Number Characters:</label>
   <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
+  <br class="mobileShow">
   <label for="level">Average Level:</label>
   <input type="number" id="level" name="level" value="" min=1 max=20>
+  <br class="mobileShow">
   <label for="difficulty">Difficulty:</label>
   <select name="difficulty" id="difficulty">
   <option value="Easy">Easy</option>
   <option value="Medium">Medium</option>
   <option value="Hard">Hard</option>
   <option value="Deadly">Deadly</option>
-  </select>
+  </select>  
+  <br class="mobileShow">
 </form>
   <button onclick="calculateXP()">Calculate XP</button>
   <p style="display:inline-block" id="xpbudget"></p>
@@ -1885,10 +1895,13 @@ function generateNumber(min, max) {
 <form>
   <label for="numwords">Number Words:</label>
   <input type="number" id="numwords" name="numwords" value="5" min=1 size="2">
+  <br class="mobileShow">
   <label for="minlength">Min Length:</label>
   <input type="number" id="minlength" name="minlength" value="3" min=1 size="2">
+  <br class="mobileShow">
   <label for="maxlength">Max Length:</label>
   <input type="number" id="maxlength" name="maxlength" value="8" min=3 size="2">
+  <br class="mobileShow">
   <label for="chosenlang">Language:</label>
   <select name="chosenlang" id="chosenlang">
   <option value="Dwarf">Dwarvish</option>
