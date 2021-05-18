@@ -1790,7 +1790,7 @@ function generateNumber(min, max) {
 	<option value="Urban">Urban</option>
 	</select>
 	<br class="mobileShow">
-	<label for="creatureType" class="mobileShow">Type:</label>
+	<label for="creaturetype" class="mobileShow">Type:</label>
 	<select name="creaturetype" id="creaturetype" multiple>
 	<option value="">Any</option>
     <option value="Aberration">Aberration</option>
