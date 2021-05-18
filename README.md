@@ -112,7 +112,7 @@ and (max-device-width : 480px){ .mobileShow { display: inline;}}
 /* Smartphone Portrait and Landscape */
 @media only screen
 and (min-device-width : 320px)
-and (max-device-width : 480px){ .mobileShow { display: none;}}
+and (max-device-width : 480px){ .mobileHide { display: none;}}
 
 	
 </style>
