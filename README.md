@@ -1329,6 +1329,111 @@
              generateTreasure();
          }
          
+         function determineSentence(){
+         	var output = [];
+            
+         	var race = document.getElementById("chosenlang").value;
+			//determine length of sentence: 1-10
+          	var sentence_length = generateNumber(1, 10);
+            //for the length of our sentence...
+            for(var x=0;x<sentence_length;x++){
+            	//generate a word of the selected language with a random min/max length and proper = false
+	           var minleng = generateNumber(1,5);
+               var maxleng = generateNumber(1,5);
+               output.push(returnRandomWordPerRace(race, 1, false, maxleng+minleng, minleng))    
+            }
+            //capitalize first word
+            output[1] = capitalize(output[1]);
+            //determine if we will capitalize a word
+            	//if so, pick word at random after 1st
+            //determine if we will do a (, ; -)
+            	//if so, pick word and add it on end
+            //determine ending punctuation (? . ! ?!)
+            //join sentence array with spaces
+            var sentence = output.join(" ");
+            //set sentence to element value
+           document.getElementById("wordbank").innerHTML = output.join(" ") + "<br>" + document.getElementById("wordbank").innerHTML;
+         }
+             
+         function returnRandomWordPerRace(race, numwords, proper, maxleng, minleng){
+         	var output = "";
+         	
+         	switch(race){
+               case "Dwarf":
+                   output = generateWord(lang_dwarvish, numwords, proper, maxleng, minleng);
+                   break;
+               case "Elf":
+                   output = generateWord(lang_elvish, numwords, proper, maxleng, minleng);
+                   break;
+               case "Halfling":
+                   output = generateWord(lang_halfling, numwords, proper, maxleng, minleng);
+                   break;
+               case "Human":
+                   output = generateWord(lang_human, numwords, proper, maxleng, minleng);
+                   break;
+               case "Dragonborn":
+                   output = generateWord(lang_dragonborn, numwords, proper, maxleng, minleng);
+                   break;
+               case "Gnome":
+                   output = generateWord(lang_gnomish, numwords, proper, maxleng, minleng);
+                   break;
+               case "Aasimar":
+                   output = generateWord(lang_aasimar, numwords, proper, maxleng, minleng);
+                   break;
+               case "Tiefling":
+                   output = generateWord(lang_tiefling, numwords, proper, maxleng, minleng);
+                   break;
+               case "Shifter":
+                   output = generateWord(lang_shifter, numwords, proper, maxleng, minleng);
+                   break;
+               case "Gith":
+                   output = generateWord(lang_gith, numwords, proper, maxleng, minleng);
+                   break;
+               case "Firbolg":
+                   output = generateWord(lang_firbolg, numwords, proper, maxleng, minleng);
+                   break;
+               case "Goliath":
+                   output = generateWord(lang_goliath, numwords, proper, maxleng, minleng);
+                   break;
+               case "Kenku":
+                   output = generateWord(lang_kenku, numwords, proper, maxleng, minleng);
+                   break;
+               case "Lizardfolk":
+                   output = generateWord(lang_lizardfolk, numwords, proper, maxleng, minleng);
+                   break;
+               case "Tabaxi":
+                   output = generateWord(lang_tabaxi, numwords, proper, maxleng, minleng);
+                   break;
+               case "Triton":
+                   output = generateWord(lang_triton, numwords, proper, maxleng, minleng);
+                   break;
+               case "Goblinoid":
+                   output = generateWord(lang_goblinoid, numwords, proper, maxleng, minleng);
+                   break;
+               case "Kobold":
+                   output = generateWord(lang_kobold, numwords, proper, maxleng, minleng);
+                   break;
+               case "Yuan Ti":
+                   output = generateWord(lang_yuanti, numwords, proper, maxleng, minleng);
+                   break;
+               case "Orc":
+                   output = generateWord(lang_orcish, numwords, proper, maxleng, minleng);
+                   break;
+               case "Warforged":
+                   output = generateWord(lang_warforged, numwords, proper, maxleng, minleng);
+                   break;
+               case "Beastfolk":
+                   output = generateWord(lang_beastfolk, numwords, proper, maxleng, minleng);
+                   break;
+               case "Genasi":
+                   output = generateWord(lang_genasi, numwords, proper, maxleng, minleng);
+                   break;	
+                default:
+                   output = "Unable to generate word";
+             }
+             return output;
+         }
+              
          function determineWords(){
          	var output = [];
              
@@ -1337,79 +1442,7 @@
              var maximumlength = document.getElementById("maxlength").value;
              var race = document.getElementById("chosenlang").value;
              
-         	switch(race){
-               case "Dwarf":
-                   output = generateWord(lang_dwarvish, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Elf":
-                   output = generateWord(lang_elvish, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Halfling":
-                   output = generateWord(lang_halfling, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Human":
-                   output = generateWord(lang_human, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Dragonborn":
-                   output = generateWord(lang_dragonborn, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Gnome":
-                   output = generateWord(lang_gnomish, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Aasimar":
-                   output = generateWord(lang_aasimar, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Tiefling":
-                   output = generateWord(lang_tiefling, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Shifter":
-                   output = generateWord(lang_shifter, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Gith":
-                   output = generateWord(lang_gith, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Firbolg":
-                   output = generateWord(lang_firbolg, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Goliath":
-                   output = generateWord(lang_goliath, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Kenku":
-                   output = generateWord(lang_kenku, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Lizardfolk":
-                   output = generateWord(lang_lizardfolk, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Tabaxi":
-                   output = generateWord(lang_tabaxi, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Triton":
-                   output = generateWord(lang_triton, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Goblinoid":
-                   output = generateWord(lang_goblinoid, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Kobold":
-                   output = generateWord(lang_kobold, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Yuan Ti":
-                   output = generateWord(lang_yuanti, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Orc":
-                   output = generateWord(lang_orcish, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Warforged":
-                   output = generateWord(lang_warforged, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Beastfolk":
-                   output = generateWord(lang_beastfolk, numwords, false, maximumlength, minimumlength);
-                   break;
-               case "Genasi":
-                   output = generateWord(lang_genasi, numwords, false, maximumlength, minimumlength);
-                   break;	
-                default:
-                   output = "Unable to generate word";
-             }
+         	output = returnRandomWordPerRace(race, numwords, false, maximumlength, minimumlength);
              
              document.getElementById("wordbank").innerHTML = output.join("   ").toLowerCase() + "<br>" + document.getElementById("wordbank").innerHTML;
          }
@@ -1914,6 +1947,7 @@
          <br>
       </form>
       <button onclick="determineWords()">Generate Words</button>
+      <button onclick="determineSentence()">Generate Sentence</button>
       <button onclick="clearWords()">Clear</button>
       <p id="wordbank"></p>
    </body>
