@@ -1353,7 +1353,7 @@
 	      	
             	//determine if we will capitalize a word
             		//if so, pick word at random after 1st
-	      	var randomword = generateNumber(-5, output.length);
+	      	var randomword = generateNumber(-5, output.length-1);
 	      
 	        if(randomword > -1){
 	      		output[randomword] = capitalize(output[randomword]);
