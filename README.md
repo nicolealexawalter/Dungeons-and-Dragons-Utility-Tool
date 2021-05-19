@@ -1595,19 +1595,19 @@
          	var commonset = gp10;
          	
          	if(rarenum == 1){
-         		goodies.push(returnRandom(rareset));
+         		goodies.push("100gp - " + returnRandom(rareset));
          	}
          	
          	if(unrarenum == 1){
-         		goodies.push(returnRandom(unrareset));
+         		goodies.push("50gp - " + returnRandom(unrareset));
          	}
          	
          	for(var x=0;x<uncommonnum;x++){
-         		goodies.push(returnRandom(uncommonset));
+         		goodies.push("25gp - " + returnRandom(uncommonset));
          	}
          	
          	for(var y=0;y<commonnum;y++){
-         		goodies.push(returnRandom(commonset));
+         		goodies.push("10gp - " + returnRandom(commonset));
          	}
          	
          	var itemset = tablea.concat(tableb).concat(tablec);
@@ -1636,19 +1636,19 @@
          	var commonset = gp50;
          	
          	if(rarenum == 1){
-         		goodies.push(returnRandom(rareset));
+         		goodies.push("500gp - " + returnRandom(rareset));
          	}
          	
          	if(unrarenum == 1){
-         		goodies.push(returnRandom(unrareset));
+         		goodies.push("250gp - " + returnRandom(unrareset));
          	}
          	
          	for(var x=0;x<uncommonnum;x++){
-         		goodies.push(returnRandom(uncommonset));
+         		goodies.push("100gp - " + returnRandom(uncommonset));
          	}
          	
          	for(var y=0;y<commonnum;y++){
-         		goodies.push(returnRandom(commonset));
+         		goodies.push("50gp - " + returnRandom(commonset));
          	}
          	
          	goodies.push(returnRandom(tablea.concat(tableb).concat(tablec)));
@@ -1679,19 +1679,19 @@
          	var commonset = gp250;
          	
          	if(rarenum == 1){
-         		goodies.push(returnRandom(rareset));
+         		goodies.push("1000gp - " + returnRandom(rareset));
          	}
          	
          	if(unrarenum == 1){
-         		goodies.push(returnRandom(unrareset));
+         		goodies.push("750gp - " + returnRandom(unrareset));
          	}
          	
          	for(var x=0;x<uncommonnum;x++){
-         		goodies.push(returnRandom(uncommonset));
+         		goodies.push("500gp - " + returnRandom(uncommonset));
          	}
          	
          	for(var y=0;y<commonnum;y++){
-         		goodies.push(returnRandom(commonset));
+         		goodies.push("250gp - " + returnRandom(commonset));
          	}
          	
          	var combinedset = tablea.concat(tableb).concat(tablec).concat(tabled).concat(tablee).concat(tablef);
@@ -1724,19 +1724,19 @@
          	var commonset = gp1000;
          	
          	if(rarenum == 1){
-         		goodies.push(returnRandom(rareset));
+         		goodies.push("7500gp - " + returnRandom(rareset));
          	}
          	
          	if(unrarenum == 1){
-         		goodies.push(returnRandom(unrareset));
+         		goodies.push("5000gp - " + returnRandom(unrareset));
          	}
          	
          	for(var x=0;x<uncommonnum;x++){
-         		goodies.push(returnRandom(uncommonset));
+         		goodies.push("2500gp - " + returnRandom(uncommonset));
          	}
          	
          	for(var y=0;y<commonnum;y++){
-         		goodies.push(returnRandom(commonset));
+         		goodies.push("1000gp - " + returnRandom(commonset));
          	}
          	
          	var combinedset = tablea.concat(tableb).concat(tablec).concat(tabled).concat(tablee).concat(tablef).concat(tableg);
