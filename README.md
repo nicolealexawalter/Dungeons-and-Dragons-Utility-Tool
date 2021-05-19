@@ -1340,17 +1340,15 @@
             	//generate a word of the selected language with a random min/max length and proper = false
 	           var minleng = generateNumber(1,5);
                var maxleng = generateNumber(1,5);
-               output.push(returnRandomWordPerRace(race, 1, false, maxleng+minleng, minleng))    
+               output.push(returnRandomWordPerRace(race, 1, false, maxleng+minleng, minleng));
             }
             //capitalize first word
-            output[1] = capitalize(output[1]);
             //determine if we will capitalize a word
             	//if so, pick word at random after 1st
             //determine if we will do a (, ; -)
             	//if so, pick word and add it on end
             //determine ending punctuation (? . ! ?!)
             //join sentence array with spaces
-            var sentence = output.join(" ");
             //set sentence to element value
            document.getElementById("wordbank").innerHTML = output.join(" ") + "<br>" + document.getElementById("wordbank").innerHTML;
          }
