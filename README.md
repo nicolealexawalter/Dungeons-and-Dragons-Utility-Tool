@@ -1360,8 +1360,15 @@
 	        }
             	//determine if we will do a (, ; -)
             		//if so, pick word and add it on end
-            	//determine ending punctuation (? . ! ?!)
-            	//join sentence array with spaces
+            	var randomword = generateNumber(-5, output.length-2);
+	      
+	        if(randomword > -1){
+	      		output[randomword] = output[randomword] + returnRandom([",", ";", " -"]);
+	        }
+	      
+	        //determine ending punctuation (? . ! ?!)
+	      	output[output.length-1] = output[output.length-1] + returnRandom([".", "!", "?", "?!"]);
+	      
             	//set sentence to element value
            	document.getElementById("wordbank").innerHTML = output.join(" ") + "<br>" + document.getElementById("wordbank").innerHTML;
          }
