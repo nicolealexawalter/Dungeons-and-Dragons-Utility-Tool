@@ -1340,12 +1340,17 @@
             		//generate a word of the selected language with a random min/max length and proper = false
 	        	var minleng = generateNumber(1,5);
                		var maxleng = generateNumber(1,5);
-               		output.push(returnRandomWordPerRace(race, 1, false, maxleng+minleng, minleng));
+               		output.push(returnRandomWordPerRace(race, 1, false, maxleng+minleng, minleng)[0].toLowerCase());
             	}
             	//capitalize first word
 	        output[0] = capitalize(output[0]);
             	//determine if we will capitalize a word
             		//if so, pick word at random after 1st
+	      	var randomword = generateNumber(-5, output.length());
+	      
+	        if(randomword > -1){
+	      		output[randomword] = capitalize(output[randomword]);
+	        }
             	//determine if we will do a (, ; -)
             		//if so, pick word and add it on end
             	//determine ending punctuation (? . ! ?!)
