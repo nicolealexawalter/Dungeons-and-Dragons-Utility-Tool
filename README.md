@@ -1333,24 +1333,25 @@
          	var output = [];
             
          	var race = document.getElementById("chosenlang").value;
-			//determine length of sentence: 1-10
+		//determine length of sentence: 1-10
           	var sentence_length = generateNumber(1, 10);
-            //for the length of our sentence...
-            for(var x=0;x<sentence_length;x++){
-            	//generate a word of the selected language with a random min/max length and proper = false
-	           var minleng = generateNumber(1,5);
-               var maxleng = generateNumber(1,5);
-               output.push(returnRandomWordPerRace(race, 1, false, maxleng+minleng, minleng));
-            }
-            //capitalize first word
-            //determine if we will capitalize a word
-            	//if so, pick word at random after 1st
-            //determine if we will do a (, ; -)
-            	//if so, pick word and add it on end
-            //determine ending punctuation (? . ! ?!)
-            //join sentence array with spaces
-            //set sentence to element value
-           document.getElementById("wordbank").innerHTML = output.join(" ") + "<br>" + document.getElementById("wordbank").innerHTML;
+            	//for the length of our sentence...
+            	for(var x=0;x<sentence_length;x++){
+            		//generate a word of the selected language with a random min/max length and proper = false
+	        	var minleng = generateNumber(1,5);
+               		var maxleng = generateNumber(1,5);
+               		output.push(returnRandomWordPerRace(race, 1, false, maxleng+minleng, minleng));
+            	}
+            	//capitalize first word
+	        output[0] = capitalize(output[0]);
+            	//determine if we will capitalize a word
+            		//if so, pick word at random after 1st
+            	//determine if we will do a (, ; -)
+            		//if so, pick word and add it on end
+            	//determine ending punctuation (? . ! ?!)
+            	//join sentence array with spaces
+            	//set sentence to element value
+           	document.getElementById("wordbank").innerHTML = output.join(" ") + "<br>" + document.getElementById("wordbank").innerHTML;
          }
              
          function returnRandomWordPerRace(race, numwords, proper, maxleng, minleng){
