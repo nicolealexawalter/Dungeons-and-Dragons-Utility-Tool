@@ -1331,6 +1331,8 @@
          
          function determineSentence(){
          	var output = [];
+						  
+		var endpunc = returnRandom([".", "!", "?", "?!"]);
             
          	var race = document.getElementById("chosenlang").value;
 		//determine length of sentence: 1-10
@@ -1347,7 +1349,7 @@
 	        output[0] = capitalize(output[0]);
 	      
 	      	if(sentence_length == 1){
-	      		document.getElementById("wordbank").innerHTML = output[0] + "<br>" + document.getElementById("wordbank").innerHTML;
+	      		document.getElementById("wordbank").innerHTML = output[0] + endpunc + "<br>" + document.getElementById("wordbank").innerHTML;
 	      		return;
 	      	}
 	      	
@@ -1367,7 +1369,7 @@
 	        }
 	      
 	        //determine ending punctuation (? . ! ?!)
-	      	output[output.length-1] = output[output.length-1] + returnRandom([".", "!", "?", "?!"]);
+	      	output[output.length-1] = output[output.length-1] + endpunc;
 	      
             	//set sentence to element value
            	document.getElementById("wordbank").innerHTML = output.join(" ") + "<br>" + document.getElementById("wordbank").innerHTML;
