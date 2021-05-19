@@ -1343,13 +1343,14 @@
                		output.push(returnRandomWordPerRace(race, 1, false, maxleng+minleng, minleng)[0].toLowerCase());
             	}
 	      
+	      	//capitalize first word
+	        output[0] = capitalize(output[0]);
+	      
 	      	if(sentence_length == 1){
 	      		document.getElementById("wordbank").innerHTML = output[0] + "<br>" + document.getElementById("wordbank").innerHTML;
 	      		return;
 	      	}
 	      	
-            	//capitalize first word
-	        output[0] = capitalize(output[0]);
             	//determine if we will capitalize a word
             		//if so, pick word at random after 1st
 	      	var randomword = generateNumber(-5, output.length);
