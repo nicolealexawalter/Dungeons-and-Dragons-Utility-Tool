@@ -1346,7 +1346,7 @@
 	        output[0] = capitalize(output[0]);
             	//determine if we will capitalize a word
             		//if so, pick word at random after 1st
-	      	var randomword = generateNumber(-5, output.length());
+	      	var randomword = generateNumber(-5, output.length);
 	      
 	        if(randomword > -1){
 	      		output[randomword] = capitalize(output[randomword]);
