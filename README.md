@@ -1355,18 +1355,20 @@
 	      	
             	//determine if we will capitalize a word
             		//if so, pick word at random after 1st
-	      	var randomword = generateNumber(-5, output.length-1);
+	      	var randompropernoun = generateNumber(-5, output.length-1);
 	      
-	        if(randomword > -1){
-	      		output[randomword] = capitalize(output[randomword]);
+	        if(randompropernoun > -1){
+	      		output[randompropernoun] = capitalize(output[randompropernoun]);
 	        }
             	//determine if we will do a (, ; -)
             		//if so, pick word and add it on end
-            	var randomword = generateNumber(-5, output.length-2);
+            	var randompunc = generateNumber(-3, output.length-2);
 	      
-	        if(randomword > -1){
-	      		output[randomword] = output[randomword] + returnRandom([",", ";", " -"]);
+	        if(randompunc > -1){
+	      		output[randompunc] = output[randompunc] + returnRandom([",", ";", " -"]);
 	        }
+	      
+	      
 	      
 	        //determine ending punctuation (? . ! ?!)
 	      	output[output.length-1] = output[output.length-1] + endpunc;
