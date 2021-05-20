@@ -51,8 +51,6 @@ You'll notice that the Generate Sentence button doesn't allow you to set a numbe
 
 You can do a lot of fun things on this site, and I hope it helps you grow your campaign! You can use the link below to access the site at your whimsy. The actual URL is pasted below as well.
 
-If you'd like to contribute to the project simply send me a message on Github or an email at nicolealexawalter@gmail.com and we can talk!
-
 [Site](https://nicolealexawalter.github.io/Dungeons-and-Dragons-Utility-Tool/)
 
 `https://nicolealexawalter.github.io/Dungeons-and-Dragons-Utility-Tool/`
