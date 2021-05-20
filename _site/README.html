@@ -1,10 +1,8 @@
----
----
 <!-- Host locally on Jekyll with "bundle exec jekyll serve"-->
 <!-- Created by Nicole Walter -->
 <html>
    <head>
-      <link rel="shortcut icon" type="image/png" href="favicon.png">
+      <link rel="shortcut icon" type="image/png" href="favicon.png" />
       <style>
          body {
          margin-bottom: 200%;
@@ -1805,16 +1803,16 @@
       </header>
       <form>
          <label for="crname">Creature Name:</label>
-         <input type="text" id="crname" name="crname" value="" size="12">
-         <br class="mobileShow">
+         <input type="text" id="crname" name="crname" value="" size="12" />
+         <br class="mobileShow" />
          <label for="minxp">Minimum XP:</label>
-         <input type="number" id="minxp" name="minxp" min="0" size="4">
-         <br class="mobileShow">
+         <input type="number" id="minxp" name="minxp" min="0" size="4" />
+         <br class="mobileShow" />
          <label for="maxxp">Maximum XP:</label>
-         <input type="number" id="maxxp" name="maxxp" size="4">
-         <br><br>
+         <input type="number" id="maxxp" name="maxxp" size="4" />
+         <br /><br />
          <label for="environment" class="mobileShow">Environment:</label>
-         <select name="environment" id="environment" multiple>
+         <select name="environment" id="environment" multiple="">
             <option value="">Any</option>
             <option value="Aquatic">Aquatic</option>
             <option value="Arctic">Arctic</option>
@@ -1830,9 +1828,9 @@
             <option value="Underground">Underground</option>
             <option value="Urban">Urban</option>
          </select>
-         <br class="mobileShow">
+         <br class="mobileShow" />
          <label for="creaturetype" class="mobileShow">Type:</label>
-         <select name="creaturetype" id="creaturetype" multiple>
+         <select name="creaturetype" id="creaturetype" multiple="">
             <option value="">Any</option>
             <option value="Aberration">Aberration</option>
             <option value="Beast">Beast</option>
@@ -1849,18 +1847,18 @@
             <option value="Plant">Plant</option>
             <option value="Undead">Undead</option>
          </select>
-         <br class="mobileShow">
+         <br class="mobileShow" />
          <label for="book" class="mobileShow">Book:</label>
-         <select name="book" id="book" multiple>
+         <select name="book" id="book" multiple="">
             <option value="">Any</option>
             <option value="Tome of Beasts">Tome of Beasts</option>
             <option value="Monster Manual">Monster Manual</option>
             <option value="Volo's Guide to Monsters">Volo's Guide to Monsters</option>
             <option value="Mordenkainen's Tome of Foes">Mordenkainen's Tome of Foes</option>
          </select>
-         <br class="mobileShow">
+         <br class="mobileShow" />
          <label for="alignment" class="mobileShow">Alignment:</label>
-         <select name="Alignment" id="alignment" multiple>
+         <select name="Alignment" id="alignment" multiple="">
             <option value="">Any</option>
             <option value="lawful good">Lawful Good</option>
             <option value="neutral good">Neutral Good</option>
@@ -1873,9 +1871,9 @@
             <option value="chaotic evil">Chaotic Evil</option>
             <option value="unaligned">Unaligned</option>
          </select>
-         <br class="mobileShow">
+         <br class="mobileShow" />
          <label for="size" class="mobileShow">Type:</label>
-         <select name="Size" id="size" multiple>
+         <select name="Size" id="size" multiple="">
             <option value="">Any</option>
             <option value="Tiny">Tiny</option>
             <option value="Small">Small</option>
@@ -1886,17 +1884,17 @@
          </select>
       </form>
       <button onclick="creatureSearch()">Search</button>
-      <br class="mobileShow">
+      <br class="mobileShow" />
       <button onclick="sortAlphabeticallyAscending()">Sort A-Z</button>
       <button onclick="sortAlphabeticallyDescending()">Z-A</button>
-      <br class="mobileShow">
+      <br class="mobileShow" />
       <button onclick="sortXP(false)">XP Highest</button>
       <button onclick="sortXP(true)">XP Lowest</button>
-      <br class="mobileShow">
+      <br class="mobileShow" />
       <button onclick="generateEncounter()">Create Encounter</button>
       <label for="encounterxp">XP:</label>
-      <input type="number" id="encounterxp" name="encounterxp" min="0" size="2">
-      <br><br>
+      <input type="number" id="encounterxp" name="encounterxp" min="0" size="2" />
+      <br /><br />
       <p id="totalEncounterXP"></p>
       <p class="creatureDisplay" id="creatures"></p>
       <header>
@@ -1904,11 +1902,11 @@
       </header>
       <form>
          <label for="numchar">Number Characters:</label>
-         <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
-         <br class="mobileShow">
+         <input type="number" id="numchar" name="numchar" value="" min="1" max="99" />
+         <br class="mobileShow" />
          <label for="level">Average Level:</label>
-         <input type="number" id="level" name="level" value="" min=1 max=20>
-         <br class="mobileShow">
+         <input type="number" id="level" name="level" value="" min="1" max="20" />
+         <br class="mobileShow" />
          <label for="difficulty">Difficulty:</label>
          <select name="difficulty" id="difficulty">
             <option value="Easy">Easy</option>
@@ -1916,7 +1914,7 @@
             <option value="Hard">Hard</option>
             <option value="Deadly">Deadly</option>
          </select>
-         <br class="mobileShow">
+         <br class="mobileShow" />
       </form>
       <button onclick="calculateXP()">Calculate XP</button>
       <p style="display:inline-block" id="xpbudget"></p>
@@ -1925,7 +1923,7 @@
       </header>
       <form>
          <label for="treasurexp">XP:</label>
-         <input type="number" id="treasurexp" name="treasurexp" value="" min=0>
+         <input type="number" id="treasurexp" name="treasurexp" value="" min="0" />
       </form>
       <button onclick="generateTreasure()">Generate Treasure</button>
       <button onclick="clearTreasure()">Clear</button>
@@ -1935,14 +1933,14 @@
       </header>
       <form>
          <label for="numwords">Number Words:</label>
-         <input type="number" id="numwords" name="numwords" value="5" min=1 size="2">
-         <br class="mobileShow">
+         <input type="number" id="numwords" name="numwords" value="5" min="1" size="2" />
+         <br class="mobileShow" />
          <label for="minlength">Min Length:</label>
-         <input type="number" id="minlength" name="minlength" value="3" min=1 size="2">
-         <br class="mobileShow">
+         <input type="number" id="minlength" name="minlength" value="3" min="1" size="2" />
+         <br class="mobileShow" />
          <label for="maxlength">Max Length:</label>
-         <input type="number" id="maxlength" name="maxlength" value="8" min=3 size="2">
-         <br class="mobileShow">
+         <input type="number" id="maxlength" name="maxlength" value="8" min="3" size="2" />
+         <br class="mobileShow" />
          <label for="chosenlang">Language:</label>
          <select name="chosenlang" id="chosenlang">
             <option value="Dwarf">Dwarvish</option>
@@ -1969,7 +1967,7 @@
             <option value="Beastfolk">Beastfolk</option>
             <option value="Genasi">Genasi</option>
          </select>
-         <br>
+         <br />
       </form>
       <button onclick="determineWords()">Generate Words</button>
       <button onclick="determineSentence()">Generate Sentence</button>
