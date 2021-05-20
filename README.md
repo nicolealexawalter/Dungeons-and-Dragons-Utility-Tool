@@ -45,7 +45,7 @@ Here I can also generate a sentence! Yuan Ti was built on all words that have W/
 
 `Das smps sks wans Yowags vudsda vorose - davesy ano?`
 
-You'll notice that the Generate Sentence button doesn't allow you to set a number words/min/max length. It simply generates a random sentence of varying words of varying length, with random punctuation! Perfect for creating idle chatter in another language to hlep immerse your players!
+You'll notice that the Generate Sentence button doesn't allow you to set a number words/min/max length. It simply generates a random sentence of varying words of varying length, with random punctuation! Perfect for creating idle chatter in another language to help immerse your players!
 
 ### Summary
 
