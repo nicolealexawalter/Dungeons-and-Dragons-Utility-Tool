@@ -1,0 +1,130 @@
+<header>
+         <h2>Creatures and Encounters</h2>
+      </header>
+      <form>
+         <label for="crname">Creature Name:</label>
+         <input type="text" id="crname" name="crname" value="" size="12">
+         <br class="mobileShow">
+         <label for="minxp">Minimum XP:</label>
+         <input type="number" id="minxp" name="minxp" min="0" size="4">
+         <br class="mobileShow">
+         <label for="maxxp">Maximum XP:</label>
+         <input type="number" id="maxxp" name="maxxp" size="4">
+         <br><br>
+         <label for="environment" class="mobileShow">Environment:</label>
+         <select name="environment" id="environment" multiple>
+            <option value="">Any</option>
+            <option value="Aquatic">Aquatic</option>
+            <option value="Arctic">Arctic</option>
+            <option value="Cave">Cave</option>
+            <option value="Coast">Coast</option>
+            <option value="Desert">Desert</option>
+            <option value="Forest">Forest</option>
+            <option value="Grassland">Grassland</option>
+            <option value="Mountain">Mountain</option>
+            <option value="Planar">Planar</option>
+            <option value="Ruins">Ruins</option>
+            <option value="Swamp">Swamp</option>
+            <option value="Underground">Underground</option>
+            <option value="Urban">Urban</option>
+         </select>
+         <br class="mobileShow">
+         <label for="creaturetype" class="mobileShow">Type:</label>
+         <select name="creaturetype" id="creaturetype" multiple>
+            <option value="">Any</option>
+            <option value="Aberration">Aberration</option>
+            <option value="Beast">Beast</option>
+            <option value="Celestial">Celestial</option>
+            <option value="Construct">Construct</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Elemental">Elemental</option>
+            <option value="Fey">Fey</option>
+            <option value="Fiend">Fiend</option>
+            <option value="Giant">Giant</option>
+            <option value="Humanoid">Humanoid</option>
+            <option value="Monstrosity">Monstrosity</option>
+            <option value="Ooze">Ooze</option>
+            <option value="Plant">Plant</option>
+            <option value="Undead">Undead</option>
+         </select>
+         <br class="mobileShow">
+         <label for="book" class="mobileShow">Book:</label>
+         <select name="book" id="book" multiple>
+            <option value="">Any</option>
+            <option value="Tome of Beasts">Tome of Beasts</option>
+            <option value="Monster Manual">Monster Manual</option>
+            <option value="Volo's Guide to Monsters">Volo's Guide to Monsters</option>
+            <option value="Mordenkainen's Tome of Foes">Mordenkainen's Tome of Foes</option>
+         </select>
+         <br class="mobileShow">
+         <label for="alignment" class="mobileShow">Alignment:</label>
+         <select name="Alignment" id="alignment" multiple>
+            <option value="">Any</option>
+            <option value="lawful good">Lawful Good</option>
+            <option value="neutral good">Neutral Good</option>
+            <option value="chaotic good">Chaotic Good</option>
+            <option value="lawful neutral">Lawful Neutral</option>
+            <option value="neutral">Neutral</option>
+            <option value="chaotic neutral">Chaotic Neutral</option>
+            <option value="lawful evil">Lawful Evil</option>
+            <option value="neutral evil">Neutral Evil</option>
+            <option value="chaotic evil">Chaotic Evil</option>
+            <option value="unaligned">Unaligned</option>
+         </select>
+         <br class="mobileShow">
+         <label for="size" class="mobileShow">Type:</label>
+         <select name="Size" id="size" multiple>
+            <option value="">Any</option>
+            <option value="Tiny">Tiny</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="Huge">Huge</option>
+            <option value="Gargantuan">Gargantuan</option>
+         </select>
+      </form>
+      <button onclick="creatureSearch()">Search</button>
+      <br class="mobileShow">
+      <button onclick="sortAlphabeticallyAscending()">Sort A-Z</button>
+      <button onclick="sortAlphabeticallyDescending()">Z-A</button>
+      <br class="mobileShow">
+      <button onclick="sortXP(false)">XP Highest</button>
+      <button onclick="sortXP(true)">XP Lowest</button>
+      <br class="mobileShow">
+      <button onclick="generateEncounter()">Create Encounter</button>
+      <label for="encounterxp">XP:</label>
+      <input type="number" id="encounterxp" name="encounterxp" min="0" size="2">
+      <br><br>
+      <p id="totalEncounterXP"></p>
+      <p class="creatureDisplay" id="creatures"></p>
+      <header>
+         <h3>Calculate XP Budget</h3>
+      </header>
+      <form>
+         <label for="numchar">Number Characters:</label>
+         <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
+         <br class="mobileShow">
+         <label for="level">Average Level:</label>
+         <input type="number" id="level" name="level" value="" min=1 max=20>
+         <br class="mobileShow">
+         <label for="difficulty">Difficulty:</label>
+         <select name="difficulty" id="difficulty">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+            <option value="Deadly">Deadly</option>
+         </select>
+         <br class="mobileShow">
+      </form>
+      <button onclick="calculateXP()">Calculate XP</button>
+      <p style="display:inline-block" id="xpbudget"></p>
+      <header>
+         <h2>Treasure Hoard</h2>
+      </header>
+      <form>
+         <label for="treasurexp">XP:</label>
+         <input type="number" id="treasurexp" name="treasurexp" value="" min=0>
+      </form>
+      <button onclick="generateTreasure()">Generate Treasure</button>
+      <button onclick="clearTreasure()">Clear</button>
+      <p class="treasureDisplay" id="treasure"></p>
