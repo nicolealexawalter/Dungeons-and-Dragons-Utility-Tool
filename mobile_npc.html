@@ -1,0 +1,86 @@
+
+<!-- Created by Nicole Walter -->
+<html>
+   <head>
+	<title>D&D Utility Tool</title>
+      <link rel="shortcut icon" type="image/png" href="favicon.png">
+      <style>
+         body {
+         margin-bottom: 200%;
+         }
+         input[type=number]{
+         width: 70px;
+         } 
+         /* Box styles */
+         .creatureDisplay {
+         border: none;
+         padding: 5px;
+         font: 14 courier-new;
+         width: 750px;
+         height: 250px;
+         overflow: scroll;
+         }
+         .npcDisplay {
+         border: none;
+         padding: 5px;
+         font: 14 courier-new;
+         width: 600px;
+         height: 300px;
+         overflow: scroll;
+         }
+         .treasureDisplay {
+         border: none;
+         padding: 5px;
+         font: 14 courier-new;
+         width: 500px;
+         height: 250px;
+         overflow: scroll;
+         }
+         /* Scrollbar styles */
+         ::-webkit-scrollbar {
+         width: 5px;
+         height: 5px;
+         }
+         ::-webkit-scrollbar-track {
+         border: 1px solid black;
+         border-radius: 5px;
+         }
+         ::-webkit-scrollbar-thumb {
+         background: black;  
+         border-radius: 5px;
+         }
+         ::-webkit-scrollbar-thumb:hover {
+         background: #88ba1c;  
+         }
+         table {
+         font-family: arial, sans-serif;
+         border-collapse: collapse;
+         width: 100%;
+         }
+         td, th {
+         border: 1px solid #dddddd;
+         text-align: left;
+         padding: 8px;
+         }
+         tr:nth-child(even) {
+         background-color: #dddddd;
+         }
+         .mobileShow { display: none;}
+         /* Smartphone Portrait and Landscape */
+         @media only screen
+         and (min-device-width : 320px)
+         and (max-device-width : 480px){ .mobileShow { display: inline;}}
+      </style>
+   </head>
+   <body>
+      <header>
+		<h1>Dungeons and Dragons Utility Tool</h1>
+         <h2>Non-Player Characters</h2>
+      </header>
+      <form>
+      </form>
+      <button onclick="newNPC()">Create NPC</button>
+      <button onclick="clearNPCs()">Clear</button>
+      <p class="npcDisplay" id="npcs"></p>
+   </body>
+</html>
