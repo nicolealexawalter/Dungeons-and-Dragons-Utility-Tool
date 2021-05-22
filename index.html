@@ -86,7 +86,7 @@
          // ]]>
       </script>
       <header>
-         <h2>Creatures and Encounters</h2>
+         <h2>Creatures and Combat</h2>
       </header>
       <form>
          <label for="crname">Creature Name:</label>
@@ -239,6 +239,8 @@
       <button onclick="determineWords()">Generate Words</button>
       <button onclick="determineSentence()">Generate Sentence</button>
       <button onclick="clearWords()">Clear</button>
-      <p id="wordbank"></p>
+      <p class="treasureDisplay" id="wordbank"></p>
+	  <button onclick="createEncounter()">Create Encounter</button>
+	  <p id="encounters"></p>
    </body>
 </html>
