@@ -20,6 +20,11 @@
     display: block;
     width: 100%;
 }
+
+.buttonHalf {
+    display: block;
+    width: 50%;
+}
       </style>
    </head>
    <body onresize="resize_canvas()">
@@ -112,12 +117,12 @@
             <option value="Gargantuan">Gargantuan</option>
          </select>
       </form>
-      <button onclick="creatureSearch()">Search</button>
-      <button onclick="sortAlphabeticallyAscending()">Sort A-Z</button>
-      <button onclick="sortAlphabeticallyDescending()">Z-A</button>
-      <button onclick="sortXP(false)">XP Highest</button>
-      <button onclick="sortXP(true)">XP Lowest</button>
-      <button onclick="generateEncounter()">Create Encounter</button>
+      <button class="button" onclick="creatureSearch()">Search</button>
+      <button class="button" onclick="sortAlphabeticallyAscending()">Sort A-Z</button>
+      <button class="button" onclick="sortAlphabeticallyDescending()">Z-A</button>
+      <button class="button" onclick="sortXP(false)">XP Highest</button>
+      <button class="button" onclick="sortXP(true)">XP Lowest</button>
+      <button class="button" onclick="generateEncounter()">Create Encounter</button>
       <label for="encounterxp">XP:</label>
       <input type="number" id="encounterxp" name="encounterxp" min="0" size="2">
       <br><br>
@@ -139,7 +144,7 @@
             <option value="Deadly">Deadly</option>
          </select>
       </form>
-      <button onclick="calculateXP()">Calculate XP</button>
+      <button class="button" onclick="calculateXP()">Calculate XP</button>
       <p style="display:inline-block" id="xpbudget"></p>
       <header>
          <h2>Treasure Hoard</h2>
@@ -148,8 +153,8 @@
          <label for="treasurexp">XP:</label>
          <input type="number" id="treasurexp" name="treasurexp" value="" min=0>
       </form>
-      <button onclick="generateTreasure()">Generate Treasure</button>
-      <button onclick="clearTreasure()">Clear</button>
+      <button class="buttonHalf" inline="true" onclick="generateTreasure()">Generate Treasure</button>
+      <button class="buttonHalf" inline="true" onclick="clearTreasure()">Clear</button>
       <p class="treasureDisplay" id="treasure"></p>
 
    </body>
