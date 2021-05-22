@@ -1742,3 +1742,7 @@
             document.getElementById("encounters").innerHTML = output + "<br><br>" + current;
 		}
 		
+
+		function clearEncounter(){
+			document.getElementById("encounters").innerHTML = "";
+		}
