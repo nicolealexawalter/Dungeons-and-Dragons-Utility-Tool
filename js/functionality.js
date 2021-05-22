@@ -1714,3 +1714,31 @@
              return Math.floor(Math.random() * ((max+1) - min) + min);
          }
       
+		//markov chain works by common patterns, so if no two encounters start with the same values it cant make sense of it
+		//to fix this, we need to split up the file into two word pairs
+		var encounters_raw = loadFile("FILES\\" + "ENCOUNTERS" + ".txt").split("<br>");//["One Two Three Four", "Four Five Six Seven"]
+		var encounters_cooked = [];
+		for(var i=0;i<encounters_raw.length;i++){
+		  //we are on a single encounter, and now we need to split it up into word pairs
+		  var split = encounters_raw[i].split(" ");
+		  //i need to take my list of words and, for each word, push the pairing before it, and the pairing after it
+		  for(var h=3;h<split.length-3;h++){
+			encounters_cooked.push("_ " + split[h-3] + " " + split[h-2] + " " + split[h-1] + " " + split[h] + " " + split[h+1] + " " + split[h+2] + " " + split[h+3] + " _");
+		  }
+		}
+		var encounters_chain = new Markov();
+		encounters_chain.addStates(encounters_cooked);
+		encounters_chain.train(100);
+		
+		function createEncounter(){
+			var output = encounters_chain.generateRandom(1000).replaceAll("_", "");
+			
+			while(output.split(" ").length < 50){
+				output += " " + encounters_chain.generateRandom(1000).replaceAll("_", "");
+			}
+             
+            var current = document.getElementById("encounters").innerHTML;
+             
+            document.getElementById("encounters").innerHTML = output + "<br><br>" + current;
+		}
+		
