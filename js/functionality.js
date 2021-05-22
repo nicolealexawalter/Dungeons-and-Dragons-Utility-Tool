@@ -1719,11 +1719,12 @@
 		var encounters_raw = loadFile("FILES\\" + "ENCOUNTERS" + ".txt").split("<br>");//["One Two Three Four", "Four Five Six Seven"]
 		var encounters_cooked = [];
 		for(var i=0;i<encounters_raw.length;i++){
-		  //we are on a single encounter, and now we need to split it up into word pairs
 		  var split = encounters_raw[i].split(" ");
-		  //i need to take my list of words and, for each word, push the pairing before it, and the pairing after it
-		  for(var h=1;h<split.length-1;h++){
-			encounters_cooked.push("_ " + split[h-1] + " " + split[h] + " _");
+		  
+          //for my sentence split 
+		  for(var h=0;h<split.length-1;h++){
+			//at each index, push an array with the value at current index and all following indices
+            encounters_cooked.push(split.slice(h, split.length).join(" "));
 		  }
 		}
 		var encounters_chain = new Markov();
