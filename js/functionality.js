@@ -1722,8 +1722,8 @@
 		  //we are on a single encounter, and now we need to split it up into word pairs
 		  var split = encounters_raw[i].split(" ");
 		  //i need to take my list of words and, for each word, push the pairing before it, and the pairing after it
-		  for(var h=3;h<split.length-3;h++){
-			encounters_cooked.push("_ " + split[h-3] + " " + split[h-2] + " " + split[h-1] + " " + split[h] + " " + split[h+1] + " " + split[h+2] + " " + split[h+3] + " _");
+		  for(var h=1;h<split.length-1;h++){
+			encounters_cooked.push("_ " + split[h-1] + " " + split[h] + " _");
 		  }
 		}
 		var encounters_chain = new Markov();
