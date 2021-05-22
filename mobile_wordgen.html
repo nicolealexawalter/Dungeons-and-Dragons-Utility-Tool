@@ -11,7 +11,17 @@
   margin: 5px;
 }
 	            body { margin:0; }
-	  input[type=text], input[type=number], select {
+	  input[type=text], input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.selector {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -51,7 +61,7 @@
          <label for="maxlength">&nbsp;Max Length:</label>
          <input type="number" id="maxlength" name="maxlength" value="8" min=3 size="2">
          <label for="chosenlang">&nbsp;Language:</label>
-         <select name="chosenlang" id="chosenlang">
+         <select class="selector" name="chosenlang" id="chosenlang">
             <option value="Dwarf">Dwarvish</option>
             <option value="Elf">Elvish</option>
             <option value="Halfling">Halfling</option>
