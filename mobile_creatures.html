@@ -124,11 +124,11 @@
          </select>
       </form>
       <button class="button" onclick="creatureSearch()">Search</button>
-      <button class="button" onclick="sortAlphabeticallyAscending()">Sort Creatures Alphabetically (A-Z)</button>
-      <button class="button" onclick="sortAlphabeticallyDescending()">Sort Creatures Alphabetically (Z-A)</button>
-      <button class="button" onclick="sortXP(false)">Sort Creatures by XP (Highest-Lowest)</button>
-      <button class="button" onclick="sortXP(true)">Sort Creatures by XP (Lowest-Highest)</button>
       <p class="creatureDisplay" style="height:500px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="creatures"></p>
+            <button  onclick="sortAlphabeticallyAscending()">Sort A-Z</button>
+      <button  onclick="sortAlphabeticallyDescending()">Sort Z-A</button>
+      <button onclick="sortXP(false)">Sort XP (High-Low)</button>
+      <button  onclick="sortXP(true)">Sort XP (Low-High)</button>
             <p id="totalEncounterXP"></p>
             
       <button class="button" onclick="generateEncounter()">Generate Encounter</button>
