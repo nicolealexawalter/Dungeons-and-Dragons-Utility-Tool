@@ -1718,14 +1718,28 @@
 		//to fix this, we need to split up the file into two word pairs
 		var encounters_raw = loadFile("FILES\\" + "ENCOUNTERS" + ".txt").split("<br>");//["One Two Three Four", "Four Five Six Seven"]
 		var encounters_cooked = [];
-		for(var i=0;i<encounters_raw.length;i++){
+    for(var i=0;i<encounters_raw.length;i++){
 		  var split = encounters_raw[i].split(" ");
 		  
           //for my sentence split 
-		  for(var h=0;h<split.length-1;h++){
-			//at each index, push an array with the value at current index and all following indices
-            encounters_cooked.push(split.slice(h, split.length).join(" "));
+		  for(var h=0;h<split.length;h++){
+			//for every index
+            //build a substring from this index to every other index
+            for(var x=0;x<split.length;x++){
+                var slice = "";
+            	if(x==h){continue;}
+                else if(x > h){slice = (split.slice(h, x+1).join(" "))}
+                else {slice = (split.slice(x, h+1).join(" "))}
+                
+                if(!encounters_cooked.includes(slice)){
+                	encounters_cooked.push(slice);
+                }
+            }
 		  }
+          /*
+          output.push(split.slice(h, split.length).join(" "));
+          output.push(split.slice(0, h+1).join(" "));
+          */
 		}
 		var encounters_chain = new Markov();
 		encounters_chain.addStates(encounters_cooked);
