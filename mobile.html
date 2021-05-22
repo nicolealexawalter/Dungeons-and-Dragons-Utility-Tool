@@ -1,10 +1,31 @@
 <!-- Created by Nicole Walter -->
 <html>
-   <head>
+	<meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
+
+	<title>D&D Utility Tool</title>
       <link rel="shortcut icon" type="image/png" href="favicon.png">
-	   <title>D&D Utility Tool</title>
+      <style>
+	        p {
+  margin: 5px;
+}
+      body { margin:0; }
+	 .button {
+          background-color:Gainsboro;
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+  box-sizing: border-box;
+  cursor: pointer;
+}
+      </style>
    </head>
-   <body>
+   <body onresize="resize_canvas()">
+   <script type="text/javascript" src="js/resize.js" >
+        
+    </script>
       <header>
 		<h1>Dungeons and Dragons Utility Tool</h1>
          <nav>
