@@ -1738,8 +1738,6 @@
 			}
 			
 			output = output.toLowerCase();
-			
-			output = capitalize(output);
              
             var current = document.getElementById("encounters").innerHTML;
              
