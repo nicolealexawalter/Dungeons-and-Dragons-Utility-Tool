@@ -1736,6 +1736,10 @@
 			while(output.split(" ").length < 50){
 				output += " " + encounters_chain.generateRandom(1000).replaceAll("_", "");
 			}
+			
+			output = output.toLowerCase();
+			
+			output = capitalize(output);
              
             var current = document.getElementById("encounters").innerHTML;
              
