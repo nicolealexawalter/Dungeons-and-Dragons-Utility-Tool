@@ -127,9 +127,10 @@
       <button class="button" onclick="sortXP(true)">Sort Creatures by XP (Lowest-Highest)</button>
       <p class="creatureDisplay" style="height:500px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="creatures"></p>
             <p id="totalEncounterXP"></p>
+            
+      <button class="button" onclick="generateEncounter()">Generate Encounter</button>
             <label for="encounterxp">XP Budget to use for encounter with creatures searched above:</label>
       <input type="number" id="encounterxp" name="encounterxp" min="0" size="2">
-      <button class="button" onclick="generateEncounter()">Generate Encounter</button>
       <header>
          <h2>Calculate XP Budget</h2>
       </header>
