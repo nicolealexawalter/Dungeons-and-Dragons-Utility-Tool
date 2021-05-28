@@ -47,9 +47,15 @@ Here I can also generate a sentence! Yuan Ti was built on all words that have W/
 
 You'll notice that the Generate Sentence button doesn't allow you to set a number words/min/max length. It simply generates a random sentence of varying words of varying length, with random punctuation! Perfect for creating idle chatter in another language to help immerse your players!
 
+### RP Encounters
+
+Here you can fetch a random RP encounter from a master list of over 5000! Note: these are not my encounters, I crawled publically available materials on the web and amassed them into a large list. I do not claim to own any of these, nor any other material (eg, the creatures) present on the app!
+
 ### Summary
 
 You can do a lot of fun things on this site, and I hope it helps you grow your campaign! You can use the link below to access the site at your whimsy. The actual URL is pasted below as well.
+
+There is also a dedicated [mobile site](https://nicolealexawalter.github.io/Dungeons-and-Dragons-Utility-Tool/mobile.html), that should automatically load when you visit the main page on a mobile phone.
 
 [Site](https://nicolealexawalter.github.io/Dungeons-and-Dragons-Utility-Tool/)
 
