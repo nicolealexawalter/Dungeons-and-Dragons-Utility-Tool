@@ -2,7 +2,7 @@
 <html>
    <head>
       <title>D&D Utility Tool</title>
-      <link rel="shortcut icon" type="image/png" href="favicon.png">
+      <link rel="shortcut icon" type="image/png" href="favicon.png?">
       <style>
          * {
          box-sizing: border-box;
@@ -33,10 +33,10 @@
          font-family:Helvetica, serif;
          }
          .flex-title{
-         margin-bottom:15px;
-         font-size:3em;
+         margin-bottom:20px;
+         font-size:4.5em;
          text-align:center;
-         font-weight:750;
+         font-weight:800;
          color:#555;
          }
          .cards{
@@ -47,8 +47,8 @@
          }
          .card{
          background-color:white;
-         height:500px;
-         width:500px;
+         height:450px;
+         width:50%;
          margin-bottom:30px;
          box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.2);
          border-radius:2px;
@@ -58,8 +58,8 @@
          }
          .creatureCard{
          background-color:white;
-         height:500px;
-         width:1000px;
+         height:400px;
+         width:100%;
          margin-bottom:30px;
          box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.2);
          border-radius:2px;
@@ -133,7 +133,10 @@
    <body>
       <section id="imb9w" class="flex-sect">
          <div class="container-width">
-            <div id="i0xyg" class="flex-title">Dungeons and Dragons Utility Tool
+            <div id="i0xyg" class="flex-title">
+			<img src="favicon.png" height="60" width="60">
+			D&D Utility Tool
+			<img src="favicon.png" height="60" width="60">
             </div>
             <div class="cards">
                <div class="card">
@@ -173,7 +176,7 @@
                            <label for="numwords">Number Words:</label>
                            <input type="number" id="numwords" name="numwords" value="10" min=1><br>
                            <label for="minlength">Length:</label>
-                           <input type="number" id="minlength" name="minlength" value="1" min=1>
+                           <input type="number" id="minlength" name="minlength" value="2" min=1>
                            <label for="maxlength"> to </label>
                            <input type="number" id="maxlength" name="maxlength" value="20" min=3>
                            <label for="maxlength">letters</label><br>
