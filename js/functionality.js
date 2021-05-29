@@ -618,8 +618,8 @@
 
              var name = determineName(primaryrace);
 
-             //generate stats
-             var stats = generateStats();
+             //generate stats - currently not being used on NPCs
+             //var stats = generateStats();
 
              //pick a random ideal / emotion / locale / activity / trade
              var ideal = returnRandom(ideals).toLowerCase();
@@ -628,8 +628,12 @@
              var activity = returnRandom(activities);
              var trade = returnRandom(trades).toLowerCase();
              trade = determineArticle(trade) + " " + trade;
-
-             return name + "<br>" + trait + " " + age + " " + sexuality + " " + gender + " " + descriprace + "<br>" + "Values " + ideal + " | Feels " + emotion + " | " + stats + "<br>" + "Born " + locale + ", grew up " + activity + ", currently is " + trade + ".";
+			 
+			 var newline_singletab = "<br>&nbsp;&nbsp;&nbsp;&nbsp;";
+			 var newline_doubletab = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			 var newline_tripletab = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			 
+			 return name + newline_singletab + trait + " " + age + " " + sexuality + " " + gender + ";" + newline_doubletab + "Is " + determineArticle(descriprace) + " " + descriprace + ";" + newline_doubletab + "Values " + ideal + " | Feels " + emotion + newline_tripletab + "Born " + locale + ";" + newline_tripletab + "Grew up " + activity + ";" + newline_tripletab + "Currently is " + trade + ".";
          }
 
          function newNPC() {
