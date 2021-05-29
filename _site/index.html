@@ -4,244 +4,341 @@
       <title>D&D Utility Tool</title>
       <link rel="shortcut icon" type="image/png" href="favicon.png">
       <style>
-         body {
-         margin-bottom: 200%;
+         * {
+         box-sizing: border-box;
          }
-         input[type=number]{
-         width: 70px;
+         input[type='number']{
+         width: 100px;
          } 
-         /* Box styles */
-         .creatureDisplay {
-         border: none;
-         padding: 5px;
-         font: 14 courier-new;
-         width: 750px;
-         height: 250px;
-         overflow: scroll;
+         body {
+         margin: 0;
          }
-         .npcDisplay {
-         border: none;
-         padding: 5px;
-         font: 14 courier-new;
-         width: 600px;
-         height: 300px;
-         overflow: scroll;
+		 .float-container {
+			border: 3px solid #fff;
+			padding: 20px;
+		}
+		.float-child {
+			width: 50%;
+			float: left;
+			padding: 20px;
+		}  
+         .container-width{
+         width:90%;
+         max-width:1150px;
+         margin:0 auto;
          }
-         .treasureDisplay {
-         border: none;
-         padding: 5px;
-         font: 14 courier-new;
-         width: 500px;
-         height: 250px;
-         overflow: scroll;
+         .flex-sect{
+         background-color:#fafafa;
+         padding:100px 0;
+         font-family:Helvetica, serif;
          }
-         /* Scrollbar styles */
-         ::-webkit-scrollbar {
-         width: 5px;
-         height: 5px;
+         .flex-title{
+         margin-bottom:15px;
+         font-size:3em;
+         text-align:center;
+         font-weight:750;
+         color:#555;
          }
-         ::-webkit-scrollbar-track {
-         border: 1px solid black;
-         border-radius: 5px;
+         .cards{
+         padding:20px 0;
+         display:flex;
+         justify-content:space-around;
+         flex-flow:wrap;
          }
-         ::-webkit-scrollbar-thumb {
-         background: black;  
-         border-radius: 5px;
+         .card{
+         background-color:white;
+         height:500px;
+         width:500px;
+         margin-bottom:30px;
+         box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.2);
+         border-radius:2px;
+         transition:all 0.5s ease;
+         font-weight:100;
+         overflow:auto;
          }
-         ::-webkit-scrollbar-thumb:hover {
-         background: #88ba1c;  
+         .creatureCard{
+         background-color:white;
+         height:500px;
+         width:1000px;
+         margin-bottom:30px;
+         box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.2);
+         border-radius:2px;
+         transition:all 0.5s ease;
+         font-weight:100;
+         overflow:auto;
          }
-         table {
-         font-family: arial, sans-serif;
-         border-collapse: collapse;
-         width: 100%;
+         .creatureCard:hover{
+         margin-top:-5px;
+         box-shadow:0 20px 30px 0 rgba(0, 0, 0, 0.2);
          }
-         td, th {
-         border: 1px solid #dddddd;
-         text-align: left;
-         padding: 8px;
+         .creatureCard-header{
+         height:155px;
+         background-size:cover;
+         background-position:center center;
          }
-         tr:nth-child(even) {
-         background-color: #dddddd;
+         .creatureCard-body{
+         padding:15px 15px 5px 15px;
+         color:#555;
+         }
+         .creatureCard-title{
+         font-size:1.4em;
+         margin-bottom:5px;
+         }
+         .creatureCard-sub-title{
+         color:#b3b3b3;
+         font-size:1em;
+         margin-bottom:15px;
+         }
+         .creatureCard-desc{
+         font-size:0.85rem;
+         line-height:17px;
+         }
+         .card:hover{
+         margin-top:-5px;
+         box-shadow:0 20px 30px 0 rgba(0, 0, 0, 0.2);
+         }
+         .card-header{
+         height:155px;
+         background-size:cover;
+         background-position:center center;
+         }
+         .card-body{
+         padding:15px 15px 5px 15px;
+         color:#555;
+         }
+         .card-title{
+         font-size:1.4em;
+         margin-bottom:5px;
+         }
+         .card-sub-title{
+         color:#b3b3b3;
+         font-size:1em;
+         margin-bottom:15px;
+         }
+         .card-desc{
+         font-size:0.85rem;
+         line-height:17px;
          }
       </style>
    </head>
+   <script src="js/functionality.js" type="text/javascript"></script>
+   <!-- Mobile redirect script by https://pagecrafter.com -->
+   <script type="text/javascript" src="js/redirect.js"></script><script type="text/javascript">// <![CDATA[
+      SA.redirection_mobile ({
+      mobile_url : "nicolealexawalter.github.io/Dungeons-and-Dragons-Utility-Tool/mobile.html"
+      });
+      
+      // ]]>
+   </script>
    <body>
-      <header>
-         <h1>Dungeons and Dragons Utility Tool</h1>
-         <h2>Non-Player Characters</h2>
-      </header>
-      <form>
-      </form>
-      <button onclick="newNPC()">Create NPC</button>
-      <button onclick="clearNPCs()">Clear</button>
-      <p class="npcDisplay" id="npcs"></p>
-      <script src="js/functionality.js" type="text/javascript"></script>
-      <!-- Mobile redirect script by https://pagecrafter.com -->
-      <script type="text/javascript" src="js/redirect.js"></script><script type="text/javascript">// <![CDATA[
-         SA.redirection_mobile ({
-         mobile_url : "nicolealexawalter.github.io/Dungeons-and-Dragons-Utility-Tool/mobile.html"
-         });
-         
-         // ]]>
-      </script>
-      <header>
-         <h2>Creatures and Combat</h2>
-      </header>
-      <form>
-         <label for="crname">Creature Name:</label>
-         <input type="text" id="crname" name="crname" value="" size="12">
-         <label for="minxp">Minimum XP:</label>
-         <input type="number" id="minxp" name="minxp" min="0" size="4">
-         <label for="maxxp">Maximum XP:</label>
-         <input type="number" id="maxxp" name="maxxp" size="4">
-         <br><br>
-         <select name="environment" id="environment" multiple>
-            <option value="">Any</option>
-            <option value="Aquatic">Aquatic</option>
-            <option value="Arctic">Arctic</option>
-            <option value="Cave">Cave</option>
-            <option value="Coast">Coast</option>
-            <option value="Desert">Desert</option>
-            <option value="Forest">Forest</option>
-            <option value="Grassland">Grassland</option>
-            <option value="Mountain">Mountain</option>
-            <option value="Planar">Planar</option>
-            <option value="Ruins">Ruins</option>
-            <option value="Swamp">Swamp</option>
-            <option value="Underground">Underground</option>
-            <option value="Urban">Urban</option>
-         </select>
-         <select name="creaturetype" id="creaturetype" multiple>
-            <option value="">Any</option>
-            <option value="Aberration">Aberration</option>
-            <option value="Beast">Beast</option>
-            <option value="Celestial">Celestial</option>
-            <option value="Construct">Construct</option>
-            <option value="Dragon">Dragon</option>
-            <option value="Elemental">Elemental</option>
-            <option value="Fey">Fey</option>
-            <option value="Fiend">Fiend</option>
-            <option value="Giant">Giant</option>
-            <option value="Humanoid">Humanoid</option>
-            <option value="Monstrosity">Monstrosity</option>
-            <option value="Ooze">Ooze</option>
-            <option value="Plant">Plant</option>
-            <option value="Undead">Undead</option>
-         </select>
-         <select name="book" id="book" multiple>
-            <option value="">Any</option>
-            <option value="Tome of Beasts">Tome of Beasts</option>
-            <option value="Monster Manual">Monster Manual</option>
-            <option value="Volo's Guide to Monsters">Volo's Guide to Monsters</option>
-            <option value="Mordenkainen's Tome of Foes">Mordenkainen's Tome of Foes</option>
-         </select>
-         <select name="Alignment" id="alignment" multiple>
-            <option value="">Any</option>
-            <option value="lawful good">Lawful Good</option>
-            <option value="neutral good">Neutral Good</option>
-            <option value="chaotic good">Chaotic Good</option>
-            <option value="lawful neutral">Lawful Neutral</option>
-            <option value="neutral">Neutral</option>
-            <option value="chaotic neutral">Chaotic Neutral</option>
-            <option value="lawful evil">Lawful Evil</option>
-            <option value="neutral evil">Neutral Evil</option>
-            <option value="chaotic evil">Chaotic Evil</option>
-            <option value="unaligned">Unaligned</option>
-         </select>
-         <select name="Size" id="size" multiple>
-            <option value="">Any</option>
-            <option value="Tiny">Tiny</option>
-            <option value="Small">Small</option>
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
-            <option value="Huge">Huge</option>
-            <option value="Gargantuan">Gargantuan</option>
-         </select>
-      </form>
-      <button onclick="creatureSearch()">Search</button>
-      <button onclick="sortAlphabeticallyAscending()">Sort A-Z</button>
-      <button onclick="sortAlphabeticallyDescending()">Z-A</button>
-      <button onclick="sortXP(false)">XP Highest</button>
-      <button onclick="sortXP(true)">XP Lowest</button>
-      <button onclick="generateEncounter()">Create Encounter</button>
-      <label for="encounterxp">XP:</label>
-      <input type="number" id="encounterxp" name="encounterxp" min="0" size="2">
-      <br><br>
-      <p id="totalEncounterXP"></p>
-      <p class="creatureDisplay" id="creatures"></p>
-      <header>
-         <h3>Calculate XP Budget</h3>
-      </header>
-      <form>
-         <label for="numchar">Number Characters:</label>
-         <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
-         <label for="level">Average Level:</label>
-         <input type="number" id="level" name="level" value="" min=1 max=20>
-         <label for="difficulty">Difficulty:</label>
-         <select name="difficulty" id="difficulty">
-            <option value="Easy">Easy</option>
-            <option value="Medium">Medium</option>
-            <option value="Hard">Hard</option>
-            <option value="Deadly">Deadly</option>
-         </select>
-      </form>
-      <button onclick="calculateXP()">Calculate XP</button>
-      <p style="display:inline-block" id="xpbudget"></p>
-      <header>
-         <h2>Treasure Hoard</h2>
-      </header>
-      <form>
-         <label for="treasurexp">XP:</label>
-         <input type="number" id="treasurexp" name="treasurexp" value="" min=0>
-      </form>
-      <button onclick="generateTreasure()">Generate Treasure</button>
-      <button onclick="clearTreasure()">Clear</button>
-      <p class="treasureDisplay" id="treasure"></p>
-      <header>
-         <h2>Generate Words</h2>
-      </header>
-      <form>
-         <label for="numwords">Number Words:</label>
-         <input type="number" id="numwords" name="numwords" value="5" min=1 size="2">
-         <label for="minlength">Min Length:</label>
-         <input type="number" id="minlength" name="minlength" value="3" min=1 size="2">
-         <label for="maxlength">Max Length:</label>
-         <input type="number" id="maxlength" name="maxlength" value="8" min=3 size="2">
-         <label for="chosenlang">Language:</label>
-         <select name="chosenlang" id="chosenlang">
-            <option value="Dwarf">Dwarvish</option>
-            <option value="Elf">Elvish</option>
-            <option value="Halfling">Halfling</option>
-            <option value="Human">Human</option>
-            <option value="Dragonborn">Dragonborn</option>
-            <option value="Gnome">Gnome</option>
-            <option value="Aasimar">Aasimar</option>
-            <option value="Tiefling">Tiefling</option>
-            <option value="Shifter">Shifter</option>
-            <option value="Gith">Gith</option>
-            <option value="Firbolg">Firbolg</option>
-            <option value="Goliath">Goliath</option>
-            <option value="Kenku">Kenku</option>
-            <option value="Lizardfolk">Lizardfolk</option>
-            <option value="Tabaxi">Tabaxi</option>
-            <option value="Triton">Triton</option>
-            <option value="Goblinoid">Goblinoid</option>
-            <option value="Kobold">Kobold</option>
-            <option value="Yuan Ti">Yuan Ti</option>
-            <option value="Orc">Orcish</option>
-            <option value="Warforged">Warforged</option>
-            <option value="Beastfolk">Beastfolk</option>
-            <option value="Genasi">Genasi</option>
-         </select>
-         <br>
-      </form>
-      <button onclick="determineWords()">Generate Words</button>
-      <button onclick="determineSentence()">Generate Sentence</button>
-      <button onclick="clearWords()">Clear</button>
-      <p class="treasureDisplay" id="wordbank"></p>
-	  <button onclick="createEncounter()">Create Encounter</button>
-	   <button onclick="clearEncounter()">Clear</button>
-	  <p id="encounters"></p>
+      <section id="imb9w" class="flex-sect">
+         <div class="container-width">
+            <div id="i0xyg" class="flex-title">Dungeons and Dragons Utility Tool
+            </div>
+            <div class="cards">
+               <div class="card">
+                  <div class="card-body">
+                     <div class="card-title">Generate Characters
+                     </div>
+                     <div class="card-sub-title">Create brand new non-player characters!
+                     </div>
+                     <div >
+                        <button onclick="newNPC()">Create NPC</button>
+                        <button onclick="clearNPCs()">Clear</button>
+                        <p class="npcDisplay" id="npcs"></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-body">
+                     <div class="card-title">Create Encounter
+                     </div>
+                     <div class="card-sub-title">Fetch random encounters!
+                     </div>
+                     <div>
+                        <button onclick="createEncounter()">Create Encounter</button>
+                        <button onclick="clearEncounter()">Clear</button>
+                        <p id="encounters"></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-body">
+                     <div class="card-title">Fantasy Dictionary
+                     </div>
+                     <div class="card-sub-title">Generate words or sentences in a fantasy language!
+                     </div>
+                     <div>
+                        <form>
+                           <label for="numwords">Number Words:</label>
+                           <input type="number" id="numwords" name="numwords" value="5" min=1><br>
+                           <label for="minlength">Length:</label>
+                           <input type="number" id="minlength" name="minlength" value="3" min=1>
+                           <label for="maxlength"> to </label>
+                           <input type="number" id="maxlength" name="maxlength" value="8" min=3>
+                           <label for="maxlength">letters</label><br>
+                           <label for="chosenlang">Language:</label>
+                           <select name="chosenlang" id="chosenlang">
+                              <option value="Dwarf">Dwarvish</option>
+                              <option value="Elf">Elvish</option>
+                              <option value="Halfling">Halfling</option>
+                              <option value="Human">Human</option>
+                              <option value="Dragonborn">Dragonborn</option>
+                              <option value="Gnome">Gnome</option>
+                              <option value="Aasimar">Aasimar</option>
+                              <option value="Tiefling">Tiefling</option>
+                              <option value="Shifter">Shifter</option>
+                              <option value="Gith">Gith</option>
+                              <option value="Firbolg">Firbolg</option>
+                              <option value="Goliath">Goliath</option>
+                              <option value="Kenku">Kenku</option>
+                              <option value="Lizardfolk">Lizardfolk</option>
+                              <option value="Tabaxi">Tabaxi</option>
+                              <option value="Triton">Triton</option>
+                              <option value="Goblinoid">Goblinoid</option>
+                              <option value="Kobold">Kobold</option>
+                              <option value="Yuan Ti">Yuan Ti</option>
+                              <option value="Orc">Orcish</option>
+                              <option value="Warforged">Warforged</option>
+                              <option value="Beastfolk">Beastfolk</option>
+                              <option value="Genasi">Genasi</option>
+                           </select>
+                           <br>
+                        </form>
+                        <button onclick="determineWords()">Words</button>
+                        <button onclick="determineSentence()">Sentence</button>
+                        <button onclick="clearWords()">Clear</button>
+                        <p id="wordbank"></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-body">
+                     <div class="card-title">Treasure Hoard
+                     </div>
+                     <div class="card-sub-title">Create a treasure hoard for your encounter!
+                     </div>
+                     <div >
+                        <form>
+                           <label for="treasurexp">XP:</label>
+                           <input type="number" id="treasurexp" name="treasurexp" value="" min=0>
+                        </form>
+                        <button onclick="generateTreasure()">Generate Treasure</button>
+                        <button onclick="clearTreasure()">Clear</button>
+                        <p id="treasure"></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="creatureCard">
+                  <div class="card-body">
+                     <div class="card-title">Creatures and Combat
+                     </div>
+                     <div class="card-sub-title">Search for creatures, calculate XP budgets, and generate encounters!
+                     </div>
+                     <div >
+                        <form>
+                           <label for="crname">Creature Name:</label>
+                           <input type="text" id="crname" name="crname" value="" size="12">
+                           <label for="minxp">Minimum XP:</label>
+                           <input type="number" id="minxp" name="minxp" min="0" size="4">
+                           <label for="maxxp">Maximum XP:</label>
+                           <input type="number" id="maxxp" name="maxxp" size="4">
+                           <br><br>
+                           <select name="environment" id="environment" multiple>
+                              <option value="">Any</option>
+                              <option value="Aquatic">Aquatic</option>
+                              <option value="Arctic">Arctic</option>
+                              <option value="Cave">Cave</option>
+                              <option value="Coast">Coast</option>
+                              <option value="Desert">Desert</option>
+                              <option value="Forest">Forest</option>
+                              <option value="Grassland">Grassland</option>
+                              <option value="Mountain">Mountain</option>
+                              <option value="Planar">Planar</option>
+                              <option value="Ruins">Ruins</option>
+                              <option value="Swamp">Swamp</option>
+                              <option value="Underground">Underground</option>
+                              <option value="Urban">Urban</option>
+                           </select>
+                           <select name="creaturetype" id="creaturetype" multiple>
+                              <option value="">Any</option>
+                              <option value="Aberration">Aberration</option>
+                              <option value="Beast">Beast</option>
+                              <option value="Celestial">Celestial</option>
+                              <option value="Construct">Construct</option>
+                              <option value="Dragon">Dragon</option>
+                              <option value="Elemental">Elemental</option>
+                              <option value="Fey">Fey</option>
+                              <option value="Fiend">Fiend</option>
+                              <option value="Giant">Giant</option>
+                              <option value="Humanoid">Humanoid</option>
+                              <option value="Monstrosity">Monstrosity</option>
+                              <option value="Ooze">Ooze</option>
+                              <option value="Plant">Plant</option>
+                              <option value="Undead">Undead</option>
+                           </select>
+                           <select name="book" id="book" multiple>
+                              <option value="">Any</option>
+                              <option value="Tome of Beasts">Tome of Beasts</option>
+                              <option value="Monster Manual">Monster Manual</option>
+                              <option value="Volo's Guide to Monsters">Volo's Guide to Monsters</option>
+                              <option value="Mordenkainen's Tome of Foes">Mordenkainen's Tome of Foes</option>
+                           </select>
+                           <select name="Alignment" id="alignment" multiple>
+                              <option value="">Any</option>
+                              <option value="lawful good">Lawful Good</option>
+                              <option value="neutral good">Neutral Good</option>
+                              <option value="chaotic good">Chaotic Good</option>
+                              <option value="lawful neutral">Lawful Neutral</option>
+                              <option value="neutral">Neutral</option>
+                              <option value="chaotic neutral">Chaotic Neutral</option>
+                              <option value="lawful evil">Lawful Evil</option>
+                              <option value="neutral evil">Neutral Evil</option>
+                              <option value="chaotic evil">Chaotic Evil</option>
+                              <option value="unaligned">Unaligned</option>
+                           </select>
+                           <select name="Size" id="size" multiple>
+                              <option value="">Any</option>
+                              <option value="Tiny">Tiny</option>
+                              <option value="Small">Small</option>
+                              <option value="Medium">Medium</option>
+                              <option value="Large">Large</option>
+                              <option value="Huge">Huge</option>
+                              <option value="Gargantuan">Gargantuan</option>
+                           </select>
+						   <br><br>
+						   <label for="numchar">Number Characters:</label>
+                           <input type="number" id="numchar" name="numchar" value="" min=1 max=99>
+						   
+                           <input type="number" id="level" name="level" value="" min=1 max=20>
+						   <label for="difficulty">Difficulty:</label>
+                           <select name="difficulty" id="difficulty">
+                              <option value="Easy">Easy</option>
+                              <option value="Medium">Medium</option>
+                              <option value="Hard">Hard</option>
+                              <option value="Deadly">Deadly</option>
+                           </select>
+                        </form>
+                        <button onclick="creatureSearch()">Search</button>
+                        <button onclick="sortAlphabeticallyAscending()">Sort A-Z</button>
+                        <button onclick="sortAlphabeticallyDescending()">Z-A</button>
+                        <button onclick="sortXP(false)">XP Highest</button>
+                        <button onclick="sortXP(true)">XP Lowest</button>
+                        
+						                        <button onclick="calculateXP()">Calculate XP</button>
+
+                        <label for="encounterxp">XP:</label>
+                        <input type="number" id="encounterxp" name="encounterxp" min="0" size="2">
+						<button onclick="generateEncounter()">Create Encounter</button>
+                        <br><br>
+						<p id="totalEncounterXP"></p>
+                        <p id="creatures"></p>
+						<p hidden id="xpbudget"></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
    </body>
 </html>
