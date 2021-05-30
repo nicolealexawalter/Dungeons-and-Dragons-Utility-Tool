@@ -633,7 +633,7 @@
 			 var newline_doubletab = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 			 var newline_tripletab = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 			 
-			 return name + newline_singletab + trait + " " + age + " " + sexuality + " " + gender + ";" + newline_doubletab + "Is " + determineArticle(descriprace) + " " + descriprace + ";" + newline_doubletab + "Values " + ideal + " | Feels " + emotion + newline_tripletab + "Born " + locale + ";" + newline_tripletab + "Grew up " + activity + ";" + newline_tripletab + "Currently is " + trade + ".";
+			 return name + newline_singletab + trait + " " + age + " " + sexuality + " " + gender + ";" + newline_doubletab + "Is " + determineArticle(descriprace) + " " + descriprace + ";" + newline_doubletab + "Values " + ideal + " | Feels " + emotion + ";" + newline_tripletab + "Born " + locale + ";" + newline_tripletab + "Grew up " + activity + ";" + newline_tripletab + "Currently is " + trade + ".";
          }
 
          function newNPC() {
